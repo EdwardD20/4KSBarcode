@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Tsim Link2Feed profile.<br/>Khaws koj Client ID.]]></string>
+    <string name="client_id_placeholder">Client ID</string>
+    <string name="close_button">Kaw</string>
+    <string name="display_mode_barcode">Barcode</string>
+    <string name="display_mode_label">Tso saib li</string>
+    <string name="display_mode_qrcode">QR Code</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Nkag Mus Ntxov</string>
+    <string name="early_entry_text"><![CDATA[<b>Nkag Mus Ntxov</b> yog ib qho kev pab cuam rau cov neeg muaj hnub nyoog 65 xyoos tuaj nrog cov neeg uas tsis muaj peev xwm sawv ntsug tau ntev. Koj yuav raug tso cai nkag mus rau hauv <b><i>4 K.I.D.S. Sake</i></b> tsev khaws khoom noj 30 feeb ua ntej pej xeem.<br/><br/>Yuav kom tau txais kev pab cuam no, koj yuav tsum:<br/><br/>1) Ua pov thawj tias koj muaj hnub nyoog tsawg kawg 65 xyoos (State ID, daim ntawv tsav tsheb, thiab lwm yam.)<br/><br/>2) Muab ib daim ntawv los ntawm koj tus kws khom mob uas qhia tias koj sawv ntsug tsis tau ntev. Daim ntawv xiam oob qhab los ntawm Social Security lossis daim ntawv tso cai nres tsheb rau neeg xiam oob qhab tsis raug cai. Daim ntawv kws khom mob yuav tsum tau ua raws li HIPAA thiab tsuas yog qhia li ntawd xwb. Peb tsis xav paub tias vim li cas. <b><i>Daim ntawv kws khom mob yuav tsum tau muab reconfirm txhua xyoo.</i></b><br/><br/>Muab koj cov ntaub ntawv rau ntawm lub rooj tom ntej thaum koj tuaj kos npe nkag mus.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Kev teem kab</string>
+    <string name="info_button_label2">Kev yuav khoom</string>
+    <string name="info_text"><![CDATA[65+ thiab neeg xiam oob qhab pib 1:45.<br/><br/>Lwm tsev neeg 2:15.<br/><br/>Los ntxov tsis muaj qhov zoo.<br/><br/>Tom qab 5:30 tsis muaj lej ntxiv.]]></string>
+    <string name="info_text2"><![CDATA[Yuav tsum muaj Link2Feed.<br/><br/>Sau npe thaum hu.<br/><br/>Yuav rau koj tsev neeg xwb.]]></string>
+    <string name="language_label">Lus</string>
+    <string name="no_client">Tsis muaj Client ID</string>
+    <string name="pantry_hours">Pantry ntaub ntawv</string>
+    <string name="save_client_and_close">Khaws thiab kaw</string>
+    <string name="senior_day">Hnub laus</string>
+    <string name="senior_day_notice">Hnub Wednesday thib 3 rau cov laus xwb。</string>
+    <string name="settings_button">Chaw teeb</string>
+    <string name="shareTheApp">Qhia app</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[Lub khw uas ua rau lub tsev rau khoom noj tshwm sim.<br/>Thov tuaj ntsib peb ntawm:]]></string>
+    <string name="version_label">Version</string>
+    <string name="wallet_error">Tsis qhib tau Google Wallet。</string>
+    <string name="website_label">4 K.I.D.S. Sake (website)</string>
+</resources>

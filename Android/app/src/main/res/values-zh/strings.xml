@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[创建 Link2Feed 档案。<br/>请保存您的客户 ID。]]></string>
+    <string name="client_id_placeholder">客户 ID</string>
+    <string name="close_button">关闭</string>
+    <string name="display_mode_barcode">条形码</string>
+    <string name="display_mode_label">显示方式</string>
+    <string name="display_mode_qrcode">二维码</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">提前入场</string>
+    <string name="early_entry_text"><![CDATA[<b>提前入场</b>是为 65 岁及以上人士以及长时间站立困难的人士提供的服务。您将被允许在普通公众入场前 30 分钟进入 <b><i>4 K.I.D.S. Sake</i></b> 食品发放站。<br/><br/>要使用此服务，您必须：<br/><br/>1) 证明您年满 65 岁（州身份证、驾照等）<br/><br/>2) 出示医生的证明，确认您无法长时间站立。社会保障残疾声明或残疾人停车许可证不符合条件。医生证明应符合 HIPAA 标准并仅注明此类情况。我们不需要知道原因。 <b><i>医生证明必须在每个日历年重新确认。</i></b><br/><br/>签到时请向服务台出示您的证明文件。]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">排队流程</string>
+    <string name="info_button_label2">购物</string>
+    <string name="info_text"><![CDATA[65岁以上或残障人士1:45开始排队。<br/><br/>其他家庭2:15后。<br/><br/>提前到达不享有优先权。<br/><br/>5:30后不发号码。]]></string>
+    <string name="info_text2"><![CDATA[需要 Link2Feed。<br/><br/>被叫到时登记。<br/><br/>仅限自家使用。]]></string>
+    <string name="language_label">语言</string>
+    <string name="no_client">未设置客户 ID</string>
+    <string name="pantry_hours">发放站信息</string>
+    <string name="save_client_and_close">保存客户 ID 并关闭</string>
+    <string name="senior_day">老年人日</string>
+    <string name="senior_day_notice">每月第三个星期三仅限老年人。</string>
+    <string name="settings_button">设置</string>
+    <string name="shareTheApp">分享应用</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[让食品发放站运营起来的商店。<br/>请访问我们：]]></string>
+    <string name="version_label">版本</string>
+    <string name="wallet_error">无法打开 Google Wallet。</string>
+    <string name="website_label">4 K.I.D.S. Sake（网站）</string>
+</resources>

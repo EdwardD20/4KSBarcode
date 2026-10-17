@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[បង្កើតប្រវត្តិរូបអតិថិជន Link2Feed。<br/>សូមរក្សាទុកលេខសម្គាល់អតិថិជនរបស់អ្នក。]]></string>
+    <string name="client_id_placeholder">លេខសម្គាល់អតិថិជន</string>
+    <string name="close_button">បិទ</string>
+    <string name="display_mode_barcode">បាកូដ</string>
+    <string name="display_mode_label">បង្ហាញជា</string>
+    <string name="display_mode_qrcode">លេខកូដ QR</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">ការចូលមុន</string>
+    <string name="early_entry_text"><![CDATA[<b>ការចូលមុន</b> គឺជាសេវាកម្មសម្រាប់បុគ្គលដែលមានអាយុចាប់ពី 65 ឆ្នាំឡើងទៅ และបុគ្គលដែលមានការពិបាកក្នុងការឈរក្នុងរយៈពេលយូរ។ អ្នកនឹងត្រូវបានអនុញ្ញាតឱ្យចូលទៅក្នុងផាន់ទ្រីអាហារ <b><i>4 K.I.D.S. Sake</i></b> រយៈពេល 30 នាទីមុនសាធារណជនទូទៅ។<br/><br/>ដើម្បីទទួលបានសេវាកម្មនេះ អ្នកត្រូវតែ៖<br/><br/>1) បង្ហាញថាអ្នកមានអាយុយ៉ាងតិច 65 ឆ្នាំ (អត្តសញ្ញាណប័ណ្ណ ប័ណ្ណបើកបរ ។ល។)<br/><br/>2) បង្ហាញលិខិតបញ្ជាក់ពីគ្រូពេទ្យរបស់អ្នកដែលបញ្ជាក់ពីអសមត្ថភាពរបស់អ្នកក្នុងការឈរក្នុងរយៈពេលយូរ។ លិខិតបញ្ជាក់ពិការភាពរបស់សន្តិសុខសង្គម ឬប័ណ្ណចតរថយន្តសម្រាប់ជនពិការមិនត្រូវបានទទួលយកទេ។ លិខិតបញ្ជាក់របស់គ្រូពេទ្យគួរតែអនុលោមតាម HIPAA និងគ្រាន់តែបញ្ជាក់ពីបញ្ហានោះ। យើងមិនចាំបាច់ដឹងពីមូលហេតុនោះទេ។ <b><i>លិខិតបញ្ជាក់របស់គ្រូពេទ្យត្រូវតែបញ្ជាក់ឡើងវិញក្នុងឆ្នាំប្រតិទិននីមួយៗ។</i></b><br/><br/>បង្ហាញឯកសាររបស់អ្នកទៅកាន់តុខាងមុខនៅពេលអ្នកចុះឈ្មោះចូល។]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">ដំណើរការជួរ</string>
+    <string name="info_button_label2">ការទិញនៅក្នុងផាន់ទ្រី</string>
+    <string name="info_text"><![CDATA[មនុស្សអាយុ 65 ឆ្នាំឡើងទៅ និងអ្នកពិការអាចចូលជួរចាប់ពីម៉ោង 1:45។ លេខត្រូវបានចែកនៅម៉ោង 2:00。<br/><br/>គ្រួសារផ្សេងទៀតអាចចូលជួរចាប់ពីម៉ោង 2:15។ ប្រសិនបើជួរអ្នកចាស់/ពិការ មិនទាន់ដំណើរការ អាចពន្យារដល់ 2:30។ លេខចាប់ផ្តើមចែកនៅ 2:30。<br/><br/>មកមុនមិនមានអាទិភាព។ សូមរង់ចាំក្នុងយានយន្តរហូតដល់ម៉ោងរបស់អ្នក。<br/><br/>បន្ទាប់ពីម៉ោង 5:30 មិនមានលេខទៀត។<br/><br/>ប្រហែល 25 នាក់ក្នុងមួយម៉ោង。<br/><br/>ការបំពាននឹងបាត់សេវា។]]></string>
+    <string name="info_text2"><![CDATA[ត្រូវមានប្រវត្តិរូប Link2Feed。<br/><br/>ទៅចុះឈ្មោះនៅពេលហៅ។<br/><br/>ទិញសម្រាប់គ្រួសាររបស់អ្នកប៉ុណ្ណោះ។<br/><br/>មានកំណត់លើទំនិញ។<br/><br/>កុំយករទេះចេញក្រៅ។<br/><br/>សូមចតនៅខាងក្រោយ។]]></string>
+    <string name="language_label">ភាសា</string>
+    <string name="no_client">មិនទាន់កំណត់លេខសម្គាល់អតិថិជន</string>
+    <string name="pantry_hours">ព័ត៌មានផាន់ទ្រី</string>
+    <string name="save_client_and_close">រក្សាទុក និងបិទ</string>
+    <string name="senior_day">ថ្ងៃមនុស្សចាស់</string>
+    <string name="senior_day_notice">បើកនៅថ្ងៃពុธទីបីពីម៉ោង 12:00–2:00 សម្រាប់មនុស្សចាស់ និងអ្នកមានជំងឺ。</string>
+    <string name="settings_button">ការកំណត់</string>
+    <string name="shareTheApp">ចែករំលែកកម្មវិធី</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[ហាងដែលធ្វើឱ្យផាន់ទ្រីកើតឡើង។<br/>សូមអញ្ជើញមកកាន់៖]]></string>
+    <string name="version_label">កំណែ</string>
+    <string name="wallet_error">មិនអាចបើក Google Wallet បានទេ។ សូមព្យាយាមម្តងទៀត។</string>
+    <string name="website_label">4 K.I.D.S. Sake (គេហទំព័រ)</string>
+</resources>

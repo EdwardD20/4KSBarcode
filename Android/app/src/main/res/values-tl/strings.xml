@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Gumawa ng Link2Feed profile.<br/>I-save ang Client ID.]]></string>
+    <string name="client_id_placeholder">Client ID</string>
+    <string name="close_button">Isara</string>
+    <string name="display_mode_barcode">Barcode</string>
+    <string name="display_mode_label">Ipakita bilang</string>
+    <string name="display_mode_qrcode">QR Code</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Maagang Pagpasok</string>
+    <string name="early_entry_text"><![CDATA[Ang <b>Maagang Pagpasok</b> ay isang serbisyo para sa mga taong 65 taong gulang pataas at mga taong nahihirapang tumayo nang matagal. Bibigyan ka ng access sa <b><i>4 K.I.D.S. Sake</i></b> food pantry 30 minuto bago ang pangkalahatang publiko.<br/><br/>Upang ma-access ang serbisyong ito, kailangan mong:<br/><br/>1) Patunayan na ikaw ay hindi bababa sa 65 taong gulang (State ID, driver\'s license, atbp.)<br/><br/>2) Magpakita ng sulat mula sa iyong doktor na nagkukumpirma sa iyong kawalan ng kakayahang tumayo nang matagal. Hindi kwalipikado ang Social Security disability statement o handicap parking permit. Ang sulat ng doktor ay dapat sumusunod sa HIPAA at sadyang ipinapahiwatig ang ganoon. Hindi namin kailangang malaman kung bakit. <b><i>Ang sulat ng doktor ay dapat muling kumpirmahin bawat taon ng kalendaryo.</i></b><br/><br/>Ipakita ang iyong dokumentasyon sa front desk kapag nag-sign in ka.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Proseso ng pila</string>
+    <string name="info_button_label2">Pamimili</string>
+    <string name="info_text"><![CDATA[65+ at may kapansanan mula 1:45.<br/><br/>Iba pa mula 2:15.<br/><br/>Walang benepisyo ang maagang dating.<br/><br/>Pagkatapos ng 5:30 walang numero.]]></string>
+    <string name="info_text2"><![CDATA[Kailangan ang Link2Feed profile.<br/><br/>Magrehistro kapag tinawag.<br/><br/>Para lamang sa sariling pamilya.]]></string>
+    <string name="language_label">Wika</string>
+    <string name="no_client">Walang nakatakdang Client ID</string>
+    <string name="pantry_hours">Impormasyon ng pantry</string>
+    <string name="save_client_and_close">I-save at isara</string>
+    <string name="senior_day">Araw ng Senior</string>
+    <string name="senior_day_notice">Ikatlong Miyerkules para sa seniors.</string>
+    <string name="settings_button">Mga Setting</string>
+    <string name="shareTheApp">Ibahagi ang app</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[Ang tindahan na nagbibigay-daan sa Pantry.<br/>Mangyaring bisitahin kami sa:]]></string>
+    <string name="version_label">Bersyon</string>
+    <string name="wallet_error">Hindi mabuksan ang Google Wallet.</string>
+    <string name="website_label">4 K.I.D.S. Sake (website)</string>
+</resources>

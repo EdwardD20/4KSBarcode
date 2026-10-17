@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Link2Feed 프로필 생성.<br/>고객 ID 저장.]]></string>
+    <string name="client_id_placeholder">고객 ID</string>
+    <string name="close_button">닫기</string>
+    <string name="display_mode_barcode">바코드</string>
+    <string name="display_mode_label">표시 방식</string>
+    <string name="display_mode_qrcode">QR 코드</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">조기 입장</string>
+    <string name="early_entry_text"><![CDATA[<b>조기 입장</b>은 65세 이상의 고령자 및 장시간 서 있는 데 어려움이 있는 분들을 위한 서비스입니다. 일반 대중보다 30분 먼저 <b><i>4 K.I.D.S. Sake</i></b> 푸드 팬트리에 입장하실 수 있습니다.<br/><br/>이 서비스를 이용하려면 다음 중 하나를 수행해야 합니다.<br/><br/>1) 65세 이상임을 증명합니다(주 ID, 운전 면허증 등).<br/><br/>2) 장시간 서 있을 수 없음을 확인하는 의사 소견서를 제출합니다. 사회 보장 장애 증명서나 장애인 주차 허가증은 인정되지 않습니다. 의사 소견서는 HIPAA를 준수해야 하며 단순히 그러한 상태임을 나타내야 합니다. 구체적인 이유는 알 필요가 없습니다. <b><i>의사 소견서는 매년 재확인을 받아야 합니다.</i></b><br/><br/>방문 시 접수처에 서류를 제출해 주세요.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">대기 절차</string>
+    <string name="info_button_label2">쇼핑</string>
+    <string name="info_text"><![CDATA[65세 이상 및 장애인 1:45부터.<br/><br/>일반 2:15부터.<br/><br/>조기 도착 혜택 없음.<br/><br/>5:30 이후 번호 없음.]]></string>
+    <string name="info_text2"><![CDATA[Link2Feed 필요.<br/><br/>호출 시 등록.<br/><br/>가족만 이용.]]></string>
+    <string name="language_label">언어</string>
+    <string name="no_client">고객 ID 없음</string>
+    <string name="pantry_hours">팬트리 정보</string>
+    <string name="save_client_and_close">저장 후 닫기</string>
+    <string name="senior_day">시니어 데이</string>
+    <string name="senior_day_notice">매월 셋째 수요일.</string>
+    <string name="settings_button">설정</string>
+    <string name="shareTheApp">앱 공유</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[팬트리를 가능하게 하는 상점.<br/>방문해 주세요:]]></string>
+    <string name="version_label">버전</string>
+    <string name="wallet_error">Google Wallet을 열 수 없습니다.</string>
+    <string name="website_label">4 K.I.D.S. Sake (웹사이트)</string>
+</resources>

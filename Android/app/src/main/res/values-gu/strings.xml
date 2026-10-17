@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Link2Feed પ્રોફાઇલ બનાવો.<br/>આઈડી સાચવો.]]></string>
+    <string name="client_id_placeholder">ક્લાયન્ટ આઈડી</string>
+    <string name="close_button">બંધ કરો</string>
+    <string name="display_mode_barcode">બારકોડ</string>
+    <string name="display_mode_label">આ રીતે દર્શાવો</string>
+    <string name="display_mode_qrcode">QR કોડ</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">વહેલી એન્ટ્રી</string>
+    <string name="early_entry_text"><![CDATA[<b>વહેલી એન્ટ્રી</b> એ 65 વર્ષ અને તેથી વધુ ઉંમરના વ્યક્તિઓ અને જેમને લાંબા સમય સુધી ઊભા રહેવામાં મુશ્કેલી હોય તેવા લોકો માટેની સેવા છે. તમને સામાન્ય લોકોના 30 મિનિટ પહેલા <b><i>4 K.I.D.S. Sake</i></b> ફૂડ પેન્ટ્રીમાં પ્રવેશ આપવામાં આવશે.<br/><br/>આ સેવાનો લાભ લેવા માટે, તમારે કાં તો:<br/><br/>1) સાબિત કરવું પડશે કે તમારી ઉંમર ઓછામાં ઓછી 65 વર્ષ છે (સ્ટેટ આઈડી, ડ્રાઈવિંગ લાયસન્સ, વગેરે.)<br/><br/>2) તમારા ડૉક્ટરની એક નોંધ રજૂ કરો જે લાંબા સમય સુધી ઊભા રહેવાની તમારી અસમર્થતાની પુષ્ટિ કરે છે. સોશિયલ સિક્યુરિટી ડિસેબિલિટી સ્ટેટમેન્ટ અથવા હેન્ડીકેપ પાર્કિંગ પરમિટ માન્ય ગણાશે નહીં. ડૉક્ટરની નોંધ HIPAA સુસંગત હોવી જોઈએ અને તે ફક્ત તે જ સૂચવે છે. અમારે કારણ જાણવાની જરૂર નથી. <b><i>ડૉક્ટરની નોંધ દર વર્ષે ફરીથી કન્ફર્મ કરાવવી આવશ્યક છે.</i></b><br/><br/>જ્યારે તમે સાઇન ઇન કરો ત્યારે તમારા દસ્તાવેજો ફ્રન્ટ ડેસ્ક પર રજૂ કરો.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">લાઇન પ્રક્રિયા</string>
+    <string name="info_button_label2">ખરીદી</string>
+    <string name="info_text"><![CDATA[65+ અને અક્ષમ 1:45 થી.<br/><br/>બીજા 2:15 થી.<br/><br/>વહેલા આવવાથી લાભ નથી.<br/><br/>5:30 પછી નંબર નથી.]]></string>
+    <string name="info_text2"><![CDATA[Link2Feed જરૂરી.<br/><br/>બુલાવ્યા પછી નોંધણી.<br/><br/>ફક્ત પરિવાર માટે.]]></string>
+    <string name="language_label">ભાષા</string>
+    <string name="no_client">કોઈ ક્લાયન્ટ આઈડી નથી</string>
+    <string name="pantry_hours">પેન્ટ્રી માહિતી</string>
+    <string name="save_client_and_close">સાચવો અને બંધ કરો</string>
+    <string name="senior_day">સિનિયર દિવસ</string>
+    <string name="senior_day_notice">ત્રીજા બુધવારે.</string>
+    <string name="settings_button">સેટિંગ્સ</string>
+    <string name="shareTheApp">એપ શેર કરો</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[એ સ્ટોર જે પેન્ટ્રીને શક્ય બનાવે છે.<br/>કૃપા કરીને અમારી મુલાકાત લો:]]></string>
+    <string name="version_label">આવૃત્તિ</string>
+    <string name="wallet_error">Google Wallet ખોલી શકાયું નથી.</string>
+    <string name="website_label">4 K.I.D.S. Sake (વેબસાઇટ)</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Erstellen Sie ein Link2Feed-Kundenprofil.<br/>Speichern Sie unbedingt Ihre Kunden-ID.]]></string>
+    <string name="client_id_placeholder">Kunden-ID</string>
+    <string name="close_button">Schließen</string>
+    <string name="display_mode_barcode">Barcode</string>
+    <string name="display_mode_label">Anzeigen als</string>
+    <string name="display_mode_qrcode">QR-Code</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Vorzeitiger Einlass</string>
+    <string name="early_entry_text"><![CDATA[<b>Vorzeitiger Einlass</b> ist ein Service für Personen ab 65 Jahren und Personen, die Schwierigkeiten haben, längere Zeit zu stehen. Sie erhalten 30 Minuten vor der allgemeinen Öffentlichkeit Zugang zur <b><i>4 K.I.D.S. Sake</i></b> Speisekammer.<br/><br/>Um diesen Service zu nutzen, müssen Sie entweder:<br/><br/>1) Nachweisen, dass Sie mindestens 65 Jahre alt sind (Personalausweis, Führerschein usw.)<br/><br/>2) Ein ärztliches Attest vorlegen, das Ihre Unfähigkeit bestätigt, längere Zeit zu stehen. Ein Bescheid der Sozialversicherung über Erwerbsminderung oder ein Behindertenparkausweis reicht nicht aus. Das ärztliche Attest sollte HIPAA-konform sein und dies lediglich bestätigen. Wir müssen den Grund nicht wissen. <b><i>Das ärztliche Attest muss in jedem Kalenderjahr erneut bestätigt werden.</i></b><br/><br/>Legen Sie Ihre Unterlagen bei der Anmeldung am Empfang vor.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Ablauf für das Anstellen</string>
+    <string name="info_button_label2">Einkauf im Lager</string>
+    <string name="info_text"><![CDATA[Personen ab 65 Jahren und Kunden mit Behinderung können ab 13:45 eine Schlange bilden. Nummern werden um 14:00 ausgegeben.<br/><br/>Alle anderen Familien dürfen frühestens ab 14:15 eine Schlange bilden. Wenn die Senioren-/Behindertenschlange noch nicht abgearbeitet wurde, kann sich dies bis 14:30 verzögern. Nummern werden ab 14:30 ausgegeben.<br/><br/>Frühes Erscheinen berechtigt nicht zu früherem Service. Bitte warten Sie bis zu Ihrer Zeit im Fahrzeug.<br/><br/>Nach 17:30 werden keine Nummern mehr ausgegeben.<br/><br/>Etwa 25 Kunden pro Stunde.<br/><br/>Regelverstöße führen zum Ausschluss.]]></string>
+    <string name="info_text2"><![CDATA[Alle Kunden benötigen ein Link2Feed-Profil. Haben Sie Ihre Kunden-ID bei der Anmeldung griffbereit.<br/><br/>Wenn Ihre Nummer aufgerufen wird, begeben Sie sich zum Empfang, um Ihren Besuch zu registrieren. Wir benötigen Ihre Kunden-ID und genaue Angaben zum Haushalt, um unsere Dienstleistungen weiterhin allen Kunden anbieten zu können.<br/><br/>Shop only for your own household. Do not attempt to cheat the system and have multiple family members shop separately. You may be asked to leave and not return.<br/><br/>Limits are placed on items so all clients may shop. All food items are “first come, first served” so options may be more limited as distribution moves along. Our apologies.<br/><br/>When you are done shopping, your food will be transferred from the shopping cart to a plastic trolley. Do not take the shopping cart out of the building, use the plastic trolley instead. Our volunteers will assist you and push the plastic trolley outside while you get your vehicle and bring it to the loading zone.<br/><br/>Please park only in the back three rows of the main parking lot. The main lot is reserved for the medical center. The front lot is reserved for workers and other businesses.]]></string>
+    <string name="language_label">Sprache</string>
+    <string name="no_client">Keine Kunden-ID festgelegt</string>
+    <string name="pantry_hours">Informationen zur Ausgabestelle</string>
+    <string name="save_client_and_close">Kunden-ID speichern und schließen</string>
+    <string name="senior_day">Seniorentag</string>
+    <string name="senior_day_notice">Jeden dritten Mittwoch 12:00–14:00 nur für Senioren und medizinisch Bedürftige.</string>
+    <string name="settings_button">Einstellungen</string>
+    <string name="shareTheApp">App teilen</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[Der Laden, der die Speisekammer ermöglicht.<br/>Bitte besuchen Sie uns unter:]]></string>
+    <string name="version_label">Version</string>
+    <string name="wallet_error">Google Wallet konnte nicht geöffnet werden. Bitte erneut versuchen.</string>
+    <string name="website_label">4 K.I.D.S. Sake (Website)</string>
+</resources>

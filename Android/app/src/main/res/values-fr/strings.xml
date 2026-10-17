@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Créez un profil client sur Link2Feed.<br/>Assurez-vous de sauvegarder votre identifiant client.]]></string>
+    <string name="client_id_placeholder">Identifiant client</string>
+    <string name="close_button">Fermer</string>
+    <string name="display_mode_barcode">Code-barres</string>
+    <string name="display_mode_label">Afficher comme</string>
+    <string name="display_mode_qrcode">Code QR</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Entrée anticipée</string>
+    <string name="early_entry_text"><![CDATA[<b>L\'entrée anticipée</b> est un service destiné aux personnes de 65 ans et plus et aux personnes ayant des difficultés à rester debout pendant une période prolongée. Vous aurez accès à la banque alimentaire <b><i>4 K.I.D.S. Sake</i></b> 30 minutes avant le grand public.<br/><br/>Pour accéder à ce service, vous devez soit :<br/><br/>1) Prouver que vous avez au moins 65 ans (carte d\'identité, permis de conduire, etc.)<br/><br/>2) Présenter une note de votre médecin confirmando votre incapacité à rester debout pendant de longues périodes. Une déclaration d\'invalidité de la Sécurité sociale ou un permis de stationnement pour handicapés ne suffit pas. La note du médecin doit être conforme à la norme HIPAA et l\'indiquer simplement. Nous n\'avons pas besoin d\'en connaître la raison. <b><i>La note du médecin doit être reconfirmée chaque année civile.</i></b><br/><br/>Présentez vos documents à la réception lors de votre inscription.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Procédure pour faire la file</string>
+    <string name="info_button_label2">Achats dans le garde-manger</string>
+    <string name="info_text"><![CDATA[Les personnes de 65 ans et plus ainsi que les clients handicapés peuvent commencer à faire la file à partir de 13 h 45. Des numéros leur sont distribués à 14 h.<br/><br/>Toutes les autres familles peuvent commencer à faire la file à partir de 14 h 15. Si la file des personnes âgées ou handicapées n’a pas encore été traitée, cette file peut être retardée jusqu’à 14 h 30. Les numéros sont distribués à partir de 14 h 30.<br/><br/>Arriver tôt ne vous donne pas droit à un service prioritaire, ni aucune autre file pour obtenir des numéros. Tous les clients doivent attendre dans leur véhicule jusqu’à l’heure appropriée.<br/><br/>Tous ceux qui reçoivent un numéro auront l’occasion de magasiner. Après 17 h 30, aucun numéro supplémentaire ne sera distribué.<br/><br/>En général, environ 25 clients peuvent magasiner par heure. Vous pouvez attendre dans votre véhicule, mas vous devez revenir avant que votre numéro ne soit appelé — au plus tard à 17 h 30.<br/><br/>Le respect des règles est essentiel. Courir, pousser ou passer devant les autres entraînera une perte de service pour la journée. Les infractions répétées peuvent entraîner une interdiction permanente de nos services.<br/><br/>Ces règles peuvent être modifiées de temps à autre selon les besoins.]]></string>
+    <string name="info_text2"><![CDATA[Tous les clients doivent avoir un profil sur Link2Feed. Ayez votre identifiant client à portée de main lors de votre arrivée.<br/><br/>Lorsque votre numéro est appelé, présentez-vous au comptoir pour enregistrer votre visite. Nous avons besoin de votre identifiant client et d’informations exactes sur votre foyer pour pouvoir continuer à offrir nos services.<br/><br/>Shop only for your own household. Do not attempt to cheat the system and have multiple family members shop separately. You may be asked to leave and not return.<br/><br/>Limits are placed on items so all clients may shop. All food items are “first come, first served” so options may be more limited as distribution moves along. Our apologies.<br/><br/>When you are done shopping, your food will be transferred from the shopping cart to a plastic trolley. Do not take the shopping cart out of the building, use the plastic trolley instead. Our volunteers will assist you and push the plastic trolley outside while you get your vehicle and bring it to the loading zone.<br/><br/>Please park only in the back three rows of the main parking lot. The main lot is reserved for the medical center. The front lot is reserved for workers and other businesses.]]></string>
+    <string name="language_label">Langue</string>
+    <string name="no_client">Aucun identifiant client défini</string>
+    <string name="pantry_hours">Informations sur la banque alimentaire</string>
+    <string name="save_client_and_close">Enregistrer l’identifiant client et fermer</string>
+    <string name="senior_day">Journée des aînés</string>
+    <string name="senior_day_notice">Nous serons ouverts le troisième mercredi de chaque mois de 12 h à 14 h exclusivement pour les aînés et les personnes ayant un diagnostic médical. Vous devez avoir une carte d’entrée anticipée pour cette journée de magasinage.</string>
+    <string name="settings_button">Paramètres</string>
+    <string name="shareTheApp">Partager l’application</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[Le magasin qui rend la banque alimentaire possible.<br/>S\'il vous plaît venez nous voir à :]]></string>
+    <string name="version_label">Version</string>
+    <string name="wallet_error">Impossible d\'ouvrir Google Wallet. Veuillez réessayer.</string>
+    <string name="website_label">4 K.I.D.S. Sake (site web)</string>
+</resources>

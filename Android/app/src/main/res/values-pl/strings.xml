@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Utwórz profil Link2Feed.<br/>Zapisz swój identyfikator klienta.]]></string>
+    <string name="client_id_placeholder">Identyfikator klienta</string>
+    <string name="close_button">Zamknij</string>
+    <string name="display_mode_barcode">Kod kreskowy</string>
+    <string name="display_mode_label">Wyświetl jako</string>
+    <string name="display_mode_qrcode">Kod QR</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Wcześniejsze wejście</string>
+    <string name="early_entry_text"><![CDATA[<b>Wcześniejsze wejście</b> to usługa dla osób w wieku 65 lat i starszych oraz osób, które mają trudności z staniem przez dłuższy czas. Otrzymasz dostęp do banku żywności <b><i>4 K.I.D.S. Sake</i></b> 30 minut przed ogółem społeczeństwa.<br/><br/>Aby skorzystać z tej usługi, musisz albo:<br/><br/>1) Udowodnić, że masz co najmniej 65 lat (dowód osobisty, prawo jazdy itp.)<br/><br/>2) Przedstawić zaświadczenie od lekarza potwierdzające niezdolność do stania przez dłuższy czas. Oświadczenie o niepełnosprawności z Social Security lub zezwolenie na parkowanie dla niepełnosprawnych nie uprawnia do tej usługi. Zaświadczenie lekarskie powinno być zgodne z HIPAA i po prostu to wskazywać. Nie musimy znać przyczyny. <b><i>Zaświadczenie lekarskie musi być potwierdzane w każdym roku kalendarzowym.</i></b><br/><br/>Przedstaw dokumentację w recepcji podczas rejestracji.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Proces ustawiania się</string>
+    <string name="info_button_label2">Zakupy</string>
+    <string name="info_text"><![CDATA[Seniorzy i osoby niepełnosprawne od 13:45.<br/><br/>Inni od 14:15.<br/><br/>Wcześniejsze przybycie nie daje pierwszeństwa.<br/><br/>Po 17:30 brak numerów.]]></string>
+    <string name="info_text2"><![CDATA[Wymagany profil Link2Feed.<br/><br/>Rejestracja przy wywołaniu.<br/><br/>Tylko dla własnej rodziny.]]></string>
+    <string name="language_label">Język</string>
+    <string name="no_client">Brak identyfikatora klienta</string>
+    <string name="pantry_hours">Informacje o punkcie</string>
+    <string name="save_client_and_close">Zapisz identyfikator i zamknij</string>
+    <string name="senior_day">Dzień seniora</string>
+    <string name="senior_day_notice">Trzecia środa miesiąca tylko dla seniorów.</string>
+    <string name="settings_button">Ustawienia</string>
+    <string name="shareTheApp">Udostępnij aplikację</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[Sklep, dzięki któremu spiżarnia może działać.<br/>Zapraszamy do odwiedzenia nas pod adresem:]]></string>
+    <string name="version_label">Wersja</string>
+    <string name="wallet_error">Nie można otworzyć Google Wallet.</string>
+    <string name="website_label">4 K.I.D.S. Sake (strona)</string>
+</resources>

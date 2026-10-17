@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Create a Link2Feed client profile.<br/>Be sure and save your Client ID.]]></string>
+    <string name="client_id_placeholder">Client ID</string>
+    <string name="close_button">Close</string>
+    <string name="display_mode_barcode">Barcode</string>
+    <string name="display_mode_label">Display as</string>
+    <string name="display_mode_qrcode">QR Code</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Early Entry</string>
+    <string name="early_entry_text"><![CDATA[<b>Early Entry</b> is a service for persons 65 and older and persons who have difficulty standing for an extended period of time. You will be granted access to the <b><i>4 K.I.D.S. Sake</i></b> food pantry 30 minutes before the general public.<br/><br/>To access this service, you must either:<br/><br/>1) Prove you are at least 65 years old (State ID, driver\'s license, etc.)<br/><br/>2) Present a note from your doctor confirming your inability to stand for extended periods of time. A Social Security disability statement or a handicap parking permit does not quality. The doctor’s note should be HIPAA compliant and simply indicate such. We don’t need to know why. <b><i>The doctor’s note must be reconfirmed each calendar year.</i></b><br/><br/>Present your documentation to the front desk when you sign in.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Process for lining up</string>
+    <string name="info_button_label2">In pantry shopping</string>
+    <string name="info_text"><![CDATA[Persons 65 or older and disabled clients may form a line starting at 1:45. Numbers are passed out to these clients at 2:00.<br/><br/>All other families may start to form a line no earlier than 2:15. If the elderly/disabled line has NOT been processed, this line may be delayed until 2:30. Numbers are passed out to all other families beginning at 2:30.<br/><br/>Arriving early does NOT entitle you to earlier services, nor does any other lines formed to obtain numbers. All clients are asked to wait in their vehicles until their appropriate time.<br/><br/>All who receive a number will be offered the opportunity to shop. After 5:30, NO more numbers are passed out.<br/><br/>Typically, about 25 clients are able to shop per hour. You may wait in your vehicle, but you must return before your number is called—no later than 5:30.<br/><br/>Following the rules is essential. Running, pushing, or jumping in front of others will result in a loss of service for that day. Repeated offenses will result in a permanent ban on our services.<br/><br/>These rules may be changed from time to time as necessary.]]></string>
+    <string name="info_text2"><![CDATA[All clients must have a profile with Link2Feed. Have your Client ID handy when you report.<br/><br/>When your number is called, step to the front desk to register your visit. We need your Client ID and accurate household information so we can continue to provide services to all of our clients.<br/><br/>Shop only for your own household. Do not attempt to cheat the system and have multiple family members shop separately. You may be asked to leave and not return.<br/><br/>Limits are placed on items so all clients may shop. All food items are “first come, first served” so options may be more limited as distribution moves along. Our apologies.<br/><br/>When you are done shopping, your food will be transferred from the shopping cart to a plastic trolley. Do not take the shopping cart out of the building, use the plastic trolley instead. Our volunteers will assist you and push the plastic trolley outside while you get your vehicle and bring it to the loading zone.<br/><br/>Please park only in the back three rows of the main parking lot. The main lot is reserved for the medical center. The front lot is reserved for workers and other businesses.]]></string>
+    <string name="language_label">Language</string>
+    <string name="no_client">No Client ID set</string>
+    <string name="pantry_hours">Pantry Information</string>
+    <string name="save_client_and_close">Save Client ID and Close</string>
+    <string name="senior_day">Senior Day</string>
+    <string name="senior_day_notice">We will be open on the third Wednesday of each month from 12:00–2:00pm exclusively for seniors and those with medical diagnoses. You must have one of our early entry cards for this shopping day.</string>
+    <string name="settings_button">Settings</string>
+    <string name="shareTheApp">Share The App</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[The store that makes the Pantry happen.<br/>Please visit us at:]]></string>
+    <string name="version_label">Version</string>
+    <string name="wallet_error">Could not open Google Wallet. Please try again.</string>
+    <string name="website_label">4 K.I.D.S. Sake (website)</string>
+</resources>

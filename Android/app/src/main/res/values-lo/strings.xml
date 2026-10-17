@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[ສ້າງ Link2Feed profile.<br/>ບັນທຶກ ID ຂອງທ່ານ.]]></string>
+    <string name="client_id_placeholder">ID ລູກຄ້າ</string>
+    <string name="close_button">ປິດ</string>
+    <string name="display_mode_barcode">ບາໂຄດ</string>
+    <string name="display_mode_label">ສະແດງເປັນ</string>
+    <string name="display_mode_qrcode">ລະຫັດ QR</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">ການເຂົ້າກ່ອນ</string>
+    <string name="early_entry_text"><![CDATA[<b>ການເຂົ້າກ່ອນ</b> ແມ່ນບໍລິການສຳລັບບຸກຄົນທີ່ມີອາຍຸ 65 ປີຂຶ້ນໄປ ແລະ ບຸກຄົນທີ່ມີຄວາມຫຍຸ້ງຍາກໃນການຢືນເປັນເວລາດົນນານ. ທ່ານຈະໄດ້ຮັບອະນຸຍາດໃຫ້ເຂົ້າໄປໃນ <b><i>4 K.I.D.S. Sake</i></b> ຫ້ອງອາຫານ 30 ນາທີກ່ອນສາທາລະນະຊົນທົ່ວໄປ.<br/><br/>ເພື່ອເຂົ້າເຖິງບໍລິການນີ້, ທ່ານຕ້ອງ:<br/><br/>1) ພິສູດວ່າທ່ານມີອາຍຸຢ່າງໜ້ອຍ 65 ປີ (ບັດປະຈຳຕົວ, ໃບຂັບຂີ່, ແລະອື່ນໆ.)<br/><br/>2) ສະແດງໃບຢັ້ງຢືນຈາກທ່ານໝໍທີ່ຢືນຢັນວ່າທ່ານບໍ່ສາມາດຢືນເປັນເວລາດົນນານໄດ້. ໃບຢັ້ງຢືນຄວາມພິການຈາກປະກັນສັງຄົມ ຫຼື ໃບອະນຸຍາດບ່ອນຈອດລົດຄົນພິການແມ່ນບໍ່ສາມາດໃຊ້ໄດ້. ໃບຢັ້ງຢືນຂອງທ່ານໝໍຄວນສອດຄ່ອງກັບ HIPAA ແລະພຽງແຕ່ລະບຸແນວນັ້ນ. ພວກເຮົາບໍ່ຈຳເປັນຕ້ອງຮູ້ເຫດຜົນ. <b><i>ໃບຢັ້ງຢືນຂອງທ່ານໝໍຕ້ອງໄດ້ຮັບການຢັ້ງຢືນຄືນໃໝ່ໃນແຕ່ລະປີປະຕິທິນ.</i></b><br/><br/>ສະແດງເອກະສານຂອງທ່ານຢູ່ທີ່ເຄົາເຕີດ້ານໜ້າເມື່ອທ່ານລົງທະບຽນເຂົ້າ.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">ຂັ້ນຕອນການຕໍ່ແຖວ</string>
+    <string name="info_button_label2">ຊື້ໃນ pantry</string>
+    <string name="info_text"><![CDATA[65+ ແລະຜູ້ພິການ 1:45.<br/><br/>ອື່ນໆ 2:15.<br/><br/>ມາໄວບໍ່ໄດ້ປະໂຫຍດ.<br/><br/>5:30 ຫຼັງຈາກນັ້ນບໍ່ມີເລກ.]]></string>
+    <string name="info_text2"><![CDATA[ຕ້ອງມີ Link2Feed.<br/><br/>ລົງທະບຽນເມື່ອຖືກເອີ້ນ.<br/><br/>ສຳລັບຄອບຄົວຕົນເเอง.]]></string>
+    <string name="language_label">ພາສາ</string>
+    <string name="no_client">ບໍ່ມີ ID</string>
+    <string name="pantry_hours">ຂໍ້ມູນ pantry</string>
+    <string name="save_client_and_close">ບັນທຶກ ແລະ ປິດ</string>
+    <string name="senior_day">ວັນຜູ້ເຖົ້າ</string>
+    <string name="senior_day_notice">ວັນພຸດທີ 3 ຈາກ 12:00–2:00 ສຳລັບຜູ້ເຖົ້າ。</string>
+    <string name="settings_button">ການຕັ້ງຄ່າ</string>
+    <string name="shareTheApp">ແບ່ງປັນແອັບ</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[ຮ້ານທີ່ເຮັດໃຫ້ pantry ເກີດຂຶ້ນ.<br/>ກະລຸນາມາຢ້ຽມຢາມພວກເຮົາທີ່:]]></string>
+    <string name="version_label">ເວີຊັນ</string>
+    <string name="wallet_error">ບໍ່ສາມາດເປີດ Google Wallet ໄດ້。</string>
+    <string name="website_label">4 K.I.D.S. Sake (ເວັບໄຊ)</string>
+</resources>

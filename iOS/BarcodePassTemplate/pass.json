@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.org.danleys.4KSBarcode",
+  "serialNumber": "__SERIAL__",
+  "teamIdentifier": "7WNRPT262U",
+  "organizationName": "4 K.I.D.S. Sake",
+  "description": "4KSBarcode",
+  "logoText": "4 K.I.D.S. Sake",
+  "foregroundColor": "rgb(255, 255, 255)",
+  "backgroundColor": "rgb(255,0,0)",
+  "locations" : [
+     {
+       "latitude" : 41.68296,
+       "longitude" : -88.07794,
+       "relevantText" : "Welcome to the 4 K.I.D.S. Sake Food Pantry"
+     },
+     {
+       "latitude" : 41.681,
+       "longitude" : -88.130,
+       "relevantText" : "Welcome to the Feel Good Deals Retail Store"
+     }
+   ],
+   "storeCard" : {
+    "primaryFields" : [
+      {
+        "key" : "ClientID",
+        "label" : "",
+        "value" : ""
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "street",
+        "label": "Address",
+        "value": "339 Remington Blvd"
+      },
+      {
+        "key": "city",
+        "label": "City",
+        "value": "Bolingbrook, IL 60440"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "pantry",
+        "label": "Food Pantry",
+        "value": "339 Remington Blvd\nBolingbrook, IL 60440"
+      },
+      {
+        "key": "store",
+        "label": "Feel Good Deals Retail Store",
+        "value": "505 S Weber Rd Unit 315\nBolingbrook, IL 60490"
+      }
+    ]
+  },
+  "barcodes": [
+  	{
+      "format": "PKBarcodeFormatCode128",
+      "message": "__SERIAL__",
+      "altText": "__SERIAL__",
+      "messageEncoding": "iso-8859-1"
+    }
+  ]
+}

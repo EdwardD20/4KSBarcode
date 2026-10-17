@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Tạo hồ sơ Link2Feed.<br/>Lưu ID khách hàng.]]></string>
+    <string name="client_id_placeholder">ID khách hàng</string>
+    <string name="close_button">Đóng</string>
+    <string name="display_mode_barcode">Mã vạch</string>
+    <string name="display_mode_label">Hiển thị dưới dạng</string>
+    <string name="display_mode_qrcode">Mã QR</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Vào cửa sớm</string>
+    <string name="early_entry_text"><![CDATA[<b>Vào cửa sớm</b> là dịch vụ dành cho những người từ 65 tuổi trở lên và những người gặp khó khăn khi đứng trong thời gian dài. Bạn sẽ được phép vào kho thực phẩm <b><i>4 K.I.D.S. Sake</i></b> 30 phút trước công chúng.<br/><br/>Để sử dụng dịch vụ này, bạn phải:<br/><br/>1) Chứng minh bạn ít nhất 65 tuổi (ID tiểu bang, bằng lái xe, v.v.)<br/><br/>2) Xuất trình giấy xác nhận của bác sĩ về việc bạn không thể đứng trong thời gian dài. Giấy chứng nhận khuyết tật của An sinh Xã hội hoặc giấy phép đậu xe dành cho người khuyết tật không đủ điều kiện. Giấy xác nhận của bác sĩ phải tuân thủ HIPAA và chỉ cần nêu rõ như vậy. Chúng tôi không cần biết lý do tại sao. <b><i>Giấy xác nhận của bác sĩ phải được xác nhận lại mỗi năm dương lịch.</i></b><br/><br/>Xuất trình giấy tờ của bạn tại quầy lễ tân khi bạn đăng ký vào.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Quy trình xếp hàng</string>
+    <string name="info_button_label2">Mua sắm</string>
+    <string name="info_text"><![CDATA[65+ và người khuyết tật từ 1:45.<br/><br/>Người khác từ 2:15.<br/><br/>Không ưu tiên đến sớm.<br/><br/>Sau 5:30 không phát số.]]></string>
+    <string name="info_text2"><![CDATA[Cần Link2Feed.<br/><br/>Đăng ký khi được gọi.<br/><br/>Chỉ cho gia đình.]]></string>
+    <string name="language_label">Ngôn ngữ</string>
+    <string name="no_client">Chưa đặt ID khách hàng</string>
+    <string name="pantry_hours">Thông tin pantry</string>
+    <string name="save_client_and_close">Lưu và đóng</string>
+    <string name="senior_day">Ngày người cao tuổi</string>
+    <string name="senior_day_notice">Thứ Tư tuần thứ ba.</string>
+    <string name="settings_button">Cài đặt</string>
+    <string name="shareTheApp">Chia sẻ ứng dụng</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[Cửa hàng làm cho Pantry hoạt động.<br/>Vui lòng ghé thăm chúng tôi tại:]]></string>
+    <string name="version_label">Phiên bản</string>
+    <string name="wallet_error">Không mở được Google Wallet.</string>
+    <string name="website_label">4 K.I.D.S. Sake (trang web)</string>
+</resources>

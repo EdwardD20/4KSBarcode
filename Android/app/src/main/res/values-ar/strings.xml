@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[أنشئ ملف عميل في Link2Feed.<br/>تأكد من حفظ رقم هوية العميل الخاص بك.]]></string>
+    <string name="client_id_placeholder">معرّف العميل</string>
+    <string name="close_button">إغلاق</string>
+    <string name="display_mode_barcode">باركد</string>
+    <string name="display_mode_label">عرض كـ</string>
+    <string name="display_mode_qrcode">رمز QR</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">الدخول المبكر</string>
+    <string name="early_entry_text"><![CDATA[<b>الدخول المبكر</b> هي خدمة للأشخاص الذين تبلغ أعمارهم 65 عاماً أو أكبر والأشخاص الذين يجدون صعوبة في الوقوف لفترات طويلة. سيتم منحك حق الدخول إلى مخزن طعام <b><i>4 K.I.D.S. Sake</i></b> قبل 30 دقيقة من عامة الجمهور.<br/><br/>للحصول على هذه الخدمة، يجب عليك إما:<br/><br/>1) إثبات أن عمرك 65 عاماً على الأقل (بطاقة هوية حكومية، رخصة قيادة، إلخ.)<br/><br/>2) تقديم تقرير من طبيبك يؤكد عدم قدرتك على الوقوف لفترات طويلة. لا يعتد ببيان عجز الضمان الاجتماعي أو تصريح وقوف ذوي الاحتياجات الخاصة. يجب أن يكون تقرير الطبيب متوافقاً مع معايير HIPAA ويشير ببساطة إلى ذلك. لسنا بحاجة لمعرفة السبب. <b><i>يجب إعادة تأكيد تقرير الطبيب في كل سنة ميلادية.</i></b><br/><br/>قدم وثائقك إلى المكتب الأمامي عند تسجيل الدخول.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">إجراءات الاصطفاف</string>
+    <string name="info_button_label2">التسوق داخل المخزن</string>
+    <string name="info_text"><![CDATA[يمكن للأشخاص الذين تبلغ أعمارهم 65 عامًا فأكثر والعملاء ذوي الإعاقة تكوين طابور بدءًا من الساع1:45. تُوزّع الأرقام على هؤلاء العملاء في الساعة 2:00.<br/><br/>يمكن لجميع العائلات الأخرى البدء في تكوين الطابور في وقت لا يسبق الساعة 2:15. إذا لم تتم معالجة طابور كبار السن/ذوي الإعاقة، فقد يتأخر هذا الطابور حتى الساعة 2:30. تُوزّع الأرقام على بقية العائلات بدءًا من الساعة 2:30.<br/><br/>الوصول مبكرًا لا يمنحك الحق في الحصول على خدمة مبكرة، ولا أي طوابير أخرى تم تشكيلها للحصول على الأرقام. يُطلب من جميع العملاء الانتظار في سياراتهم حتى يحين وقتهم المناسب.<br/><br/>كل من يتلقى رقمًا ستتاح له فرصة التسوق. بعد الساعة 5:30، لن تُوزّع المزيد من الأرقام.<br/><br/>عادةً ما يتمكن حوالي 25 عميلًا من التسوق في الساعة. يمكنك الانتظار في سيارتك، ولكن يجب أن تعود قبل مناداة رقمك — في موعد أقصاه 5:30.<br/><br/>اتباع القواعد أمر ضروري. الجري أو الدفع أو تجاوز الآخرين سيؤدي إلى فقدان الخدمة في ذلك اليوم. المخالفات المتكررة قد تؤدي إلى حظر دائم من خدماتنا.<br/><br/>قد يتم تعديل هذه القواعد من وقت لآخر حسب الحاجة.]]></string>
+    <string name="info_text2"><![CDATA[يجب على جميع العملاء أن يكون لديهم ملف في Link2Feed. احرص على أن يكون رقم هوية العميل الخاص بك في متناول اليد عند الوصول.<br/><br/>عندما يتم مناداة رقمك، توجه إلى المكتب الأمامي لتسجيل زيارتك. نحتاج إلى رقم هوية العميل ومعلومات دقيقة عن الأسرة حتى نتمكن من الاستمرار في تقديم الخدمات لجميع عملائنا.<br/><br/>Shop only for your own household. Do not attempt to cheat the system and have multiple family members shop separately. You may be asked to leave and not return.<br/><br/>Limits are placed on items so all clients may shop. All food items are “first come, first served” so options may be more limited as distribution moves along. Our apologies.<br/><br/>When you are done shopping, your food will be transferred from the shopping cart to a plastic trolley. Do not take the shopping cart out of the building, use the plastic trolley instead. Our volunteers will assist you and push the plastic trolley outside while you get your vehicle and bring it to the loading zone.<br/><br/>Please park only in the back three rows of the main parking lot. The main lot is reserved for the medical center. The front lot is reserved for workers and other businesses.]]></string>
+    <string name="language_label">اللغة</string>
+    <string name="no_client">لم يتم تعيين معرّف العميل</string>
+    <string name="pantry_hours">معلومات عن المخزن</string>
+    <string name="save_client_and_close">احفظ معرّف العميل وأغلق</string>
+    <string name="senior_day">يوم كبار السن</string>
+    <string name="senior_day_notice">سنكون مفتوحين في الأربعاء الثالث من كل شهر من الساعة 12:00 إلى 2:00 ظهرًا حصريًا لكبار السن والأشخاص الذين لديهم تشخيصات طبية. يجب أن يكون لديك بطاقة دخول مبكر لهذا اليوم المخصص للتسوق.</string>
+    <string name="settings_button">الإعدادات</string>
+    <string name="shareTheApp">مشاركة التطبيق</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[المتجر الذي يجعل المخزن الغذائي ممكناً.<br/>يرجى زيارتنا في:]]></string>
+    <string name="version_label">الإصدار</string>
+    <string name="wallet_error">تعذّر فتح Google Wallet. يرجى المحاولة مرة أخرى.</string>
+    <string name="website_label">4 K.I.D.S. Sake (الموقع الإلكتروني)</string>
+</resources>

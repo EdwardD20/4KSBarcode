@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Crie um perfil de cliente no Link2Feed.<br/>Certifique-se de salvar seu ID de Cliente.]]></string>
+    <string name="client_id_placeholder">ID do Cliente</string>
+    <string name="close_button">Fechar</string>
+    <string name="display_mode_barcode">Código de barras</string>
+    <string name="display_mode_label">Exibir como</string>
+    <string name="display_mode_qrcode">Código QR</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Entrada antecipada</string>
+    <string name="early_entry_text"><![CDATA[<b>Entrada antecipada</b> é um serviço para pessoas com 65 anos ou mais e pessoas que têm dificuldade em ficar de pé por um longo período de tempo. Você terá acesso à despensa de alimentos <b><i>4 K.I.D.S. Sake</i></b> 30 minutos antes do público em geral.<br/><br/>Para aceder a este serviço, deve:<br/><br/>1) Provar que tem pelo menos 65 anos (cartão de identidade, carta de condução, etc.)<br/><br/>2) Apresentar uma nota do seu médico confirmando a sua incapacidade de permanecer de pé por longos períodos de tempo. Uma declaração de invalidez da Segurança Social ou uma autorização de estacionamento para deficientes não é válida. A nota do médico deve estar em conformidade com a HIPAA e simplesmente indicar tal facto. Não precisamos de saber porquê. <b><i>A nota do médico deve ser reconfirmada a cada ano civil.</i></b><br/><br/>Apresente a sua documentação na receção quando se registar.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Processo de formação de fila</string>
+    <string name="info_button_label2">Compras na despensa</string>
+    <string name="info_text"><![CDATA[Pessoas com 65 anos ou mais e clientes com deficiência podem formar fila a partir das 13:45. Os números são distribuídos a esses clientes às 14:00.<br/><br/>Todas as outras famílias podem começar a formar fila não antes das 14:15. Se a fila de idosos/deficientes NÃO tiver sido processada, esta fila pode ser adiada até às 14:30. Os números são distribuídos a todas as outras famílias a partir das 14:30.<br/><br/>Chegar cedo NÃO dá direito a atendimento antecipado, nem qualquer otra fila formada para obter números. Todos os clientes devem permanecer em seus veículos até o horário apropriado.<br/><br/>Todos que receberem um número terão a oportunidade de fazer compras. Após as 17:30, NÃO serão distribuídos mais números.<br/><br/>Normalmente, cerca de 25 clientes conseguem fazer compras por hora. Você pode aguardar em seu veículo, mas deve retornar antes que seu número seja chamado—no máximo até às 17:30.<br/><br/>Seguir as regras é essencial. Correr, empurrar ou furar a fila resultará na perda do atendimento naquele dia. Infrações repetidas resultarão em banimento permanente dos nossos servicios.<br/><br/>Estas regras podem ser alteradas de tempos em tempos conforme necessário.]]></string>
+    <string name="info_text2"><![CDATA[Todos os clientes devem ter um perfil no Link2Feed. Tenha seu ID de Cliente em mãos ao se apresentar.<br/><br/>Quando seu número for chamado, dirija-se à recepção para registrar sua visita. Precisamos do seu ID de Cliente e de informações corretas sobre o seu agregado familiar para continuarmos a prestar serviços a todos os clientes.<br/><br/>Shop only for your own household. Do not attempt to cheat the system and have multiple family members shop separately. You may be asked to leave and not return.<br/><br/>Limits are placed on items so all clients may shop. All food items are “first come, first served” so options may be more limited as distribution moves along. Our apologies.<br/><br/>When you are done shopping, your food will be transferred from the shopping cart to a plastic trolley. Do not take the shopping cart out of the building, use the plastic trolley instead. Our volunteers will assist you and push the plastic trolley outside while you get your vehicle and bring it to the loading zone.<br/><br/>Please park only in the back three rows of the main parking lot. The main lot is reserved for the medical center. The front lot is reserved for workers and other businesses.]]></string>
+    <string name="language_label">Idioma</string>
+    <string name="no_client">Nenhum ID de Cliente definido</string>
+    <string name="pantry_hours">Informações da despensa</string>
+    <string name="save_client_and_close">Salvar ID do Cliente e fechar</string>
+    <string name="senior_day">Dia do Idoso</string>
+    <string name="senior_day_notice">Estaremos abertos na terceira quarta-feira de cada mês, das 12:00 às 14:00, exclusivamente para idosos e pessoas com diagnósticos médicos. É necessário possuir um dos nossos cartões de entrada antecipada para este dia de compras.</string>
+    <string name="settings_button">Configurações</string>
+    <string name="shareTheApp">Compartilhar o aplicativo</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[A loja que faz a Despensa acontecer.<br/>Por favor, visite-nos em:]]></string>
+    <string name="version_label">Versão</string>
+    <string name="wallet_error">Não foi possível abrir o Google Wallet. Tente novamente.</string>
+    <string name="website_label">4 K.I.D.S. Sake (site)</string>
+</resources>

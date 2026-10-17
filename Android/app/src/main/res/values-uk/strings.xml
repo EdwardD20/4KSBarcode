@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="app_title">4 K.I.D.S. Sake Food Pantry</string>
+    <string name="client_enrollment"><![CDATA[Створіть профіль Link2Feed.<br/>Збережіть свій ідентифікатор клієнта.]]></string>
+    <string name="client_id_placeholder">Ідентифікатор клієнта</string>
+    <string name="close_button">Закрити</string>
+    <string name="display_mode_barcode">Штрих-код</string>
+    <string name="display_mode_label">Відображати як</string>
+    <string name="display_mode_qrcode">QR-код</string>
+    <string name="early_entry_card"><![CDATA[EARLY ENTRY CLIENT CARD: ?????<br/><br/>Expires on: ~~~~~<br/><br/>Client: _____<br/><br/>Express entry is available only for arrivals between 2:00 PM and 2:30 PM. Arrivals after this window will be numbered in the order received, alongside other clients.<br/><br/><b>Early entry for medical reasons requires a doctor’s note.</b><br/><br/>This card is non-transferable.<br/><br/>Date issued: <b>-----</b>]]></string>
+    <string name="early_entry_label">Ранній вхід</string>
+    <string name="early_entry_text"><![CDATA[<b>Ранній вхід</b> — це послуга для осіб віком від 65 років, а також осіб, яким важко стояти протягом тривалого періоду часу. Вам буде надано доступ до пункту видачі продуктів <b><i>4 K.I.D.S. Sake</i></b> за 30 хвилин до загального відкриття.<br/><br/>Щоб скористатися цією послугою, ви повинні:<br/><br/>1) Довести, що вам принаймні 65 років (посвідчення особи, водійські права тощо)<br/><br/>2) Надати довідку від лікаря, що підтверджує вашу нездатність стояти тривалий час. Заява про інвалідність від служби соціального захисту або дозвіл на паркування для інвалідів не дають права на цю послугу. Довідка від лікаря повинна відповідати вимогам HIPAA і просто вказувати на це. Нам не потрібно знати причину. <b><i>Довідку від лікаря необхідно підтверджувати кожного календарного року.</i></b><br/><br/>Пред’явіть документацію на стійці реєстрації під час запису.]]></string>
+    <string name="feel_good_deals">Feel Good Deals</string>
+    <string name="info_button_label">Порядок черги</string>
+    <string name="info_button_label2">Покупки</string>
+    <string name="info_text"><![CDATA[Особи 65+ та люди з інвалідністю з 1:45.<br/><br/>Інші з 2:15.<br/><br/>Ранній прихід не дає переваг.<br/><br/>Після 17:30 номери не видаються.]]></string>
+    <string name="info_text2"><![CDATA[Потрібен профіль Link2Feed.<br/><br/>Реєстрація при виклику.<br/><br/>Лише для своєї родини.]]></string>
+    <string name="language_label">Мова</string>
+    <string name="no_client">Ідентифікатор клієнта не встановлено</string>
+    <string name="pantry_hours">Інформація про пункт</string>
+    <string name="save_client_and_close">Зберегти ідентифікатор і закрити</string>
+    <string name="senior_day">День для літніх</string>
+    <string name="senior_day_notice">Третя середа місяця для літніх та медичних випадків.</string>
+    <string name="settings_button">Налаштування</string>
+    <string name="shareTheApp">Поділитися застосунком</string>
+    <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>
+    <string name="splash_text"><![CDATA[Магазин, завдяки якому працює пункт видачі продуктів.<br/>Будь ласка, завітайте до нас за адресою:]]></string>
+    <string name="version_label">Версія</string>
+    <string name="wallet_error">Не вдалося відкрити Google Wallet.</string>
+    <string name="website_label">4 K.I.D.S. Sake (вебсайт)</string>
+</resources>

@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Simple circle background -->
+    <path
+        android:fillColor="#1877F2"
+        android:pathData="M12,0A12,12 0,1 1,12,24A12,12 0,0 1,12,0Z" />
+    <!-- Stylized 'f'; sized to read well at small dp -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="nonZero"
+        android:pathData="M13.1,19L13.1,12.8h2.05l0.31,-2.39h-2.36V8.5c0,-0.69 0.19,-1.16 1.17,-1.16h1.25V5.23c-0.22,-0.03 -0.98,-0.09 -1.86,-0.09c-1.84,0 -3.09,1.12 -3.09,3.19v1.56H8.64v2.39h2.03V19h2.43z" />
+</vector>
