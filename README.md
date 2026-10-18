@@ -5,7 +5,7 @@ The intent is to simply record the Client ID in a barcode format (Code128 aka 3o
  The thought is that people lose, forget, or wash their paper cards with their Client ID number, but not their phones.
  This works up to the point where phones are charged and not left in their vehicles.
 
-The app's existi in both iOS (Apple) and Android (Google) app stores.
+The app's exist in both iOS (Apple) and Android (Google) app stores.
 
 These apps are released as public domain however they are current signed using my personal development accounts with Apple and Google.
 These app also attempt to use the Wallet features of the respective platforms.
