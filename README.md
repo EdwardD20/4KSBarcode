@@ -19,6 +19,10 @@ The 4 K.I.D.S. Sake Food Pantry is where I volunteer.
  This version adds additional features specifically for the 4 K.I.D.S. Sake non-profit. 
  The barcode presented can also be used at any Link2Feed location but has information that is not pertinent to other distribution locations.
 
+App Store: https://apps.apple.com/app/4-k-i-d-s-sake-food-pantry/id6753714955
+
+Google Play Store: https://play.google.com/store/apps/details?id=org.danleys.fourksbarcode
+
 Permission from any of the 3 organizations was not obtained for the creation these apps.
 
 https://solvehungertoday.org
