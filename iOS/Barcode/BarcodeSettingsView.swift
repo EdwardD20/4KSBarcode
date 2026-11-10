@@ -18,16 +18,14 @@ struct BarcodeSettingsView: View {
     var isEmbedded: Bool = false
     @FocusState private var isClientIdFocused: Bool
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.colorScheme) private var colorScheme
     @Environment(\.locale) private var locale
 
     @State private var editingClientId: String = ""
     @State private var showingSafari = false
     @State private var url: String = ""
     @State private var showingScanner: Bool = false
-    @State private var showingInfo: Bool = false
     @State private var shareTheApp: Bool = false
-    @State private var currentInfoButton: Int = 0
+    @State private var selectedInfo: InfoSheetContent?
     @State private var showingEarlyEntry: Bool = false
 
 
@@ -39,28 +37,6 @@ struct BarcodeSettingsView: View {
         return "?.?"
     } // appVersion
 
-    private var computedInfoTitle: LocalizedStringKey {
-        switch currentInfoButton {
-        case 1:
-            return "lining_up_label"
-        case 2:
-            return "shopping_label"
-        default:
-            return ""
-        }
-    }
-
-    private var computedInfoText: LocalizedStringKey {
-        switch currentInfoButton {
-        case 1:
-            return "lining_up_text"
-        case 2:
-            return "shopping_text"
-        default:
-            return ""
-        }
-    }
-
     var body: some View {
         VStack(spacing: 0) {
             // --- Logo + Version ---
@@ -70,18 +46,21 @@ struct BarcodeSettingsView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 160)
+                        .background(Color.red)
                         .padding(.top, 12)
 
                     Text("\(NSLocalizedString("version_label", comment: "")) \(appVersion)")
                         .font(.system(size: 10))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.black)
                 } // VStack
+                .frame(maxWidth: .infinity)
+                .background(Color.red)
             } // if
 
             NavigationView {
                 ZStack {
-                    // Dynamic background color based on color scheme
-                    (colorScheme == .dark ? Color.black : Color.white)
+                    // Fixed red background for the app theme
+                    Color.red
                         .ignoresSafeArea()
 
                     Form {
@@ -93,6 +72,9 @@ struct BarcodeSettingsView: View {
                                     text: $editingClientId
                                 )
                                 .focused($isClientIdFocused)
+                                .foregroundStyle(.black)
+                                .padding(8)
+                                .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
                                 .keyboardType(.numberPad)
                                 .textInputAutocapitalization(.never)
                                 .autocorrectionDisabled(true)
@@ -100,27 +82,26 @@ struct BarcodeSettingsView: View {
                                     let digits = newValue.filter { $0.isNumber }
 
                                     editingClientId = digits
-                                    model.clientId = digits
-                                    model.save()
-                                    saveClientID(digits)
                                 } // onChange
 
                                 Button(action: { showingScanner = true }) {
                                     Image(systemName: "camera.viewfinder")
                                         .font(.title3)
-                                        .foregroundColor(.accentColor)
-                                        .padding(.trailing, 4)
+                                        .foregroundColor(.black)
+                                        .padding(8)
+                                        .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
                                 } // Button
+                                .buttonStyle(.plain)
                                 .accessibilityLabel(Text("Scan Barcode"))
 
                             } // HStack
                         } // Section
-                        .listRowBackgroundModifier(colorScheme: colorScheme)
+                        .listRowBackgroundModifier()
                         .padding(.vertical, -8)
 
                         // === Save button ===
                         Section {
-                            Button(LocalizedStringKey(isEmbedded ? "save_client_embedded_label" : "save_client_label")) {
+                            Button {
                                 let digits = editingClientId.filter { $0.isNumber }
 
                                 model.clientId = digits
@@ -130,14 +111,18 @@ struct BarcodeSettingsView: View {
                                 if !isEmbedded {
                                     dismiss()
                                 }
+                            } label: {
+                                Text(LocalizedStringKey(isEmbedded ? "save_client_embedded_label" : "save_client_label"))
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.white)
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 8)
+                                    .background(Color.black, in: RoundedRectangle(cornerRadius: 8))
                             } // Button
-                            .foregroundColor(.white)
-                            .buttonStyle(.borderedProminent)
-                            .tint(.red)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .listRowBackgroundModifier(colorScheme: colorScheme)
+                            .buttonStyle(.plain)
+                            .listRowBackground(Color.red)
                         } // Section
-                        .padding(.bottom, -12)
 
                         // === All other buttons ===
                         Section {
@@ -151,9 +136,8 @@ struct BarcodeSettingsView: View {
                                     .frame(maxWidth: .infinity)
                                     .padding(.vertical, 8)
                             } // Button
-                            .listRowBackgroundModifier(colorScheme: colorScheme)
+                            .listRowBackgroundModifier()
                         } // Section
-                        .padding(.top, -12)
 
                         Section {
                             Button(LocalizedStringKey("website_label")) {
@@ -161,31 +145,29 @@ struct BarcodeSettingsView: View {
                                 showingSafari = true
                             } // Button
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .listRowBackgroundModifier(colorScheme: colorScheme)
+                            .listRowBackgroundModifier()
                         } // Section
                         .padding(.vertical, -8)
 
                         Section {
                             Button {
-                                currentInfoButton = 1
-                                showingInfo = true
+                                selectedInfo = .liningUp
                             } label: {
                                 Text(LocalizedStringKey("lining_up_label"))
                             } // Button
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .listRowBackgroundModifier(colorScheme: colorScheme)
+                            .listRowBackgroundModifier()
                         } // Section
                         .padding(.vertical, -8)
 
                         Section {
                             Button {
-                                currentInfoButton = 2
-                                showingInfo = true
+                                selectedInfo = .shopping
                             } label: {
                                 Text(LocalizedStringKey("shopping_label"))
                             } // Button
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .listRowBackgroundModifier(colorScheme: colorScheme)
+                            .listRowBackgroundModifier()
                         } // Section
                         .padding(.vertical, -8)
 
@@ -194,19 +176,18 @@ struct BarcodeSettingsView: View {
                                 showingEarlyEntry = true
                             }
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .listRowBackgroundModifier(colorScheme: colorScheme)
+                            .listRowBackgroundModifier()
                         } // Section
                         .padding(.vertical, -8)
 
                         Section {
                             Button {
-                                currentInfoButton = 3
                                 shareTheApp = true
                             } label: {
                                 Text(LocalizedStringKey("ShareTheApp_label"))
                             } // Button
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .listRowBackgroundModifier(colorScheme: colorScheme)
+                            .listRowBackgroundModifier()
                         } // Section
                         .padding(.vertical, -8)
                         
@@ -241,7 +222,9 @@ struct BarcodeSettingsView: View {
                             .pickerStyle(.menu)
                         } // Section
                         } // Form
-                    .modifier(FormBackgroundModifier(colorScheme: colorScheme))
+                    .foregroundColor(.black)
+                    .background(Color.red)
+                    .modifier(FormBackgroundModifier())
                     .modifier(ScrollContentBackgroundModifier()) // iOS 15/16 compatible
                     .modifier(FormSectionSpacingModifier())
                     .task {
@@ -276,7 +259,13 @@ struct BarcodeSettingsView: View {
                 } // ZStack
             } // NavigationView
             .navigationViewStyle(StackNavigationViewStyle())
+            .toolbarBackground(Color.red, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .foregroundStyle(.black)
+            .tint(.black)
+            .buttonStyle(MainAppButtonStyle())
         } // VStack
+        .background(Color.red.ignoresSafeArea())
         .overlay(alignment: .bottom) {
             BottomBannerView()
         }
@@ -303,11 +292,16 @@ struct BarcodeSettingsView: View {
                 SafariView(url: u)
             } // if
         } // sheet
-        .sheet(isPresented: $showingInfo) {
+        .sheet(item: $selectedInfo) { info in
             InfoSheet(
-                isPresented: $showingInfo,
-                title: computedInfoTitle,
-                text: computedInfoText
+                isPresented: Binding(
+                    get: { selectedInfo != nil },
+                    set: { isPresented in
+                        if !isPresented { selectedInfo = nil }
+                    }
+                ),
+                title: info.title,
+                text: info.text
             ) // InfoSheet
         } // sheet
         .sheet(isPresented: $shareTheApp) {
@@ -319,17 +313,42 @@ struct BarcodeSettingsView: View {
     } // body
 } // BarcodeSettingsView
 
-// MARK: - View Modifiers for Dark Mode Support
+private enum InfoSheetContent: String, Identifiable {
+    case liningUp
+    case shopping
+
+    var id: String { rawValue }
+
+    var title: LocalizedStringKey {
+        switch self {
+        case .liningUp: return "lining_up_label"
+        case .shopping: return "shopping_label"
+        }
+    }
+
+    var text: LocalizedStringKey {
+        switch self {
+        case .liningUp: return "lining_up_text"
+        case .shopping: return "shopping_text"
+        }
+    }
+}
+
+// MARK: - View Modifiers
 
 extension View {
-    func listRowBackgroundModifier(colorScheme: ColorScheme) -> some View {
-        self.listRowBackground(
-            colorScheme == .dark
-                ? Color(UIColor.systemGray6)  // Dark gray for dark mode
-                : Color(UIColor.systemGray5)  // Light gray for light mode
-        )
+    func listRowBackgroundModifier() -> some View {
+        self.listRowBackground(Color.red)
     } // listRowBackgroundModifier
 } // extension View
+
+struct FormBackgroundModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.onAppear {
+            UITableView.appearance().backgroundColor = UIColor.red
+        }
+    } // body
+} // FormBackgroundModifier
 
 // iOS 15/16 compatible scroll content background modifier
 struct ScrollContentBackgroundModifier: ViewModifier {
@@ -341,24 +360,6 @@ struct ScrollContentBackgroundModifier: ViewModifier {
         } // if
     } // body
 } // ScrollContentBackgroundModifier
-
-struct FormBackgroundModifier: ViewModifier {
-    let colorScheme: ColorScheme
-    
-    func body(content: Content) -> some View {
-        content
-            .onAppear {
-                // Set the form background color
-                UITableView.appearance().backgroundColor = colorScheme == .dark
-                    ? UIColor.black
-                    : UIColor.white
-            } // onAppear
-            .onDisappear {
-                // Reset to default when leaving
-                UITableView.appearance().backgroundColor = UIColor.systemGroupedBackground
-            } // onDisappear
-    } // body
-} // FormBackgroundModifier
 
 struct FormSectionSpacingModifier: ViewModifier {
     func body(content: Content) -> some View {
@@ -397,29 +398,46 @@ struct InfoSheet: View {
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    Text(title)
-                        .font(.title2)
-                        .bold()
-                        .padding(.bottom, 8)
+            ZStack {
+                Color.red.ignoresSafeArea()
 
-                    Text(text)
-                        .multilineTextAlignment(.leading)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text(title)
+                            .font(.title2)
+                            .bold()
+                            .foregroundStyle(.black)
+                            .padding(.bottom, 8)
 
-                    Spacer(minLength: 20)
-                } // VStack
-                .padding()
-            } // ScrollView
+                        Text(text)
+                            .multilineTextAlignment(.leading)
+                            .foregroundStyle(.black)
+
+                        Spacer(minLength: 20)
+                    } // VStack
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                } // ScrollView
+                .modifier(ScrollContentBackgroundModifier())
+                .foregroundStyle(.black)
+            } // ZStack
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Color.red, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(action: { isPresented = false }) {
                         Text(LocalizedStringKey("close_button"))
                     } // Button
+                    .buttonStyle(WhiteCompactButtonStyle())
+                    .fixedSize(horizontal: true, vertical: false)
                 } // ToolbarItem
             } // toolbar
         } // NavigationView
+        .navigationViewStyle(StackNavigationViewStyle())
+        .background(Color.red.ignoresSafeArea())
+        .tint(.black)
+        .buttonStyle(MainAppButtonStyle())
     } // body
 } // InfoSheet
 
@@ -438,12 +456,15 @@ struct ShareAppSheet: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.main.bounds.width * 0.5) // 50% of screen width
-                        if let image = generateQRCode(from: appleStoreURL) {
-                            Image(uiImage: image)
-                                .interpolation(.none)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.width * 0.75) // 75% of screen width
+                        if let image = generateQRCode(from: appleStoreURL),
+                           let destination = URL(string: appleStoreURL) {
+                            Link(destination: destination) {
+                                Image(uiImage: image)
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: UIScreen.main.bounds.width * 0.75)
+                            }
                         } // if
                     } // VStack
                     .padding(.bottom, 24)
@@ -467,16 +488,24 @@ struct ShareAppSheet: View {
                 } // VStack
                 .padding()
             } // ScrollView
+            .background(Color.red.ignoresSafeArea())
+            .foregroundStyle(.black)
             .navigationTitle(LocalizedStringKey("ShareTheApp_label"))
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Color.red, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(action: { dismiss() }) {
                         Text(LocalizedStringKey("close_button"))
                     } // Button
+                    .buttonStyle(WhiteCompactButtonStyle())
+                    .fixedSize(horizontal: true, vertical: false)
                 } // ToolbarItem
             } // toolbar
         } // NavigationView
+        .tint(.black)
+        .buttonStyle(MainAppButtonStyle())
     } // body
 
     private func generateQRCode(from string: String) -> UIImage? {
@@ -499,7 +528,6 @@ struct ShareAppSheet: View {
 struct EarlyEntrySheet: View {
     @Binding var isPresented: Bool
 
-    @Environment(\.colorScheme) private var colorScheme
     @State private var isSubmitting: Bool = false
     @State private var requestStatusMessage: String? = nil
     @State private var errorMessage: String? = nil
@@ -647,10 +675,7 @@ struct EarlyEntrySheet: View {
                         .font(.headline)
                         .padding(.horizontal, 24)
                         .padding(.vertical, 8)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(Color.yellow.opacity(colorScheme == .dark ? 0.12 : 0.18))
-                        )
+                        .buttonStyle(MainAppButtonStyle())
                         .frame(maxWidth: .infinity)
                         .disabled(isSubmitting)
 
@@ -661,7 +686,7 @@ struct EarlyEntrySheet: View {
                             Text("Erase")
                                 .frame(maxWidth: .infinity)
                         }
-                        .buttonStyle(.bordered)
+                        .buttonStyle(MainAppButtonStyle())
                         .padding(.horizontal, 12)
                     }
 #else
@@ -673,10 +698,7 @@ struct EarlyEntrySheet: View {
                     .font(.headline)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 8)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(Color.yellow.opacity(colorScheme == .dark ? 0.12 : 0.18))
-                    )
+                    .buttonStyle(MainAppButtonStyle())
                     .frame(maxWidth: .infinity, alignment: .center)
                     .disabled(isSubmitting)
 #endif
@@ -685,57 +707,45 @@ struct EarlyEntrySheet: View {
                     if let msg = requestStatusMessage, !msg.isEmpty {
                         Text(msg)
                             .font(.footnote)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .center)
                     }
                     if let err = errorMessage, !err.isEmpty {
                         Text(err)
                             .font(.footnote)
-                            .foregroundColor(.red)
+                            .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .center)
                     }
 #endif
                 } // VStack
                 .padding()
             } // ScrollView
+            .background(Color.red.ignoresSafeArea())
+            .foregroundStyle(.black)
+            .toolbarBackground(Color.red, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(action: { isPresented = false }) {
                         Text(LocalizedStringKey("close_button"))
                     } // Button
+                    .buttonStyle(WhiteCompactButtonStyle())
+                    .fixedSize(horizontal: true, vertical: false)
                 } // ToolbarItem
             } // toolbar
         } // NavigationView
+        .buttonStyle(MainAppButtonStyle())
     } // body
 } // EarlyEntrySheet
 
 func saveClientID(_ clientId: String) {
     let trimmed = clientId.trimmingCharacters(in: .whitespacesAndNewlines)
+    UserDefaults.standard.set(trimmed, forKey: PassModel.clientKey)
+    PhoneWatchSessionManager.shared.sendClientIdText(trimmed)
     guard !trimmed.isEmpty else { return }
 
-    // Store the last scanned barcode in UserDefaults
+    // Store the barcode and notify the session manager once, after Save is tapped.
     UserDefaults.standard.set(trimmed, forKey: "LastScannedBarcode")
-
-    // Notify observers that the barcode has changed (for PhoneWatchSessionManager)
     NotificationCenter.default.post(name: .barcodeDidChange, object: nil)
-
-    let style = UserDefaults.standard.string(forKey: "clientDisplayStyle") ?? "barcode"
-    switch style {
-    case "qrcode":
-        if let qr = generateQRCodeImage(from: trimmed, size: CGSize(width: 600, height: 600)) {
-            PhoneWatchSessionManager.shared.sendBarcodeAndClientId(
-                barcodeImage: qr,
-                clientId: trimmed
-            )
-        }
-    case "barcode": fallthrough
-    default:
-        if let code128 = generateCode128BarcodeImage(from: trimmed, size: CGSize(width: 600, height: 200)) {
-            PhoneWatchSessionManager.shared.sendBarcodeAndClientId(
-                barcodeImage: code128,
-                clientId: trimmed
-            )
-        }
-    }
 } // saveClientID

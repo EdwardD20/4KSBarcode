@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">CÀ ĐẶT</string>
+    <string name="xpaddle_sound_on">Bật âm thanh</string>
+    <string name="xpaddle_sound_off">Tắt âm thanh</string>
+    <string name="xpaddle_black_hole_on">Bật Hố Đen</string>
+    <string name="xpaddle_black_hole_off">Tắt Hố Đen</string>
+    <string name="xpaddle_smarter_ai">AI THÔNG MINH HƠN</string>
+    <string name="xpaddle_instructions">Kéo trên nửa của bạn để di chuyển vợt\nAi đạt %1$d điểm trước sẽ thắng\n\nChơi gần nhau: đặt hai điện thoại cạnh nhau\nđánh bóng qua lại trên cả hai màn hình</string>
+    <string name="xpaddle_back">QUAY LẠI</string>
+    <string name="xpaddle_return_to_app">Quay lại ứng dụng</string>
+    <string name="xpaddle_1p_vs_cpu">1 NGƯỜI (VS MÁY)</string>
+    <string name="xpaddle_2p_same_device">2 NGƯỜI (CÙNG MỘT THIẾT BỊ)</string>
+    <string name="xpaddle_play_nearby">CHƠI GẦN (2 THIẾT BỊ)</string>
+    <string name="xpaddle_settings">CÀ ĐẶT</string>
+    <string name="xpaddle_tap_to_serve">CHẠM ĐỂ GIAO BÓNG</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">Người chơi 1 (trên) vs Người chơi 2 (dưới)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">Người chơi 1 (trái) vs Người chơi 2 (phải)</string>
+    <string name="xpaddle_you_are_bottom_paddle">Bạn là vợt phía dưới</string>
+    <string name="xpaddle_you_are_right_paddle">Bạn là vợt bên phải</string>
+    <string name="xpaddle_wins_format">%1$s THẮNG</string>
+    <string name="xpaddle_player_1">NGƯỜI CHƠI 1</string>
+    <string name="xpaddle_player_2">NGƯỜI CHƠI 2</string>
+    <string name="xpaddle_computer">MÁY TÍNH</string>
+    <string name="xpaddle_rematch">ĐẤU LẠI</string>
+    <string name="xpaddle_menu">MENU</string>
+    <string name="xpaddle_searching_for_phone">Đang tìm điện thoại gần đây…</string>
+    <string name="xpaddle_connected_syncing">Đã kết nối — đang đồng bộ…</string>
+    <string name="xpaddle_connection_lost">MẤT KẾT NỐI</string>
+    <string name="xpaddle_search_again">TÌM LẠI</string>
+    <string name="xpaddle_nearby_hint">Đặt hai điện thoại lại gần nhau.\nĐảm bảo Wi-Fi và Bluetooth đã bật,\nvà XPaddle đang mở trên cả hai.</string>
+    <string name="xpaddle_cancel">HỦY</string>
+    <string name="xpaddle_you">BẠN</string>
+    <string name="xpaddle_them">HỌ</string>
+    <string name="xpaddle_opponents_serve">LƯỢT GIAO CỦA ĐỐI THỦ…</string>
+    <string name="xpaddle_you_win">BẠN THẮNG</string>
+    <string name="xpaddle_you_lose">BẠN THUA</string>
+    <string name="xpaddle_exit">THOÁT</string>
+    <string name="xpaddle_default_player_name">Người chơi XPaddle</string>
+</resources>

@@ -21,6 +21,7 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
     let objectWillChange = ObservableObjectPublisher() // objectWillChange
 
     private var lastSentBarcodeData: Data? = nil // Track last sent barcode to detect changes
+    private var pendingBarcode: (image: UIImage, clientId: String)?
 
     private override init() {
         super.init() // super.init
@@ -29,10 +30,7 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
             session.activate()
         } // if
 
-        // On first launch, push current barcode if available
-        sendCurrentBarcodeIfAvailable()
-
-        // Observe model changes
+        // Observe model changes. The saved barcode is sent after WCSession activates.
         observeModelChanges()
     } // init
 
@@ -40,7 +38,7 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
     private func sendCurrentBarcodeIfAvailable() {
         // Read barcode string and clientId from UserDefaults
         guard let barcodeString = UserDefaults.standard.string(forKey: "LastScannedBarcode") else { return } // guard
-        let clientId = UserDefaults.standard.string(forKey: "ClientID") ?? "" // get clientId
+        let clientId = UserDefaults.standard.string(forKey: PassModel.clientKey) ?? "" // get clientId
         guard !clientId.isEmpty else { return } // guard
 
         let style = UserDefaults.standard.string(forKey: "clientDisplayStyle") ?? "barcode"
@@ -73,7 +71,7 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
     @objc private func handleModelUpdate() {
         // Read latest barcode string and clientId from UserDefaults
         guard let barcodeString = UserDefaults.standard.string(forKey: "LastScannedBarcode") else { return } // guard
-        let clientId = UserDefaults.standard.string(forKey: "ClientID") ?? "" // get clientId
+        let clientId = UserDefaults.standard.string(forKey: PassModel.clientKey) ?? "" // get clientId
         guard !clientId.isEmpty else { return } // guard
 
         let style = UserDefaults.standard.string(forKey: "clientDisplayStyle") ?? "barcode"
@@ -98,6 +96,11 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
         guard let session = session,
               session.isPaired,
               session.isWatchAppInstalled else { return } // guard
+
+        guard session.activationState == .activated else {
+            pendingBarcode = (image: barcodeImage, clientId: clientId)
+            return
+        } // guard session activation
         guard let data = barcodeImage.pngData() else { return } // guard
 
         // Only send if different from last sent
@@ -127,19 +130,18 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
         sendBarcodeIfChanged(barcodeImage: barcodeImage, clientId: clientId)
     } // sendBarcodeAndClientId
 
-    // Optional: live clientId updates without sending the image
+    // Queue the latest client ID for the paired Watch, even when it is not reachable.
     func sendClientIdText(_ clientId: String) {
         guard let session = session,
               session.isPaired,
               session.isWatchAppInstalled else { return } // guard
 
-        session.sendMessage(
-            ["clientId": clientId],
-            replyHandler: nil,
-            errorHandler: { error in
-                print("Phone: sendMessage error: \(error)")
-            }
-        ) // sendMessage
+        do {
+            try session.updateApplicationContext(["clientId": clientId])
+            print("Phone: queued current clientId for Watch via applicationContext")
+        } catch {
+            print("Phone: failed to queue clientId: \(error)")
+        } // do/catch
     } // sendClientIdText
 
     // Render a number-only image so the Watch can display the chosen style
@@ -181,6 +183,16 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
            session.isPaired,
            session.isWatchAppInstalled {
             pushCurrentClientIdToWatch()
+
+            if let pendingBarcode {
+                self.pendingBarcode = nil
+                sendBarcodeIfChanged(
+                    barcodeImage: pendingBarcode.image,
+                    clientId: pendingBarcode.clientId
+                )
+            } else {
+                sendCurrentBarcodeIfAvailable()
+            }
         } // if
     } // session activationDidCompleteWith
 
@@ -188,7 +200,7 @@ final class PhoneWatchSessionManager: NSObject, WCSessionDelegate, ObservableObj
         guard let session = session else { return } // guard
         guard session.isPaired, session.isWatchAppInstalled else { return } // guard
 
-        let clientId = UserDefaults.standard.string(forKey: "ClientID") ?? "" // read clientId
+        let clientId = UserDefaults.standard.string(forKey: PassModel.clientKey) ?? "" // read clientId
         guard !clientId.isEmpty else { return } // guard
 
         do {

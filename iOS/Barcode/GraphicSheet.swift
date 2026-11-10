@@ -162,17 +162,23 @@ struct GraphicSheet: View {
                         .ignoresSafeArea(edges: .bottom) // optional
                 } else {
                     Text("Image not found: \(graphic)")
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.black)
                         .padding()
                 } // if
             } // Group
+            .background(Color.red.ignoresSafeArea())
+            .foregroundStyle(.black)
             .navigationTitle(Text(LocalizedStringKey(title)))
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Color.red, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(LocalizedStringKey("close_button")) { dismiss() }
                 } // ToolbarItem
             } // toolbar
         } // NavigationView
+        .tint(.black)
+        .buttonStyle(MainAppButtonStyle())
     } // body
 } // struct GraphicSheet

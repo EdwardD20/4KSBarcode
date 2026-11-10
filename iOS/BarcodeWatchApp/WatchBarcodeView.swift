@@ -11,49 +11,54 @@ struct WatchBarcodeView: View {
     @EnvironmentObject var phoneWatchReceiver: WatchSessionReceiver
 
     var body: some View {
-        VStack(spacing: 8) {
-            // --- Logo at the top ---
-            Image("Logo")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 40)
-                .padding(.top, 4)
-                .accessibilityLabel("Logo")
+        ZStack {
+            Color.red.ignoresSafeArea()
 
-            // --- Barcode (if received) ---
-            if let image = phoneWatchReceiver.latestBarcodeImage {
-                Image(uiImage: image)
-                    .interpolation(.none)
+            VStack(spacing: 8) {
+                // --- Logo at the top ---
+                Image("Logo")
                     .resizable()
                     .scaledToFit()
-                    .padding(12)
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .padding(.horizontal, 6)
-                    .accessibilityLabel("Client barcode")
+                    .frame(height: 40)
+                    .padding(.top, 4)
+                    .accessibilityLabel("Logo")
 
-//                if !phoneWatchReceiver.clientId.isEmpty {
-//                    Text(phoneWatchReceiver.clientId)
-//                        .font(.footnote.weight(.semibold))
-//                        .lineLimit(1)
-//                } // if
-            } else {
+                // --- Barcode (if received) ---
+                if let image = phoneWatchReceiver.latestBarcodeImage {
+                    Image(uiImage: image)
+                        .interpolation(.none)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(12)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .padding(.horizontal, 6)
+                        .accessibilityLabel("Client barcode")
+
                 if !phoneWatchReceiver.clientId.isEmpty {
-                    // We have clientId text but no barcode image yet
                     Text(phoneWatchReceiver.clientId)
                         .font(.footnote.weight(.semibold))
                         .lineLimit(1)
-                }
+                } // if
+                } else {
+                    if !phoneWatchReceiver.clientId.isEmpty {
+                        // We have clientId text but no barcode image yet
+                        Text(phoneWatchReceiver.clientId)
+                            .font(.footnote.weight(.semibold))
+                            .lineLimit(1)
+                    }
 
-                Text("Waiting for barcode...")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-                    .accessibilityLabel("Waiting for barcode from phone")
-            } // if/else chain
+                    Text("Waiting for barcode...")
+                        .font(.caption2)
+                        .foregroundColor(.black)
+                        .accessibilityLabel("Waiting for barcode from phone")
+                } // if/else chain
 
-            Spacer(minLength: 0)
-        } // VStack
-        .padding(.horizontal, 8)
+                Spacer(minLength: 0)
+            } // VStack
+            .padding(.horizontal, 8)
+            .foregroundStyle(.black)
+        }
         .accessibilityElement(children: .combine)
     } // body
 } // struct WatchBarcodeView

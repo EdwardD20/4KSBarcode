@@ -22,6 +22,8 @@
     <string name="save_client_and_close">저장 후 닫기</string>
     <string name="senior_day">시니어 데이</string>
     <string name="senior_day_notice">매월 셋째 수요일.</string>
+    <string name="games">게임</string>
+    <string name="return_to_app">앱으로 돌아가기</string>
     <string name="settings_button">설정</string>
     <string name="shareTheApp">앱 공유</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

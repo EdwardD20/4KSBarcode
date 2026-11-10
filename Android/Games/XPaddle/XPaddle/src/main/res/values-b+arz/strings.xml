@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">الإعدادات</string>
+    <string name="xpaddle_sound_on">الصوت شغال</string>
+    <string name="xpaddle_sound_off">الصوت مقفول</string>
+    <string name="xpaddle_black_hole_on">الثقب الأسود شغال</string>
+    <string name="xpaddle_black_hole_off">الثقب الأسود مقفول</string>
+    <string name="xpaddle_smarter_ai">ذكاء اصطناعي أذكى</string>
+    <string name="xpaddle_instructions">اسحب في نصك عشان تحرك المضرب\nأول واحد يجيب %1$d يكسب\n\nالعب قريبة: حط موبايلين جنب بعض\nوتبادل الكورة بين الشاشتين</string>
+    <string name="xpaddle_back">رجوع</string>
+    <string name="xpaddle_return_to_app">اررجع للتطبيق</string>
+    <string name="xpaddle_1p_vs_cpu">لاعب واحد (ضد الكمبيوتر)</string>
+    <string name="xpaddle_2p_same_device">لاعبين (نفس الجهاز)</string>
+    <string name="xpaddle_play_nearby">العب قريبة (جهازين)</string>
+    <string name="xpaddle_settings">الإعدادات</string>
+    <string name="xpaddle_tap_to_serve">اضغط للإرسال</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">لاعب 1 (فوق) ضد لاعب 2 (تحت)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">لاعب 1 (شمال) ضد لاعب 2 (يمين)</string>
+    <string name="xpaddle_you_are_bottom_paddle">إنت المضرب اللي تحت</string>
+    <string name="xpaddle_you_are_right_paddle">إنت المضرب اللي في اليمين</string>
+    <string name="xpaddle_wins_format">%1$s كسب</string>
+    <string name="xpaddle_player_1">لاعب 1</string>
+    <string name="xpaddle_player_2">لاعب 2</string>
+    <string name="xpaddle_computer">الكمبيوتر</string>
+    <string name="xpaddle_rematch">ماتش تاني</string>
+    <string name="xpaddle_menu">القائمة</string>
+    <string name="xpaddle_searching_for_phone">جاري البحث عن موبايل قريب…</string>
+    <string name="xpaddle_connected_syncing">تم الاتصال — جاري المزامنة…</string>
+    <string name="xpaddle_connection_lost">الاتصال قطع</string>
+    <string name="xpaddle_search_again">ابحث تاني</string>
+    <string name="xpaddle_nearby_hint">قرب الموبايلين من بعض.\nتأكد إن الواي فاي والبلوتوث شغالين،\nوإن XPaddle مفتوح على الموبايلين.</string>
+    <string name="xpaddle_cancel">إلغاء</string>
+    <string name="xpaddle_you">إنت</string>
+    <string name="xpaddle_them">الخصم</string>
+    <string name="xpaddle_opponents_serve">إرسال الخصم…</string>
+    <string name="xpaddle_you_win">إنت كسبت</string>
+    <string name="xpaddle_you_lose">إنت خسرت</string>
+    <string name="xpaddle_exit">خروج</string>
+    <string name="xpaddle_default_player_name">لاعب XPaddle</string>
+</resources>

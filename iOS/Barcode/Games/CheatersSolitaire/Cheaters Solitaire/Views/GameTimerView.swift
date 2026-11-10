@@ -61,7 +61,7 @@ struct GameTimerView: View {
             } // if
         } // background
         .animation(.easeInOut(duration: 0.3), value: hasCheated)
-        .accessibilityLabel("Elapsed game time")
+        .accessibilityLabel(solitaireText("elapsed_game_time"))
     } // body
 
     private static func format(_ interval: TimeInterval) -> String {

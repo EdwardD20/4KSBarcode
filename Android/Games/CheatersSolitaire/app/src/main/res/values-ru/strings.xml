@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">Топ-10 результатов</string>
+    <string name="solitaire_no_scores">Пока нет сохраненных результатов. Выиграйте игру, чтобы установить рекорд!</string>
+    <string name="solitaire_close">Закрыть</string>
+    <string name="solitaire_return_to_app">Вернуться в приложение</string>
+    <string name="solitaire_new_game">Новая</string>
+    <string name="solitaire_you_won">★ ВЫ ПОБЕДИЛИ! ★</string>
+    <string name="solitaire_play_again">Играть снова</string>
+    <string name="solitaire_card_description">%1$s %2$s</string>
+    <string name="solitaire_card_back">Рубашка карты</string>
+</resources>

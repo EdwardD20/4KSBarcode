@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">Mejores 10 puntuaciones</string>
+    <string name="solitaire_no_scores">Aún no hay puntuaciones registradas. ¡Gana una partida para establecer una puntuación!</string>
+    <string name="solitaire_close">Cerrar</string>
+    <string name="solitaire_return_to_app">Volver a la aplicación</string>
+    <string name="solitaire_new_game">Nuevo</string>
+    <string name="solitaire_you_won">★ ¡GANASTE! ★</string>
+    <string name="solitaire_play_again">Jugar de nuevo</string>
+    <string name="solitaire_card_description">%1$s de %2$s</string>
+    <string name="solitaire_card_back">Dorso de carta</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">أفضل 10 نقاط</string>
+    <string name="solitaire_no_scores">لا توجد نتائج مسجلة حتى الآن. اربح لعبة لتسجيل نتيجة!</string>
+    <string name="solitaire_close">إغلاق</string>
+    <string name="solitaire_return_to_app">العودة إلى التطبيق</string>
+    <string name="solitaire_new_game">جديد</string>
+    <string name="solitaire_you_won">★ لقد فزت! ★</string>
+    <string name="solitaire_play_again">العب مرة أخرى</string>
+    <string name="solitaire_card_description">%1$s من %2$s</string>
+    <string name="solitaire_card_back">خلفية البطاقة</string>
+</resources>

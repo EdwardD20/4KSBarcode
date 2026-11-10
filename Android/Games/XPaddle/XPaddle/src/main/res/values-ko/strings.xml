@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">설정</string>
+    <string name="xpaddle_sound_on">소리 켜기</string>
+    <string name="xpaddle_sound_off">소리 끄기</string>
+    <string name="xpaddle_black_hole_on">블랙홀 켜기</string>
+    <string name="xpaddle_black_hole_off">블랙홀 끄기</string>
+    <string name="xpaddle_smarter_ai">스마트한 AI</string>
+    <string name="xpaddle_instructions">내 진영을 드래그하여 패들 이동\n먼저 %1$d점에 도달하는 사람이 승리\n\n근처에서 플레이: 두 대의 폰을 나란히 놓고\n양쪽 화면을 가로질러 공을 쳐보세요</string>
+    <string name="xpaddle_back">뒤로</string>
+    <string name="xpaddle_return_to_app">앱으로 돌아가기</string>
+    <string name="xpaddle_1p_vs_cpu">1인용 (VS CPU)</string>
+    <string name="xpaddle_2p_same_device">2인용 (동일 기기)</string>
+    <string name="xpaddle_play_nearby">근처에서 플레이 (2대 기기)</string>
+    <string name="xpaddle_settings">설정</string>
+    <string name="xpaddle_tap_to_serve">서브하려면 탭하세요</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">플레이어 1 (위) vs 플레이어 2 (아래)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">플레이어 1 (왼쪽) vs 플레이어 2 (오른쪽)</string>
+    <string name="xpaddle_you_are_bottom_paddle">당신은 아래쪽 패들입니다</string>
+    <string name="xpaddle_you_are_right_paddle">당신은 오른쪽 패들입니다</string>
+    <string name="xpaddle_wins_format">%1$s 승리</string>
+    <string name="xpaddle_player_1">플레이어 1</string>
+    <string name="xpaddle_player_2">플레이어 2</string>
+    <string name="xpaddle_computer">컴퓨터</string>
+    <string name="xpaddle_rematch">재경기</string>
+    <string name="xpaddle_menu">메뉴</string>
+    <string name="xpaddle_searching_for_phone">주변 폰 검색 중…</string>
+    <string name="xpaddle_connected_syncing">연결됨 — 동기화 중…</string>
+    <string name="xpaddle_connection_lost">연결 끊김</string>
+    <string name="xpaddle_search_again">다시 검색</string>
+    <string name="xpaddle_nearby_hint">두 폰을 가까이 붙이세요.\nWi-Fi와 블루투스가 켜져 있는지 확인하고,\n양쪽 모두에 XPaddle이 열려 있어야 합니다.</string>
+    <string name="xpaddle_cancel">취소</string>
+    <string name="xpaddle_you">나</string>
+    <string name="xpaddle_them">상대</string>
+    <string name="xpaddle_opponents_serve">상대 서브…</string>
+    <string name="xpaddle_you_win">승리했습니다</string>
+    <string name="xpaddle_you_lose">패배했습니다</string>
+    <string name="xpaddle_exit">종료</string>
+    <string name="xpaddle_default_player_name">XPaddle 플레이어</string>
+</resources>

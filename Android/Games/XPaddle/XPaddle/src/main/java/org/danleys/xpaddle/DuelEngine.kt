@@ -43,7 +43,7 @@ enum class DuelPhase {
 /// are held together. Whoever currently "has" the ball is fully
 /// authoritative over its physics until it either bounces back across the
 /// seam or gets missed. Direct Kotlin port of the iOS DuelEngine.
-class DuelEngine(context: Context) {
+class DuelEngine(private val context: Context) {
     companion object {
         const val WINNING_SCORE = 11
     } // companion object
@@ -64,7 +64,7 @@ class DuelEngine(context: Context) {
     private val scope = CoroutineScope(Dispatchers.Main.immediate + SupervisorJob())
 
     var phase by mutableStateOf(DuelPhase.CONNECTING)
-    var connectionLabel by mutableStateOf("Searching for nearby phone…")
+    var connectionLabel by mutableStateOf(context.getString(R.string.xpaddle_searching_for_phone))
     var isLeftSide: Boolean by mutableStateOf(true)
         private set
 
@@ -100,7 +100,7 @@ class DuelEngine(context: Context) {
 
     fun start() {
         phase = DuelPhase.CONNECTING
-        connectionLabel = "Searching for nearby phone…"
+        connectionLabel = context.getString(R.string.xpaddle_searching_for_phone)
         localScore = 0
         opponentScore = 0
         winnerIsMe = null
@@ -131,9 +131,9 @@ class DuelEngine(context: Context) {
     private fun handleConnectionState(state: DuelConnectionState) {
         when (state) {
             DuelConnectionState.IDLE -> {} // case .idle
-            DuelConnectionState.SEARCHING -> connectionLabel = "Searching for nearby phone…"
+            DuelConnectionState.SEARCHING -> connectionLabel = context.getString(R.string.xpaddle_searching_for_phone)
             DuelConnectionState.CONNECTED -> {
-                connectionLabel = "Connected — syncing…"
+                connectionLabel = context.getString(R.string.xpaddle_connected_syncing)
                 beginHandshake()
             } // case .connected
             DuelConnectionState.LOST -> {

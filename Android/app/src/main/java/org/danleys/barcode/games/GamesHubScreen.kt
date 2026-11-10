@@ -19,15 +19,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.danleys.barcode.R
 
 @Composable
 fun GamesHubScreen(
     onReturnToApp: () -> Unit,
     onSelectSolitaire: () -> Unit,
-    onSelectXPaddle: () -> Unit
+    onSelectXPaddle: () -> Unit,
+    showReturnButton: Boolean = true
 ) {
     Box(
         modifier = Modifier
@@ -39,28 +42,33 @@ fun GamesHubScreen(
             modifier = Modifier.fillMaxSize()
         ) {
             // --- Top Bar ---
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 24.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Button(
-                    onClick = onReturnToApp,
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Red.copy(alpha = 0.4f)),
-                    shape = RoundedCornerShape(10.dp)
+            if (showReturnButton) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 24.dp),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(
-                        text = "Return to app",
-                        color = Color.Black,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                } // end Button Return to app
-            } // end Row Top Bar
+                    Button(
+                        onClick = onReturnToApp,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color.White,
+                            contentColor = Color.Black
+                        ),
+                        shape = RoundedCornerShape(10.dp)
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.return_to_app),
+                            color = Color.Black,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    } // end Button Return to app
+                } // end Row Top Bar
+            } // if (showReturnButton)
 
             // --- Title ---
             Text(
-                text = "Get sidetracked...",
+                text = stringResource(id = R.string.games),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black,
@@ -77,7 +85,7 @@ fun GamesHubScreen(
                     onClick = onSelectSolitaire,
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(10.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFE0E0E0))
+                    colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Box(
                         modifier = Modifier
@@ -98,7 +106,7 @@ fun GamesHubScreen(
                     onClick = onSelectXPaddle,
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(10.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFE0E0E0))
+                    colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Box(
                         modifier = Modifier

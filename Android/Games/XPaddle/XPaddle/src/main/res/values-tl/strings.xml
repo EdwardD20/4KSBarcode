@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">MGA SETTING</string>
+    <string name="xpaddle_sound_on">Tunog on</string>
+    <string name="xpaddle_sound_off">Tunog off</string>
+    <string name="xpaddle_black_hole_on">Itim na Butas on</string>
+    <string name="xpaddle_black_hole_off">Itim na Butas off</string>
+    <string name="xpaddle_smarter_ai">MAS MATALINONG AI</string>
+    <string name="xpaddle_instructions">I-drag sa iyong kalahati upang igalaw ang iyong paddle\nAng unang maka-%1$d ang panalo\n\nMaglaro sa Malapit: hawakan ang dalawang telepono nang magkatabi\nat i-rally ang bola sa parehong mga screen</string>
+    <string name="xpaddle_back">BALIK</string>
+    <string name="xpaddle_return_to_app">Bumalik sa app</string>
+    <string name="xpaddle_1p_vs_cpu">1 PLAYER (VS CPU)</string>
+    <string name="xpaddle_2p_same_device">2 PLAYERS (IISANG DEVICE)</string>
+    <string name="xpaddle_play_nearby">MAGLARO SA MALAPIT (2 DEVICES)</string>
+    <string name="xpaddle_settings">MGA SETTING</string>
+    <string name="xpaddle_tap_to_serve">I-TAP PARA MAG-SERVE</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">Player 1 (itaas) vs Player 2 (ibaba)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">Player 1 (kaliwa) vs Player 2 (kanan)</string>
+    <string name="xpaddle_you_are_bottom_paddle">Ikaw ang paddle sa ibaba</string>
+    <string name="xpaddle_you_are_right_paddle">Ikaw ang paddle sa kanang bahagi</string>
+    <string name="xpaddle_wins_format">PANALO ANG %1$s</string>
+    <string name="xpaddle_player_1">PLAYER 1</string>
+    <string name="xpaddle_player_2">PLAYER 2</string>
+    <string name="xpaddle_computer">COMPUTER</string>
+    <string name="xpaddle_rematch">MULING MAGLARO</string>
+    <string name="xpaddle_menu">MENU</string>
+    <string name="xpaddle_searching_for_phone">Naghahanap ng malapit na telepono…</string>
+    <string name="xpaddle_connected_syncing">Konektado — nag-a-sync…</string>
+    <string name="xpaddle_connection_lost">NAWALA ANG KONEKSYON</string>
+    <string name="xpaddle_search_again">MAGHANAP MULI</string>
+    <string name="xpaddle_nearby_hint">Ilapit ang dalawang telepono sa isa\'t isa.\nSiguraduhing nakabukas ang Wi-Fi at Bluetooth,\nat bukas ang XPaddle sa pareho.</string>
+    <string name="xpaddle_cancel">KANSELAHIN</string>
+    <string name="xpaddle_you">IKAW</string>
+    <string name="xpaddle_them">SILA</string>
+    <string name="xpaddle_opponents_serve">SERVE NG KALABAN…</string>
+    <string name="xpaddle_you_win">PANALO KA</string>
+    <string name="xpaddle_you_lose">TALO KA</string>
+    <string name="xpaddle_exit">LUMABAS</string>
+    <string name="xpaddle_default_player_name">XPaddle Player</string>
+</resources>

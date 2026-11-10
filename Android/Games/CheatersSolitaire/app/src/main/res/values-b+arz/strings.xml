@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">أحسن 10 درجات</string>
+    <string name="solitaire_no_scores">مفيش درجات متسجلة لغاية دلوقتي. كسب دور عشان تسجل درجات!</string>
+    <string name="solitaire_close">إغلاق</string>
+    <string name="solitaire_return_to_app">اررجع للتطبيق</string>
+    <string name="solitaire_new_game">جديد</string>
+    <string name="solitaire_you_won">★ إنت كسبت! ★</string>
+    <string name="solitaire_play_again">العب تاني</string>
+    <string name="solitaire_card_description">%1$s من %2$s</string>
+    <string name="solitaire_card_back">ظهر الكارت</string>
+</resources>

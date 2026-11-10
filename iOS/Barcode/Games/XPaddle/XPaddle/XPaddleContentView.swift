@@ -65,7 +65,7 @@ struct XPaddleContentView: View {
                 if let onExitToHost {
                     VStack {
                         HStack {
-                            Button(LocalizedStringKey("Return to app"), action: onExitToHost)
+                            Button(action: onExitToHost) { xpaddleText("Return to app") }
                                 .font(.headline.weight(.semibold))
                                 .foregroundStyle(.black)
                                 .padding(.horizontal, 14)
@@ -360,7 +360,7 @@ private struct MenuOverlay: View {
     
     var body: some View {
         VStack(spacing: 28) {
-            Text("XPaddle")
+            xpaddleText("XPaddle")
                 .font(.system(size: 48, weight: .heavy, design: .monospaced))
                 .foregroundStyle(.yellow)
                 .kerning(8)
@@ -387,7 +387,7 @@ private struct MenuOverlay: View {
     } // body
 
     private func menuLabel(_ text: String) -> some View {
-        Text(text)
+        xpaddleText(text)
             .font(.system(size: 20, weight: .bold, design: .monospaced))
             .foregroundStyle(.black)
             .padding(.vertical, 14)
@@ -402,10 +402,10 @@ private struct ServeOverlay: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("TAP TO SERVE")
+            xpaddleText("TAP TO SERVE")
                 .font(.system(size: 26, weight: .bold, design: .monospaced))
                 .foregroundStyle(.yellow)
-            Text(engine.twoPlayerMode
+            xpaddleText(engine.twoPlayerMode
                  ? (engine.isPortrait ? "Player 1 (top) vs Player 2 (bottom)" : "Player 1 (left) vs Player 2 (right)")
                  : (engine.isPortrait ? "You are the bottom paddle" : "You are the right paddle"))
                 .font(.system(size: 14, weight: .medium, design: .monospaced))
@@ -421,9 +421,19 @@ private struct ServeOverlay: View {
 private struct GameOverOverlay: View {
     @ObservedObject var engine: GameEngine
 
+    private var localizedWinner: Text {
+        let playerKey: String
+        switch engine.winner {
+        case "PLAYER 1": playerKey = "PLAYER 1"
+        case "PLAYER 2": playerKey = "PLAYER 2"
+        default: playerKey = "COMPUTER"
+        }
+        return xpaddleText(playerKey) + xpaddleText(" WINS")
+    }
+
     var body: some View {
         VStack(spacing: 24) {
-            Text("\(engine.winner ?? "") WINS")
+            localizedWinner
                 .font(.system(size: 40, weight: .heavy, design: .monospaced))
                 .foregroundStyle(.yellow)
                 .multilineTextAlignment(.center)
@@ -436,7 +446,7 @@ private struct GameOverOverlay: View {
                 Button {
                     engine.startGame(twoPlayer: engine.twoPlayerMode)
                 } label: {
-                    Text("REMATCH")
+                    xpaddleText("REMATCH")
                         .font(.system(size: 17, weight: .bold, design: .monospaced))
                         .foregroundStyle(.black)
                         .padding(.vertical, 12)
@@ -447,7 +457,7 @@ private struct GameOverOverlay: View {
                 Button {
                     engine.backToMenu()
                 } label: {
-                    Text("MENU")
+                    xpaddleText("MENU")
                         .font(.system(size: 17, weight: .bold, design: .monospaced))
                         .foregroundStyle(.yellow)
                         .padding(.vertical, 12)

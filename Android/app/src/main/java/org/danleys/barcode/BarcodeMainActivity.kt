@@ -73,8 +73,10 @@ class BarcodeMainActivity : ComponentActivity() {
                     }
                 }
 
+                val isTwoPaneMode = configuration.screenWidthDp >= 600
+
                 if (prefsState != null && !initialized) {
-                    showSettings = currentClientId.isEmpty()
+                    showSettings = currentClientId.isEmpty() && !isTwoPaneMode
                     initialized = true
                 } // if (prefsState != null && !initialized)
 
@@ -101,10 +103,7 @@ class BarcodeMainActivity : ComponentActivity() {
                             SplashScreen(onTimeout = onTimeout)
                         },
                         mainContent = {
-                            val configuration = LocalConfiguration.current
-                            val isTwoPaneMode = configuration.screenWidthDp >= 600
-
-                            if (showSettings && !isTwoPaneMode) {
+                            if (showSettings) {
                                 SettingsScreen(
                                     currentClientId = currentClientId,
                                     currentDisplayMode = currentDisplayMode,

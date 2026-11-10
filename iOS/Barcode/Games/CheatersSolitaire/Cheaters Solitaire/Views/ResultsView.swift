@@ -18,11 +18,13 @@ struct ResultsView: View {
         NavigationStack {
             Group {
                 if resultsStore.results.isEmpty {
-                    ContentUnavailableView(
-                        "No games finished yet",
-                        systemImage: "trophy",
-                        description: Text("Win a game and it'll show up here.")
-                    ) // ContentUnavailableView
+                    ContentUnavailableView {
+                        Label { solitaireText("no_games_yet") } icon: {
+                            Image(systemName: "trophy")
+                        }
+                    } description: {
+                        solitaireText("results_empty_hint")
+                    } // ContentUnavailableView
                 } else {
                     List {
                         ForEach(Array(resultsStore.results.enumerated()), id: \.element.id) { index, result in
@@ -31,13 +33,13 @@ struct ResultsView: View {
                     } // List
                 } // if/else (any results yet)
             } // Group
-            .navigationTitle("Top Results")
+            .navigationTitle(solitaireText("top_results"))
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { dismiss() }
+                    Button { dismiss() } label: { solitaireText("done") }
                 } // ToolbarItem
             } // toolbar
         } // NavigationStack
@@ -62,7 +64,7 @@ struct ResultsView: View {
                 // idea, just the visible badge for it here in the list.
                 Text("🐔")
                     .font(.body)
-                    .accessibilityLabel("Cheated")
+                    .accessibilityLabel(solitaireText("cheated"))
             } // if this win involved a cheat
         } // HStack (one result row)
     } // resultRow(rank:result:)
@@ -71,3 +73,4 @@ struct ResultsView: View {
 #Preview {
     ResultsView(resultsStore: GameResultsStore())
 }
+

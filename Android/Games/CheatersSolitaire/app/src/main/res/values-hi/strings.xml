@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">शीर्ष 10 स्कोर</string>
+    <string name="solitaire_no_scores">अभी तक कोई स्कोर दर्ज नहीं किया गया है। स्कोर सेट करने के लिए गेम जीतें!</string>
+    <string name="solitaire_close">बंद करें</string>
+    <string name="solitaire_return_to_app">ऐप पर लौटें</string>
+    <string name="solitaire_new_game">नया</string>
+    <string name="solitaire_you_won">★ आप जीत गए! ★</string>
+    <string name="solitaire_play_again">फिर से खेलें</string>
+    <string name="solitaire_card_description">%2$s का %1$s</string>
+    <string name="solitaire_card_back">कार्ड बैक</string>
+</resources>

@@ -29,8 +29,8 @@ android {
         applicationId = "org.danleys.fourksbarcode"
         minSdk = 24
         targetSdk = 37
-        versionCode = 249
-        versionName = "4.0.2"
+        versionCode = 252
+        versionName = "4.1.1"
     } // defaultConfig
 
     compileOptions {

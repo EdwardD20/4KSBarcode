@@ -44,9 +44,6 @@ struct CheatersSolitaireApp: App {
     var body: some Scene {
         WindowGroup {
             SolitaireContentView()
-                // Respects the system light/dark setting automatically since
-                // no .preferredColorScheme override is set — remove this
-                // comment's assumption only if you want to force a mode.
         }
         #if os(macOS)
         .windowStyle(.hiddenTitleBar)

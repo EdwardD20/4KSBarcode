@@ -22,6 +22,8 @@
     <string name="save_client_and_close">Zapisz identyfikator i zamknij</string>
     <string name="senior_day">Dzień seniora</string>
     <string name="senior_day_notice">Trzecia środa miesiąca tylko dla seniorów.</string>
+    <string name="games">Gry</string>
+    <string name="return_to_app">Wróć do aplikacji</string>
     <string name="settings_button">Ustawienia</string>
     <string name="shareTheApp">Udostępnij aplikację</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

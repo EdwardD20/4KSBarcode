@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">સેેટિંગ્સ</string>
+    <string name="xpaddle_sound_on">અવાજ ચાલુ</string>
+    <string name="xpaddle_sound_off">અવાજ બંધ</string>
+    <string name="xpaddle_black_hole_on">બ્લેક હોલ ચાલુ</string>
+    <string name="xpaddle_black_hole_off">બ્લેક હોલ બંધ</string>
+    <string name="xpaddle_smarter_ai">વધુ હોશિયાર AI</string>
+    <string name="xpaddle_instructions">તમારું પેડલ ખસેડવા માટે તમારા અડધા ભાગ પર ખેંચો\nપ્રથમ %1$d જીતે છે\n\nનજીકમાં રમો: બે ફોન બાજુ બાજુમાં રાખો\nઅને બંને સ્ક્રીન પર બોલ રમો</string>
+    <string name="xpaddle_back">પાછા</string>
+    <string name="xpaddle_return_to_app">એપ પર પાછા જાઓ</string>
+    <string name="xpaddle_1p_vs_cpu">1 ખેલાડી (VS CPU)</string>
+    <string name="xpaddle_2p_same_device">2 ખેલાડીઓ (એ જ ઉપકરણ)</string>
+    <string name="xpaddle_play_nearby">નજીકમાં રમો (2 ઉપકરણો)</string>
+    <string name="xpaddle_settings">સેેટિંગ્સ</string>
+    <string name="xpaddle_tap_to_serve">સર્વ કરવા માટે ટેપ કરો</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">ખેલાડી 1 (ઉપર) vs ખેલાડી 2 (નીચે)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">ખેલાડી 1 (ડાબે) vs ખેલાડી 2 (જમણે)</string>
+    <string name="xpaddle_you_are_bottom_paddle">તમે નીચેનું પેડલ છો</string>
+    <string name="xpaddle_you_are_right_paddle">તમે જમણું પેડલ છો</string>
+    <string name="xpaddle_wins_format">%1$s જીતે છે</string>
+    <string name="xpaddle_player_1">ખેલાડી 1</string>
+    <string name="xpaddle_player_2">ખેલાડી 2</string>
+    <string name="xpaddle_computer">કમ્પ્યુટર</string>
+    <string name="xpaddle_rematch">ફરીથી રમત</string>
+    <string name="xpaddle_menu">મેનુ</string>
+    <string name="xpaddle_searching_for_phone">નજીકનો ફોન શોધી રહ્યા છીએ…</string>
+    <string name="xpaddle_connected_syncing">કનેક્ટ થયું — સિન્ક થઈ રહ્યું છે…</string>
+    <string name="xpaddle_connection_lost">કનેક્શન ખોવાયું</string>
+    <string name="xpaddle_search_again">ફરીથી શોધો</string>
+    <string name="xpaddle_nearby_hint">બ બંને ફોનને નજીક લાવો.\nWi-Fi અને બ્લૂટૂથ ચાલુ છે તેની ખાતરી કરો,\nઅને બંને પર XPaddle ખુલ્લું છે.</string>
+    <string name="xpaddle_cancel">રદ કરો</string>
+    <string name="xpaddle_you">તમે</string>
+    <string name="xpaddle_them">તેઓ</string>
+    <string name="xpaddle_opponents_serve">પ્રતિસ્પર્ધીની સર્વ…</string>
+    <string name="xpaddle_you_win">તમે જીત્યા</string>
+    <string name="xpaddle_you_lose">તમે હારી ગયા</string>
+    <string name="xpaddle_exit">બહાર નીકળો</string>
+    <string name="xpaddle_default_player_name">XPaddle પ્લેયર</string>
+</resources>

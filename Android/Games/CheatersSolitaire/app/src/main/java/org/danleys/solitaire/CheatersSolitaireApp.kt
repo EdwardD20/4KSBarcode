@@ -58,6 +58,7 @@ import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
@@ -895,7 +896,7 @@ private fun TopScoresDialog(
 
     androidx.compose.material3.AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Top 10 Scores", fontWeight = FontWeight.Bold) },
+        title = { Text(stringResource(R.string.solitaire_top_scores), fontWeight = FontWeight.Bold) },
         text = {
             Column(
                 modifier = Modifier
@@ -904,7 +905,7 @@ private fun TopScoresDialog(
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 if (scores.isEmpty()) {
-                    Text("No scores recorded yet. Win a game to set a score!")
+                    Text(stringResource(R.string.solitaire_no_scores))
                 } else {
                     scores.forEachIndexed { index, score ->
                         Row(
@@ -920,7 +921,7 @@ private fun TopScoresDialog(
         },
         confirmButton = {
             Button(onClick = onDismiss) {
-                Text("Close")
+                Text(stringResource(R.string.solitaire_close))
             } // end Button
         }
     )
@@ -1059,7 +1060,7 @@ fun CheatersSolitaireApp(
                         colors = ButtonDefaults.buttonColors(containerColor = Color.Red.copy(alpha = 0.4f)),
                         shape = RoundedCornerShape(8.dp)
                     ) {
-                        Text("Return to app", color = Color.Black, fontWeight = FontWeight.Bold)
+                        Text(stringResource(R.string.solitaire_return_to_app), color = Color.Black, fontWeight = FontWeight.Bold)
                     } // end Button Return to app
                 } else {
                     Spacer(modifier = Modifier.width(8.dp))
@@ -1101,7 +1102,7 @@ fun CheatersSolitaireApp(
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2196F3)),
                         shape = RoundedCornerShape(8.dp)
                     ) {
-                        Text("New", color = Color.White, fontWeight = FontWeight.Bold)
+                        Text(stringResource(R.string.solitaire_new_game), color = Color.White, fontWeight = FontWeight.Bold)
                     } // end Button New
                 } // end Row controls
             } // end Row top bar
@@ -1166,13 +1167,13 @@ fun CheatersSolitaireApp(
                         modifier = Modifier.padding(16.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Text("★ YOU WON! ★", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color.Black)
+                        Text(stringResource(R.string.solitaire_you_won), fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color.Black)
                         Spacer(modifier = Modifier.height(8.dp))
                         Button(onClick = {
                             viewModel.startNewGame()
                             playShuffleSound(context)
                         }) {
-                            Text("Play Again")
+                            Text(stringResource(R.string.solitaire_play_again))
                         } // end Button
                     } // end Column
                 } // end Surface
@@ -1525,7 +1526,7 @@ private fun FaceUpCard(card: SolitaireCard, isSelected: Boolean = false) {
             if (faceImageRes != null) {
                 Image(
                     painter = painterResource(id = faceImageRes),
-                    contentDescription = "${card.rank} of ${card.suit}",
+                    contentDescription = stringResource(R.string.solitaire_card_description, card.rank, card.suit),
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(top = 20.dp, bottom = 2.dp, start = 8.dp, end = 2.dp),
@@ -1568,7 +1569,7 @@ private fun FaceDownCard() {
     ) {
         Image(
             painter = painterResource(id = R.drawable.cardback),
-            contentDescription = "Card Back",
+            contentDescription = stringResource(R.string.solitaire_card_back),
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         ) // end Image

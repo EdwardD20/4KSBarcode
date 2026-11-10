@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">상위 10개 점수</string>
+    <string name="solitaire_no_scores">기록된 점수가 없습니다. 게임에서 승리하여 점수를 기록해보세요!</string>
+    <string name="solitaire_close">닫기</string>
+    <string name="solitaire_return_to_app">앱으로 돌아가기</string>
+    <string name="solitaire_new_game">새 게임</string>
+    <string name="solitaire_you_won">★ 승리했습니다! ★</string>
+    <string name="solitaire_play_again">다시 플레이</string>
+    <string name="solitaire_card_description">%2$s %1$s</string>
+    <string name="solitaire_card_back">카드 뒷면</string>
+</resources>

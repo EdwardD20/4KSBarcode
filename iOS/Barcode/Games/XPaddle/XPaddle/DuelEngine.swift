@@ -47,6 +47,7 @@ final class DuelEngine: ObservableObject {
 
     @Published var phase: DuelPhase = .connecting
     @Published var connectionLabel: String = "Searching for nearby iPhone…"
+    @Published var connectedPeerName: String?
     @Published private(set) var isLeftSide: Bool = true
 
     @Published var courtSize: CGSize = .zero
@@ -89,6 +90,7 @@ final class DuelEngine: ObservableObject {
     func start() {
         phase = .connecting
         connectionLabel = "Searching for nearby iPhone…"
+        connectedPeerName = nil
         localScore = 0
         opponentScore = 0
         winnerIsMe = nil
@@ -122,8 +124,9 @@ final class DuelEngine: ObservableObject {
             break
         case .searching:
             connectionLabel = "Searching for nearby iPhone…"
+            connectedPeerName = nil
         case .connected(let name):
-            connectionLabel = "Connected to \(name) — syncing…"
+            connectedPeerName = name
             beginHandshake()
         case .lost:
             helloTimer?.invalidate()

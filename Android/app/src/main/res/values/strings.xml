@@ -22,6 +22,8 @@
     <string name="save_client_and_close">Save Client ID and Close</string>
     <string name="senior_day">Senior Day</string>
     <string name="senior_day_notice">We will be open on the third Wednesday of each month from 12:00–2:00pm exclusively for seniors and those with medical diagnoses. You must have one of our early entry cards for this shopping day.</string>
+    <string name="games">Games</string>
+    <string name="return_to_app">Return to app</string>
     <string name="settings_button">Settings</string>
     <string name="shareTheApp">Share The App</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

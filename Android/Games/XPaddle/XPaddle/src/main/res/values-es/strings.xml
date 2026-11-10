@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">CONFIGURACIÓN</string>
+    <string name="xpaddle_sound_on">Sonido activado</string>
+    <string name="xpaddle_sound_off">Sonido desactivado</string>
+    <string name="xpaddle_black_hole_on">Agujero negro activado</string>
+    <string name="xpaddle_black_hole_off">Agujero negro desactivado</string>
+    <string name="xpaddle_smarter_ai">IA MÁS INTELIGENTE</string>
+    <string name="xpaddle_instructions">Arrastra en tu mitad para mover tu pala\nEl primero en llegar a %1$d gana\n\nJugar cerca: coloca dos teléfonos lado a lado\ny pasa la pelota por ambas pantallas</string>
+    <string name="xpaddle_back">VOLVER</string>
+    <string name="xpaddle_return_to_app">Volver a la aplicación</string>
+    <string name="xpaddle_1p_vs_cpu">1 JUGADOR (VS CPU)</string>
+    <string name="xpaddle_2p_same_device">2 JUGADORES (MISMO DISPOSITIVO)</string>
+    <string name="xpaddle_play_nearby">JUGAR CERCA (2 DISPOSITIVOS)</string>
+    <string name="xpaddle_settings">CONFIGURACIÓN</string>
+    <string name="xpaddle_tap_to_serve">TOCA PARA SACAR</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">Jugador 1 (arriba) vs Jugador 2 (abajo)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">Jugador 1 (izq) vs Jugador 2 (der)</string>
+    <string name="xpaddle_you_are_bottom_paddle">Eres la pala inferior</string>
+    <string name="xpaddle_you_are_right_paddle">Eres la pala derecha</string>
+    <string name="xpaddle_wins_format">¡%1$s GANA!</string>
+    <string name="xpaddle_player_1">JUGADOR 1</string>
+    <string name="xpaddle_player_2">JUGADOR 2</string>
+    <string name="xpaddle_computer">COMPUTADORA</string>
+    <string name="xpaddle_rematch">REVANCHA</string>
+    <string name="xpaddle_menu">MENÚ</string>
+    <string name="xpaddle_searching_for_phone">Buscando teléfono cercano…</string>
+    <string name="xpaddle_connected_syncing">Conectado — sincronizando…</string>
+    <string name="xpaddle_connection_lost">CONEXIÓN PERDIDA</string>
+    <string name="xpaddle_search_again">BUSCAR DE NUEVO</string>
+    <string name="xpaddle_nearby_hint">Acerca ambos teléfonos.\nAsegúrate de que el Wi-Fi y el Bluetooth estén encendidos\ny XPaddle abierto en ambos.</string>
+    <string name="xpaddle_cancel">CANCELAR</string>
+    <string name="xpaddle_you">TÚ</string>
+    <string name="xpaddle_them">ELLOS</string>
+    <string name="xpaddle_opponents_serve">SAQUE DEL OPONENTE…</string>
+    <string name="xpaddle_you_win">¡GANASTE!</string>
+    <string name="xpaddle_you_lose">PERDISTE</string>
+    <string name="xpaddle_exit">SALIR</string>
+    <string name="xpaddle_default_player_name">Jugador de XPaddle</string>
+</resources>

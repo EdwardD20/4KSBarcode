@@ -15,6 +15,7 @@ struct BarcodeWatchApp: App {
         WindowGroup {
             WatchBarcodeView()
                 .environmentObject(receiver)   // <-- required
+                .preferredColorScheme(.light)
         } // WindowGroup
     } // body
 } // BarcodeWatchApp

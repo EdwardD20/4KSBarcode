@@ -5,7 +5,7 @@ The intent is to simply record the Client ID in a barcode format (Code128 aka 3o
  The thought is that people lose, forget, or wash their paper cards with their Client ID number, but not their phones.
  This works up to the point where phones are charged and not left in their vehicles.
 
-The app's existi in both iOS (Apple) and Android (Google) app stores.
+The app's exist in both iOS (Apple) and Android (Google) app stores.
 
 These apps are released as public domain however they are current signed using my personal development accounts with Apple and Google.
 These app also attempt to use the Wallet features of the respective platforms.
@@ -16,8 +16,12 @@ The NIFB version of the app only contains the basics which include applying for 
  The barcode presented can be used by any distribution location that uses the Link2Feed process.
 
 The 4 K.I.D.S. Sake Food Pantry is where I volunteer.
- This version adds additional features specifically for the 4 K.I.D.S. Sake non-profit. 
+ This version adds additional features specifically for the 4 K.I.D.S. Sake non-profit.
  The barcode presented can also be used at any Link2Feed location but has information that is not pertinent to other distribution locations.
+
+App Store: https://apps.apple.com/app/4-k-i-d-s-sake-food-pantry/id6753714955
+
+Google Play Store: https://play.google.com/store/apps/details?id=org.danleys.fourksbarcode
 
 Permission from any of the 3 organizations was not obtained for the creation these apps.
 

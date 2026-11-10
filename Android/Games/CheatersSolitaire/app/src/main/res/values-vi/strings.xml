@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">Top 10 điểm số</string>
+    <string name="solitaire_no_scores">Chưa có điểm số nào được ghi nhận. Thắng một ván để thiết lập điểm số!</string>
+    <string name="solitaire_close">Đóng</string>
+    <string name="solitaire_return_to_app">Quay lại ứng dụng</string>
+    <string name="solitaire_new_game">Mới</string>
+    <string name="solitaire_you_won">★ BẠN THẮNG! ★</string>
+    <string name="solitaire_play_again">Chơi lại</string>
+    <string name="solitaire_card_description">%1$s của %2$s</string>
+    <string name="solitaire_card_back">Mặt sau thẻ</string>
+</resources>

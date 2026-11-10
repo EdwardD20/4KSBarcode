@@ -43,6 +43,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -99,7 +100,7 @@ fun XPaddleApp(onExitToHost: (() -> Unit)? = null) {
             if (onExitToHost != null) {
                 Row(modifier = Modifier.align(Alignment.TopStart).padding(top = 76.dp, start = 12.dp)) {
                     Button(onClick = onExitToHost, colors = ButtonDefaults.buttonColors(containerColor = Color.Red.copy(alpha = 0.4f))) {
-                        Text("Return to app", color = Color.Black, fontWeight = FontWeight.SemiBold)
+                        Text(stringResource(R.string.xpaddle_return_to_app), color = Color.Black, fontWeight = FontWeight.SemiBold)
                     } // Button
                 } // Row
             } // if onExitToHost != null
@@ -284,16 +285,15 @@ private fun MenuOverlay(engine: GameEngine,
                         singlePlayer: Boolean) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(28.dp)) {
-            Text("XPaddle", color = GameYellow, fontSize = 48.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
+            Text(stringResource(R.string.xpaddle_app_name), color = GameYellow, fontSize = 48.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
 
             Column(verticalArrangement = Arrangement.spacedBy(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                MenuButton("1 PLAYER  (VS CPU)") { engine.startGame(twoPlayer = false) }
+                MenuButton(stringResource(R.string.xpaddle_1p_vs_cpu)) { engine.startGame(twoPlayer = false) }
                 if (!singlePlayer) {
-
-                    MenuButton("2 PLAYER  (SAME DEVICE)") { engine.startGame(twoPlayer = true) }
-                    MenuButton("PLAY NEARBY  (2 DEVICES)", onClick = onPlayNearby)
+                    MenuButton(stringResource(R.string.xpaddle_2p_same_device)) { engine.startGame(twoPlayer = true) }
+                    MenuButton(stringResource(R.string.xpaddle_play_nearby), onClick = onPlayNearby)
                 } // if !singlePlayer
-                MenuButton("SETTINGS", onClick = onSettings)
+                MenuButton(stringResource(R.string.xpaddle_settings), onClick = onSettings)
             } // Column (menu buttons)
         } // Column
     } // Box
@@ -322,11 +322,11 @@ private fun ServeOverlay(engine: GameEngine) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            Text("TAP TO SERVE", color = Color.White, fontSize = 26.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+            Text(stringResource(R.string.xpaddle_tap_to_serve), color = Color.White, fontSize = 26.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
             val subtitle = if (engine.twoPlayerMode) {
-                if (engine.isPortrait) "Player 1 (top) vs Player 2 (bottom)" else "Player 1 (left) vs Player 2 (right)"
+                if (engine.isPortrait) stringResource(R.string.xpaddle_p1_top_vs_p2_bottom) else stringResource(R.string.xpaddle_p1_left_vs_p2_right)
             } else {
-                if (engine.isPortrait) "You are the bottom paddle" else "You are the right paddle"
+                if (engine.isPortrait) stringResource(R.string.xpaddle_you_are_bottom_paddle) else stringResource(R.string.xpaddle_you_are_right_paddle)
             } // val subtitle
             Text(subtitle, color = Color.White.copy(alpha = 0.6f), fontSize = 14.sp, fontWeight = FontWeight.Medium, fontFamily = FontFamily.Monospace)
         } // Column
@@ -338,7 +338,7 @@ private fun GameOverOverlay(engine: GameEngine) {
     Box(modifier = Modifier.fillMaxSize().padding(40.dp), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(24.dp)) {
             Text(
-                "${engine.winner ?: ""} WINS",
+                stringResource(R.string.xpaddle_wins_format, engine.winner ?: ""),
                 color = Color.White,
                 fontSize = 40.sp,
                 fontWeight = FontWeight.Black,
@@ -360,7 +360,7 @@ private fun GameOverOverlay(engine: GameEngine) {
                     shape = RoundedCornerShape(8.dp),
                     modifier = Modifier.width(160.dp)
                 ) {
-                    Text("REMATCH", color = Color.Black, fontSize = 17.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+                    Text(stringResource(R.string.xpaddle_rematch), color = Color.Black, fontSize = 17.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
                 } // Button (rematch)
                 Button(
                     onClick = { engine.backToMenu() },
@@ -368,7 +368,7 @@ private fun GameOverOverlay(engine: GameEngine) {
                     shape = RoundedCornerShape(8.dp),
                     modifier = Modifier.width(160.dp)
                 ) {
-                    Text("MENU", color = Color.Black, fontSize = 17.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+                    Text(stringResource(R.string.xpaddle_menu), color = Color.Black, fontSize = 17.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
                 } // Button (menu)
             } // Row (buttons)
         } // Column

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">CHAW TSWJ XYOM</string>
+    <string name="xpaddle_sound_on">Suab qhib</string>
+    <string name="xpaddle_sound_off">Suab kaw</string>
+    <string name="xpaddle_black_hole_on">Qhov Tsaus qhib</string>
+    <string name="xpaddle_black_hole_off">Qhov Tsaus kaw</string>
+    <string name="xpaddle_smarter_ai">AI NTSE DUAG</string>
+    <string name="xpaddle_instructions">Luag rau koj ib nrab los txav koj lub nkoj\nTus mus txog %1$d yeej\n\nUa Si Nyob Ze: tuav ob lub xov tooj sib ze\nthiab muab lub pob hla ob lub vijtsam</string>
+    <string name="xpaddle_back">ROV QAB</string>
+    <string name="xpaddle_return_to_app">Rov qab rau app</string>
+    <string name="xpaddle_1p_vs_cpu">1 TUS NEEG (VS CPU)</string>
+    <string name="xpaddle_2p_same_device">2 TUS NEEG (IB LUB DEVICE)</string>
+    <string name="xpaddle_play_nearby">UA SI NYOB ZE (2 DEVICES)</string>
+    <string name="xpaddle_settings">CHAW TSWJ XYOM</string>
+    <string name="xpaddle_tap_to_serve">NYEM THXAM</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">Player 1 (saum) vs Player 2 (hauv qab)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">Player 1 (sab laug) vs Player 2 (sab xis)</string>
+    <string name="xpaddle_you_are_bottom_paddle">Koj yog lub nkoj hauv qab</string>
+    <string name="xpaddle_you_are_right_paddle">Koj yog lub nkoj sab xis</string>
+    <string name="xpaddle_wins_format">%1$s YEEJ</string>
+    <string name="xpaddle_player_1">PLAYER 1</string>
+    <string name="xpaddle_player_2">PLAYER 2</string>
+    <string name="xpaddle_computer">COMPUTER</string>
+    <string name="xpaddle_rematch">UA SI DUA</string>
+    <string name="xpaddle_menu">MENU</string>
+    <string name="xpaddle_searching_for_phone">Nrhiav xov tooj nyob ze…</string>
+    <string name="xpaddle_connected_syncing">Txuas lawm — sync…</string>
+    <string name="xpaddle_connection_lost">TXUAS LUS TAWM</string>
+    <string name="xpaddle_search_again">NRHIAV DUA</string>
+    <string name="xpaddle_nearby_hint">Coj ob lub xov tooj los ze.\nNco ntsoov Wi-Fi thiab Bluetooth qhib,\nthiab XPaddle qhib rau ob qho tib si.</string>
+    <string name="xpaddle_cancel">RHO TSEG</string>
+    <string name="xpaddle_you">KOJ</string>
+    <string name="xpaddle_them">LAWV</string>
+    <string name="xpaddle_opponents_serve">OPPONENT THXAM…</string>
+    <string name="xpaddle_you_win">KOJ YEEJ</string>
+    <string name="xpaddle_you_lose">KOJ POOB</string>
+    <string name="xpaddle_exit">TAWM</string>
+    <string name="xpaddle_default_player_name">XPaddle Player</string>
+</resources>

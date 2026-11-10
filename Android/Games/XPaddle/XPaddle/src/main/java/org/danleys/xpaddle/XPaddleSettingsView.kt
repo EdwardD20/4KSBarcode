@@ -37,6 +37,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -100,7 +101,7 @@ fun XPaddleSettingsView(settings: GameSettings, onBack: () -> Unit) {
             .padding(top = 60.dp, bottom = 40.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("SETTINGS", color = GameYellow, fontSize = 34.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
+        Text(stringResource(R.string.xpaddle_settings_title), color = GameYellow, fontSize = 34.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
 
         // Sound: shown as the standard volume icon (filled when on, a
         // crossed-out volume icon when off) rather than the word "Sound".
@@ -111,7 +112,7 @@ fun XPaddleSettingsView(settings: GameSettings, onBack: () -> Unit) {
         ) {
             Icon(
                 imageVector = if (settings.soundEnabled) Icons.AutoMirrored.Filled.VolumeUp else Icons.AutoMirrored.Filled.VolumeOff,
-                contentDescription = if (settings.soundEnabled) "Sound on" else "Sound off",
+                contentDescription = stringResource(if (settings.soundEnabled) R.string.xpaddle_sound_on else R.string.xpaddle_sound_off),
                 tint = GameYellow,
                 modifier = Modifier.size(32.dp)
             ) // Icon (sound)
@@ -149,7 +150,7 @@ fun XPaddleSettingsView(settings: GameSettings, onBack: () -> Unit) {
             } // val iconRes
             Image(
                 painter = painterResource(id = iconRes),
-                contentDescription = if (settings.blackHoleEnabled) "Black Hole on" else "Black Hole off",
+                contentDescription = stringResource(if (settings.blackHoleEnabled) R.string.xpaddle_black_hole_on else R.string.xpaddle_black_hole_off),
                 modifier = Modifier.size(32.dp)
             ) // Image (black hole icon)
             Switch(
@@ -167,7 +168,7 @@ fun XPaddleSettingsView(settings: GameSettings, onBack: () -> Unit) {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text("SMARTER AI", color = GameYellow, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+            Text(stringResource(R.string.xpaddle_smarter_ai), color = GameYellow, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
             Switch(
                 checked = settings.smarterAI,
                 onCheckedChange = { settings.smarterAI = it },
@@ -177,10 +178,7 @@ fun XPaddleSettingsView(settings: GameSettings, onBack: () -> Unit) {
 
         // Moved here from the main menu overlay.
         Text(
-            "Drag on your half to move your paddle\n" +
-                "First to ${GameEngine.WINNING_SCORE} wins\n\n" +
-                "Play Nearby: hold two phones side by side\n" +
-                "and rally the ball across both screens",
+            stringResource(R.string.xpaddle_instructions, GameEngine.WINNING_SCORE),
             color = Color.White.copy(alpha = 0.5f),
             fontSize = 15.sp,
             fontWeight = FontWeight.Medium,
@@ -194,7 +192,7 @@ fun XPaddleSettingsView(settings: GameSettings, onBack: () -> Unit) {
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier.width(200.dp)
         ) {
-            Text("BACK", color = Color.Black, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+            Text(stringResource(R.string.xpaddle_back), color = Color.Black, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
         } // Button (back)
     } // Column
 } // XPaddleSettingsView

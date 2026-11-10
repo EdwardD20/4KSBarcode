@@ -22,6 +22,8 @@
     <string name="save_client_and_close">Kunden-ID speichern und schließen</string>
     <string name="senior_day">Seniorentag</string>
     <string name="senior_day_notice">Jeden dritten Mittwoch 12:00–14:00 nur für Senioren und medizinisch Bedürftige.</string>
+    <string name="games">Spiele</string>
+    <string name="return_to_app">Zurück zur App</string>
     <string name="settings_button">Einstellungen</string>
     <string name="shareTheApp">App teilen</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

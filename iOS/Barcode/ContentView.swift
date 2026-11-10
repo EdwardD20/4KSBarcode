@@ -37,6 +37,11 @@ struct ContentView: View {
     } // body
 } // ContentView
 
+private enum DuoRightPanel {
+    case games
+    case settings
+}
+
 struct MainScreen: View {
     var usesTwoColumns: Bool = false
     @Environment(\.layoutDirection) private var layoutDirection
@@ -45,6 +50,8 @@ struct MainScreen: View {
     @StateObject private var model = PassModel.load()
     @State private var showingSettings = false
     @State private var showingGames = false
+    @State private var selectedGame: GamesHubGame?
+    @State private var duoRightPanel: DuoRightPanel = .games
     @State private var showingEarlyEntryCard = false
 
     private var earlyEntryStatus: String {
@@ -141,53 +148,9 @@ struct MainScreen: View {
         return text
     } // renderedEarlyEntryCardText
 
-    // Highlight in month 11, and 12
-    private var highlightEarlyEntryExpiration: Bool {
-        let currentMonth = Calendar.current.component(.month, from: Date())
-
-        return currentMonth == 11 ||
-               currentMonth == 12
-    } // highlightEarlyEntryExpiration
-    
-    // EarlyEntry sheet uses alternate backgrounds every other year
-    private var earlyEntryForegroundColor: Color {
-        if highlightEarlyEntryExpiration {
-            return .red
-        } else {
-            return .primary
-        }
-    }
-    
-    // Even, odd years
-    private var isOddYear: Bool {
-        let year = Calendar.current.component(.year, from: Date())
-        return year.isMultiple(of: 2) == false
-    } // var isOddYear
-
-    // EarlyEntry sheet uses alternate backgrounds every other year
-    private var earlyEntryBackgroundColor: Color {
-        if isOddYear {
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-                return Color(
-                    red: 10.0 / 255.0,
-                    green: 37.0 / 255.0,
-                    blue: 64.0 / 255.0
-                ) // dark navy
-            } else {
-                return Color(
-                    red: 1.0,
-                    green: 0.97,
-                    blue: 0.80
-                ) // soft yellow
-            } // if dark mode
-        } else {
-            return Color(.systemBackground)
-        } // if odd year
-
-    } // var earlyEntryBackgroundColor
-
     private var mainDisplay: some View {
         GeometryReader { geo in
+            let buttonWidth = geo.size.width * 0.75
             ScrollView {
 
                 VStack(spacing: 16) {
@@ -198,19 +161,20 @@ struct MainScreen: View {
                             Image(uiImage: logo)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(
-                                    maxWidth: geo.size.width * 0.9,
-                                    maxHeight: geo.size.height * 0.18
-                                )
+                                .frame(width: max(buttonWidth - 16, 0))
+                                .frame(maxHeight: geo.size.height * 0.18)
                                 .cornerRadius(6)
+                                .padding(8)
+                                .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
                                 .padding(.top, 12)
                         } // Button action: openWebsite
+                        .buttonStyle(.plain)
                         .accessibilityLabel("Open 4 K.I.D.S. Sake website")
                         .accessibilityAddTraits(.isButton)
                     } else {
-                        Color.gray.opacity(0.12)
+                        Color.red
                             .frame(height: geo.size.height * 0.14)
-                            .overlay(Text("Logo").foregroundColor(.secondary))
+                            .overlay(Text("Logo").foregroundColor(.black))
                             .cornerRadius(6)
                             .padding(.top, 12)
                     } // if/else logo
@@ -292,7 +256,7 @@ struct MainScreen: View {
                             } // switch
                         } else {
                             Text(LocalizedStringKey("no_client"))
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.black)
                                 .padding(.bottom, 8)
                         } // if cid
                     } // VStack barcode
@@ -315,13 +279,17 @@ struct MainScreen: View {
                                         print("Wallet error:", error)
                                     }
                                 } // Task
-                            }) {
+                            })
+                            {
                                 Image("apple-wallet")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(height: 50)
+                                    .padding(8)
+                                    .frame(width: buttonWidth)
+                                    .background(Color.red, in: RoundedRectangle(cornerRadius: 8))
                             } // Button action: present wallet pass
-                            .buttonStyle(.bordered)
+                            .buttonStyle(.plain)
                             .padding(.horizontal, 12)
                             .accessibilityLabel("Add to Apple Wallet")
                             .accessibilityHint("Opens wallet pass for this client")
@@ -336,10 +304,14 @@ struct MainScreen: View {
                             showingEarlyEntryCard = true
                         }) {
                             Text(LocalizedStringKey("early_entry_label"))
-//                                .frame(maxWidth: .infinity)
+                                .padding(.horizontal, 12)
+                                .frame(width: buttonWidth, alignment: .center)
+                                .multilineTextAlignment(.center)
+                                .padding(.vertical, 8)
                         } // Button action: show early entry card
-                        .buttonStyle(.bordered)
-                        .padding(.horizontal, 12)
+                        .buttonStyle(.plain)
+                        .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
+                        .foregroundStyle(.black)
                         .accessibilityLabel(Text(LocalizedStringKey("early_entry_label")))
                     } // if shouldShowEarlyEntryButton
 
@@ -353,30 +325,58 @@ struct MainScreen: View {
                                     .frame(height: 20)
                                 Text("Facebook")
                             } // HStack facebook content
+                            .padding(.horizontal, 12)
+                            .frame(width: buttonWidth, alignment: .center)
+                            .padding(.vertical, 8)
                         } // Button action: openFacebook
-                        .buttonStyle(.bordered)
+                        .buttonStyle(.plain)
+                        .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
+                        .foregroundStyle(.black)
                         .accessibilityLabel("Facebook")
                         .accessibilityAddTraits(.isButton)
                     } // HStack facebook
 
                     // --- Games button ---
-                    Button(LocalizedStringKey("Get sidetracked...")) {
-                        showingGames = true
+                    Button {
+                        if usesTwoColumns {
+                            duoRightPanel = .games
+                        } else {
+                            showingGames = true
+                        }
+                    } label: {
+                        Text(LocalizedStringKey("games_label"))
+                            .padding(.horizontal, 12)
+                            .frame(width: buttonWidth, alignment: .center)
+                            .multilineTextAlignment(.center)
+                            .padding(.vertical, 8)
                     } // Games button
-                    .buttonStyle(.bordered)
+                    .buttonStyle(.plain)
+                    .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
+                    .foregroundStyle(.black)
                     
                     // --- Settings Button ---
                     HStack {
-                        Button(action: { showingSettings = true }) {
+                        Button(action: {
+                            if usesTwoColumns {
+                                duoRightPanel = .settings
+                            } else {
+                                showingSettings = true
+                            }
+                        }) {
                             HStack {
                                 Image(systemName: "gearshape")
                                 Text(LocalizedStringKey("settings_button_label"))
                             } // HStack settings content
+                            .padding(.horizontal, 12)
+                            .frame(width: buttonWidth, alignment: .center)
+                            .padding(.vertical, 8)
                         } // Button action: show settings
-                        .buttonStyle(.bordered)
-                        .disabled(usesTwoColumns)
+                        .buttonStyle(.plain)
+                        .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
+                        .foregroundStyle(.black)
                     } // HStack settings
-                    .padding(.bottom, 20)                } // VStack main content
+                    .padding(.bottom, 20)
+                } // VStack main content
                 .frame(width: geo.size.width, alignment: .center)
             } // ScrollView
         } // GeometryReader
@@ -405,10 +405,22 @@ struct MainScreen: View {
             
             if usesTwoColumns {
                 Divider()
-                BarcodeSettingsView(model: model, isEmbedded: true)
-                    .environment(\.locale, Locale(identifier: appLanguage))
-                    .environment(\.layoutDirection, layoutDirection)
-                    .frame(maxWidth: .infinity)
+                Group {
+                    switch duoRightPanel {
+                    case .games:
+                        GamesHubView(
+                            returnToApp: {},
+                            onSelectGame: { game in
+                                selectedGame = game
+                            }
+                        )
+                    case .settings:
+                        BarcodeSettingsView(model: model, isEmbedded: true)
+                    }
+                }
+                .environment(\.locale, Locale(identifier: appLanguage))
+                .environment(\.layoutDirection, layoutDirection)
+                .frame(maxWidth: .infinity)
             }
         }
         // Keep the requested physical column order in right-to-left languages.
@@ -416,6 +428,7 @@ struct MainScreen: View {
         .onChange(of: usesTwoColumns) { _, isExpanded in
             if isExpanded {
                 showingSettings = false
+                duoRightPanel = .games
             }
         }
         .onAppear {
@@ -436,7 +449,12 @@ struct MainScreen: View {
                 } // if/else preferred
             } // if appLanguage.isEmpty
             if (model.clientId?.isEmpty ?? true) && !usesTwoColumns {
-                showingSettings = true
+                // Let the initial language update settle before presenting the sheet.
+                DispatchQueue.main.async {
+                    guard !usesTwoColumns,
+                          model.clientId?.isEmpty ?? true else { return }
+                    showingSettings = true
+                }
             } // if clientId empty
 
             if let barcode = UserDefaults.standard.string(forKey: "LastScannedBarcode"),
@@ -497,29 +515,49 @@ struct MainScreen: View {
         )) {
             BarcodeSettingsView(model: model)
                 .environment(\.locale, Locale(identifier: appLanguage))
-                .id(appLanguage)
         } // sheet
         .sheet(isPresented: $showingEarlyEntryCard) {
             NavigationView {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 16) {
                         Text(.init(renderedEarlyEntryCardText))
-                            .foregroundColor(earlyEntryForegroundColor)
+                            .foregroundStyle(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     } // VStack
                     .padding()
                 } // ScrollView
+                .background(Color.red.ignoresSafeArea())
+                .foregroundStyle(.black)
                 .navigationTitle(Text(LocalizedStringKey("early_entry_label")))
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbarBackground(Color.red, for: .navigationBar)
+                .toolbarBackground(.visible, for: .navigationBar)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("Close") {
+                Button("Close") {
                             showingEarlyEntryCard = false
                         } // Button close
                     } // ToolbarItem
                 } // toolbar
             } // NavigationView
+            .tint(.black)
         } // sheet early entry
+        .fullScreenCover(item: $selectedGame) { game in
+            Group {
+                switch game {
+                case .solitaire:
+                    SolitaireContentView(onExitToHost: {
+                        selectedGame = nil
+                    }, expandsToAvailableWidth: true)
+                case .xpaddle:
+                    XPaddleContentView(onExitToHost: {
+                        selectedGame = nil
+                    })
+                }
+            }
+            .environment(\.locale, Locale(identifier: appLanguage))
+            .id(appLanguage)
+        }
         .fullScreenCover(isPresented: $showingGames) {
             GamesHubView(
                 returnToApp: {

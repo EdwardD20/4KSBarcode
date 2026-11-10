@@ -16,7 +16,7 @@ final class PassModel: ObservableObject {
     @Published var Icon: UIImage?
     @Published var Logo: UIImage?
 
-    private static let clientKey = "pass_model_clientId"
+    static let clientKey = "pass_model_clientId"
 
     static func load() -> PassModel {
         let m = PassModel()

@@ -22,6 +22,8 @@
     <string name="save_client_and_close">I-save at isara</string>
     <string name="senior_day">Araw ng Senior</string>
     <string name="senior_day_notice">Ikatlong Miyerkules para sa seniors.</string>
+    <string name="games">Mga Laro</string>
+    <string name="return_to_app">Bumalik sa app</string>
     <string name="settings_button">Mga Setting</string>
     <string name="shareTheApp">Ibahagi ang app</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

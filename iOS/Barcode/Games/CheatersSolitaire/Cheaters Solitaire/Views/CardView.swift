@@ -80,7 +80,7 @@ struct CardView: View {
         } // ZStack
         .frame(width: width, height: height)
         .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 1)
-        .accessibilityLabel(card.isFaceUp ? "\(card.rank.label) of \(card.suit.rawValue)" : "Face-down card")
+        .accessibilityLabel(card.isFaceUp ? Text("\(solitaireText(card.rank.spokenName)) of \(solitaireText(card.suit.localizationKey))", tableName: "Solitaire") : solitaireText("Face-down card"))
     } // body
 
     private var cornerIndex: some View {

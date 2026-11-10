@@ -8,7 +8,6 @@ import SwiftUI
 import Combine
 
 struct SplashScreenView: View {
-    @Environment(\.colorScheme) private var colorScheme
     @Environment(\.layoutDirection) private var layoutDirection
     @State private var isVisible = false
     @State private var countdown: Int = Int(Globals.splashDuration)
@@ -70,7 +69,7 @@ struct SplashScreenView: View {
                         Link(destination: URL(string: mapsURL + "/?q=\(encodedAddress)")!) {
                             Text(addressAttributed)
                                 .font(.system(size: geo.size.height * 0.03, weight: .bold, design: .monospaced))
-                                .foregroundColor(.primary)
+                                .foregroundColor(.black)
                                 .multilineTextAlignment(
                                     layoutDirection == .rightToLeft
                                     ? .trailing
@@ -101,15 +100,7 @@ struct SplashScreenView: View {
                             Spacer()
                             Text("\(countdown)")
                                 .font(.system(size: geo.size.height * 0.10, weight: .black, design: .rounded))
-                                .foregroundStyle(
-                                    LinearGradient(
-                                        colors: [.red, .orange, .yellow],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .shadow(color: .red.opacity(0.8), radius: 6)
-                                .shadow(color: .orange.opacity(0.6), radius: 12)
+                                .foregroundStyle(.black)
                                 .scaleEffect(isAnimating ? 1.15 : 0.95)
                                 .animation(
                                     .easeInOut(duration: 0.6).repeatForever(autoreverses: true),

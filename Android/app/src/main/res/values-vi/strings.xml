@@ -22,6 +22,8 @@
     <string name="save_client_and_close">Lưu và đóng</string>
     <string name="senior_day">Ngày người cao tuổi</string>
     <string name="senior_day_notice">Thứ Tư tuần thứ ba.</string>
+    <string name="games">Trò chơi</string>
+    <string name="return_to_app">Quay lại ứng dụng</string>
     <string name="settings_button">Cài đặt</string>
     <string name="shareTheApp">Chia sẻ ứng dụng</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

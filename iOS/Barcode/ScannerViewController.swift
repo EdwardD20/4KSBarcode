@@ -31,7 +31,7 @@ final class ScannerViewController: UIViewController, AVCaptureMetadataOutputObje
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .red
         checkPermissionsAndSetup()
     }
 
@@ -64,7 +64,7 @@ final class ScannerViewController: UIViewController, AVCaptureMetadataOutputObje
         // Simple message + localized Cancel button
         let label = UILabel()
         label.text = NSLocalizedString("camera_permission_message", comment: "Camera access required")
-        label.textColor = .white
+        label.textColor = .black
         label.numberOfLines = 0
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -218,7 +218,17 @@ final class ScannerViewController: UIViewController, AVCaptureMetadataOutputObje
         let cancelButton = UIButton(type: .system)
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
         cancelButton.setTitle(NSLocalizedString("camera_cancel_button", comment: "Cancel"), for: .normal)
-        cancelButton.setTitleColor(.white, for: .normal)
+        var configuration = UIButton.Configuration.filled()
+        configuration.baseBackgroundColor = .white
+        configuration.baseForegroundColor = .black
+        configuration.cornerStyle = .medium
+        configuration.contentInsets = NSDirectionalEdgeInsets(
+            top: 8,
+            leading: 16,
+            bottom: 8,
+            trailing: 16
+        )
+        cancelButton.configuration = configuration
         cancelButton.addTarget(self, action: #selector(cancelTapped), for: .touchUpInside)
         NSLayoutConstraint.activate([
             // we can't activate here until added as subview, do it at call site (we do add in setupSession)

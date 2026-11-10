@@ -19,6 +19,8 @@
 		648C3BD4305C0E8500DBDCE2 /* GolfClap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 648C3BCA305C0E8500DBDCE2 /* GolfClap.wav */; };
 		655127F4FFE9302A5DEA0278 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7490E332C31ACC30D8323F /* GameEngine.swift */; };
 		A61E8FB493D547E8AB3B7345 /* XPaddleSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0C196E043F49DDB1738491 /* XPaddleSettingsView.swift */; };
+		AB12CD340000000000000001 /* XPaddleLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12CD340000000000000002 /* XPaddleLocalization.swift */; };
+		AB12CD340000000000000003 /* XPaddle.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB12CD340000000000000004 /* XPaddle.strings */; };
 		C3EBA702CC47C6AD717F3C98 /* XPaddleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD4CB42A08DA90AD56FB3A7 /* XPaddleContentView.swift */; };
 		DB351F8542554B012BD6632D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F43A974C34C99878B86F318 /* NetworkManager.swift */; };
 		DDDE4EB8B379F53C7DE2150F /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BA06619BBD19F201C0681 /* DuelView.swift */; };
@@ -38,7 +40,27 @@
 		736A37DE29E2A657CBD310CC /* DuelEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelEngine.swift; sourceTree = "<group>"; };
 		8F43A974C34C99878B86F318 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9C0C196E043F49DDB1738491 /* XPaddleSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPaddleSettingsView.swift; sourceTree = "<group>"; };
+		AB12CD340000000000000002 /* XPaddleLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPaddleLocalization.swift; sourceTree = "<group>"; };
 		BA3FEB3B00C5DE37386AB640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C20000000000000000000010 /* en.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000011 /* es.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = es.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000012 /* fr.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = fr.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000013 /* de.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = de.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000014 /* pt.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = pt.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000015 /* ru.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ru.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000016 /* zh-Hans.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "zh-Hans.lproj/XPaddle.strings"; sourceTree = "<group>"; };
+		C20000000000000000000017 /* arz.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = arz.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000018 /* ko.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ko.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000019 /* hi.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = hi.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C2000000000000000000001B /* ar.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ar.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C2000000000000000000001C /* uk.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = uk.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C2000000000000000000001D /* pl.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = pl.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C2000000000000000000001E /* tl.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = tl.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C2000000000000000000001F /* vi.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = vi.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000020 /* gu.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = gu.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000021 /* hmn.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = hmn.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000022 /* km.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = km.lproj/XPaddle.strings; sourceTree = "<group>"; };
+		C20000000000000000000023 /* lo.lproj/XPaddle.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = lo.lproj/XPaddle.strings; sourceTree = "<group>"; };
 		CA1900BAA06129AD0C990B9C /* XPaddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPaddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD4CB42A08DA90AD56FB3A7 /* XPaddleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPaddleContentView.swift; sourceTree = "<group>"; };
 		CD7490E332C31ACC30D8323F /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
@@ -81,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				BA3FEB3B00C5DE37386AB640 /* Assets.xcassets */,
+				AB12CD340000000000000004 /* XPaddle.strings */,
+				AB12CD340000000000000002 /* XPaddleLocalization.swift */,
 				CAD4CB42A08DA90AD56FB3A7 /* XPaddleContentView.swift */,
 				9C0C196E043F49DDB1738491 /* XPaddleSettingsView.swift */,
 				736A37DE29E2A657CBD310CC /* DuelEngine.swift */,
@@ -123,7 +147,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2710;
+				LastUpgradeCheck = 2720;
 				TargetAttributes = {
 					CB29957FC7A79F3B7D171819 = {
 						ProvisioningStyle = Automatic;
@@ -136,6 +160,26 @@
 			knownRegions = (
 				Base,
 				en,
+				es,
+				fr,
+				de,
+				pt,
+				ar,
+				arz,
+				gu,
+				hi,
+				hmn,
+				km,
+				ko,
+				lo,
+				pl,
+				ru,
+				tl,
+				uk,
+				vi,
+				"zh-Hans",
+				it,
+				ja,
 			);
 			mainGroup = 6D9C48DEA4A823E1163786BC;
 			minimizedProjectReferenceProxies = 1;
@@ -162,6 +206,7 @@
 				648C3BD3305C0E8500DBDCE2 /* RacquetHit.wav in Resources */,
 				648C3BD4305C0E8500DBDCE2 /* GolfClap.wav in Resources */,
 				0A36EB72904C764A7DE66C92 /* Assets.xcassets in Resources */,
+				AB12CD340000000000000003 /* XPaddle.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3EBA702CC47C6AD717F3C98 /* XPaddleContentView.swift in Sources */,
+				AB12CD340000000000000001 /* XPaddleLocalization.swift in Sources */,
 				A61E8FB493D547E8AB3B7345 /* XPaddleSettingsView.swift in Sources */,
 				E41AD2816499EE21BE572AAF /* DuelEngine.swift in Sources */,
 				DDDE4EB8B379F53C7DE2150F /* DuelView.swift in Sources */,
@@ -185,11 +231,42 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		AB12CD340000000000000004 /* XPaddle.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C20000000000000000000010 /* en.lproj/XPaddle.strings */,
+				C20000000000000000000023 /* lo.lproj/XPaddle.strings */,
+				C20000000000000000000022 /* km.lproj/XPaddle.strings */,
+				C20000000000000000000021 /* hmn.lproj/XPaddle.strings */,
+				C20000000000000000000020 /* gu.lproj/XPaddle.strings */,
+				C2000000000000000000001F /* vi.lproj/XPaddle.strings */,
+				C2000000000000000000001E /* tl.lproj/XPaddle.strings */,
+				C2000000000000000000001D /* pl.lproj/XPaddle.strings */,
+				C2000000000000000000001C /* uk.lproj/XPaddle.strings */,
+				C2000000000000000000001B /* ar.lproj/XPaddle.strings */,
+				C20000000000000000000019 /* hi.lproj/XPaddle.strings */,
+				C20000000000000000000018 /* ko.lproj/XPaddle.strings */,
+				C20000000000000000000017 /* arz.lproj/XPaddle.strings */,
+				C20000000000000000000016 /* zh-Hans.lproj/XPaddle.strings */,
+				C20000000000000000000015 /* ru.lproj/XPaddle.strings */,
+				C20000000000000000000014 /* pt.lproj/XPaddle.strings */,
+				C20000000000000000000013 /* de.lproj/XPaddle.strings */,
+				C20000000000000000000012 /* fr.lproj/XPaddle.strings */,
+				C20000000000000000000011 /* es.lproj/XPaddle.strings */,
+			);
+			name = XPaddle.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		8C2C02C997E2E991935BF019 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -306,6 +383,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

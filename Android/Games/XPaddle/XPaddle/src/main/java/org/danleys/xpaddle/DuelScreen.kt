@@ -41,6 +41,7 @@ import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -127,11 +128,11 @@ private fun duelPermissions(): Array<String> {
 private fun ConnectingOverlay(engine: DuelEngine, onCancel: () -> Unit) {
     Box(modifier = Modifier.fillMaxSize().padding(40.dp), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(24.dp)) {
-            Text("XPADDLE", color = Color.White, fontSize = 48.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
+            Text(stringResource(R.string.xpaddle_app_name), color = Color.White, fontSize = 48.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
 
             if (engine.phase == DuelPhase.CONNECTION_LOST) {
-                Text("CONNECTION LOST", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
-                PillButton("SEARCH AGAIN", filled = true) { engine.start() }
+                Text(stringResource(R.string.xpaddle_connection_lost), color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+                PillButton(stringResource(R.string.xpaddle_search_again), filled = true) { engine.start() }
             } else {
                 CircularProgressIndicator(color = Color.White)
                 Text(
@@ -143,7 +144,7 @@ private fun ConnectingOverlay(engine: DuelEngine, onCancel: () -> Unit) {
                     textAlign = TextAlign.Center
                 ) // Text (connection label)
                 Text(
-                    "Bring both phones close together.\nMake sure Wi-Fi and Bluetooth are on,\nand XPaddle is open on both.",
+                    stringResource(R.string.xpaddle_nearby_hint),
                     color = Color.White.copy(alpha = 0.4f),
                     fontSize = 12.sp,
                     fontFamily = FontFamily.Monospace,
@@ -151,7 +152,7 @@ private fun ConnectingOverlay(engine: DuelEngine, onCancel: () -> Unit) {
                 ) // Text (hint)
             } // if connection lost / else
 
-            PillButton("CANCEL", filled = false, onClick = onCancel)
+            PillButton(stringResource(R.string.xpaddle_cancel), filled = false, onClick = onCancel)
         } // Column
     } // Box
 } // ConnectingOverlay
@@ -233,14 +234,14 @@ private fun DuelCourtView(engine: DuelEngine) {
             modifier = Modifier.align(Alignment.TopCenter).padding(top = 24.dp),
             horizontalArrangement = Arrangement.spacedBy(32.dp)
         ) {
-            DuelScoreBlock("YOU", engine.localScore)
+            DuelScoreBlock(stringResource(R.string.xpaddle_you), engine.localScore)
             Text(":", color = Color.White.copy(alpha = 0.3f), fontSize = 32.sp, fontFamily = FontFamily.Monospace)
-            DuelScoreBlock("THEM", engine.opponentScore)
+            DuelScoreBlock(stringResource(R.string.xpaddle_them), engine.opponentScore)
         } // Row (score bar)
 
         when (engine.phase) {
             DuelPhase.SERVING -> Text(
-                "TAP TO SERVE",
+                stringResource(R.string.xpaddle_tap_to_serve),
                 color = Color.White,
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold,
@@ -251,7 +252,7 @@ private fun DuelCourtView(engine: DuelEngine) {
                     .padding(16.dp)
             ) // Text (tap to serve)
             DuelPhase.WAITING_FOR_BALL -> Text(
-                "OPPONENT'S SERVE…",
+                stringResource(R.string.xpaddle_opponents_serve),
                 color = Color.White.copy(alpha = 0.5f),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
@@ -276,7 +277,7 @@ private fun DuelGameOverOverlay(engine: DuelEngine, onExit: () -> Unit) {
     Box(modifier = Modifier.fillMaxSize().padding(40.dp), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(24.dp)) {
             Text(
-                if (engine.winnerIsMe == true) "YOU WIN" else "YOU LOSE",
+                stringResource(if (engine.winnerIsMe == true) R.string.xpaddle_you_win else R.string.xpaddle_you_lose),
                 color = Color.White,
                 fontSize = 40.sp,
                 fontWeight = FontWeight.Black,
@@ -297,10 +298,10 @@ private fun DuelGameOverOverlay(engine: DuelEngine, onExit: () -> Unit) {
                     shape = RoundedCornerShape(8.dp),
                     modifier = Modifier.width(150.dp)
                 ) {
-                    Text("REMATCH", color = Color.Black, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+                    Text(stringResource(R.string.xpaddle_rematch), color = Color.Black, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
                 } // Button (rematch)
                 OutlinedButton(onClick = onExit, shape = RoundedCornerShape(8.dp), modifier = Modifier.width(150.dp)) {
-                    Text("EXIT", color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+                    Text(stringResource(R.string.xpaddle_exit), color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
                 } // OutlinedButton (exit)
             } // Row (buttons)
         } // Column

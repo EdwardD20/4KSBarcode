@@ -71,6 +71,13 @@ enum class ActiveGameScreen {
     EXTREME_PADDLE
 } // end enum ActiveGameScreen
 
+enum class TwoPaneRightContent {
+    GAMES,
+    SETTINGS,
+    CHEATERS_SOLITAIRE,
+    EXTREME_PADDLE
+}
+
 @Composable
 fun GoogleWalletButton(clientId: String, barcodeFormat: String) { // fun GoogleWalletButton
     val context = LocalContext.current
@@ -96,7 +103,7 @@ fun GoogleWalletButton(clientId: String, barcodeFormat: String) { // fun GoogleW
 
                     } catch (e: Exception) { // catch
                         e.printStackTrace()
-                        snackbarHostState.showSnackbar("Error opening Google Wallet") // show Snackbar
+                        snackbarHostState.showSnackbar(context.getString(R.string.wallet_error)) // show Snackbar
                     } // try/catch
                 } // scope.launch
             }, // clickable
@@ -140,6 +147,10 @@ fun MainScreen(
     val configuration = LocalConfiguration.current
     val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
     val isTwoPaneMode = configuration.screenWidthDp >= 600
+
+    var twoPaneRightContent by remember {
+        mutableStateOf(if (clientId.isEmpty()) TwoPaneRightContent.SETTINGS else TwoPaneRightContent.GAMES)
+    }
 
     when (activeGameScreen) {
         ActiveGameScreen.GAMES_HUB -> {
@@ -193,8 +204,8 @@ fun MainScreen(
                                 earlyEntryIssueDate = earlyEntryIssueDate,
                                 isLandscape = isLandscape,
                                 isTwoPaneMode = isTwoPaneMode,
-                                onSettingsClick = onSettingsClick,
-                                onGamesClick = { activeGameScreen = ActiveGameScreen.GAMES_HUB },
+                                onSettingsClick = { twoPaneRightContent = TwoPaneRightContent.SETTINGS },
+                                onGamesClick = { twoPaneRightContent = TwoPaneRightContent.GAMES },
                                 showEarlyEntryCard = { showEarlyEntryCard = true }
                             )
                         } // end Column
@@ -205,12 +216,38 @@ fun MainScreen(
                                 .fillMaxHeight(),
                             color = Color.Red
                         ) {
-                            SettingsScreen(
-                                currentClientId = clientId,
-                                currentDisplayMode = displayMode,
-                                onSettingsSaved = onSettingsSaved,
-                                hideBottomBar = true
-                            )
+                            when (twoPaneRightContent) {
+                                TwoPaneRightContent.GAMES -> {
+                                    GamesHubScreen(
+                                        onReturnToApp = { twoPaneRightContent = TwoPaneRightContent.GAMES },
+                                        onSelectSolitaire = { twoPaneRightContent = TwoPaneRightContent.CHEATERS_SOLITAIRE },
+                                        onSelectXPaddle = { twoPaneRightContent = TwoPaneRightContent.EXTREME_PADDLE },
+                                        showReturnButton = false
+                                    )
+                                }
+                                TwoPaneRightContent.SETTINGS -> {
+                                    SettingsScreen(
+                                        currentClientId = clientId,
+                                        currentDisplayMode = displayMode,
+                                        hideBottomBar = true,
+                                        onSettingsSaved = { id, mode ->
+                                            onSettingsSaved(id, mode)
+                                            twoPaneRightContent = TwoPaneRightContent.GAMES
+                                        },
+                                        onBack = { twoPaneRightContent = TwoPaneRightContent.GAMES }
+                                    )
+                                }
+                                TwoPaneRightContent.CHEATERS_SOLITAIRE -> {
+                                    CheatersSolitaireApp(
+                                        onExitToHost = { twoPaneRightContent = TwoPaneRightContent.GAMES }
+                                    )
+                                }
+                                TwoPaneRightContent.EXTREME_PADDLE -> {
+                                    XPaddleApp(
+                                        onExitToHost = { twoPaneRightContent = TwoPaneRightContent.GAMES }
+                                    )
+                                }
+                            }
                         } // end Surface
                     } // end Row
                 } else {
@@ -424,9 +461,25 @@ private fun MainContent(
 
     Spacer(modifier = Modifier.height(12.dp))
 
+    // --- Facebook button ---
+    MediumWidthButton(
+        text = "Facebook",
+        onClick = {
+            context.startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    "https://www.facebook.com/4KIDSSAKEFOODPANTRYANDENRICHMENTCENTER".toUri()
+                )
+            )
+        },
+        icon = R.drawable.ic_facebook
+    )
+
+    Spacer(modifier = Modifier.height(12.dp))
+
     // --- Games button ---
     MediumWidthButton(
-        text = "Get sidetracked...",
+        text = stringResource(id = R.string.games),
         onClick = { onGamesClick() }
     ) // MediumWidthButton Games
 
@@ -435,7 +488,6 @@ private fun MainContent(
     // --- Settings button ---
     MediumWidthButton(
         text = stringResource(id = R.string.settings_button),
-        onClick = { onSettingsClick() },
-        enabled = !isTwoPaneMode
+        onClick = { onSettingsClick() }
     ) // MediumWidthButton Settings
 }

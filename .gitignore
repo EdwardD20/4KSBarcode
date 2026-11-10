@@ -8,8 +8,16 @@
 /zAppImages/
 
 # Android signing credentials and generated files
+# Android local configuration and release outputs
 /Android/keystore.properties
 /Android/_PlayStoreKey.txt
+/Android/Android Build*.rtf
+/Android/local.properties
+/Android/app/release/
+/Android/_PlayStoreKey.rtf
+**/Screenshot*.png
+**/*.aab
+**/*.apk
 **/*.jks
 **/*.keystore
 **/.gradle/

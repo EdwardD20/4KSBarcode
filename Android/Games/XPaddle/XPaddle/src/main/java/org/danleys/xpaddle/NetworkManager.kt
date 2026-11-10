@@ -83,7 +83,7 @@ enum class DuelConnectionState {
 class NetworkManager(context: Context) {
     private val serviceId = "org.danleys.xpaddle.duel"
     private val connectionsClient: ConnectionsClient = Nearby.getConnectionsClient(context)
-    private val myEndpointName = "${Build.MANUFACTURER} ${Build.MODEL}".trim().ifEmpty { "XPaddle Player" }
+    private val myEndpointName = "${Build.MANUFACTURER} ${Build.MODEL}".trim().ifEmpty { context.getString(R.string.xpaddle_default_player_name) }
 
     var onMessage: ((DuelMessage) -> Unit)? = null
     var onStateChange: ((DuelConnectionState, String?) -> Unit)? = null

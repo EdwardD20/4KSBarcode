@@ -22,6 +22,8 @@
     <string name="save_client_and_close">احفظ معرّف العميل وأغلق</string>
     <string name="senior_day">يوم كبار السن</string>
     <string name="senior_day_notice">سنكون مفتوحين في الأربعاء الثالث من كل شهر من الساعة 12:00 إلى 2:00 ظهرًا حصريًا لكبار السن والأشخاص الذين لديهم تشخيصات طبية. يجب أن يكون لديك بطاقة دخول مبكر لهذا اليوم المخصص للتسوق.</string>
+    <string name="games">ألعاب</string>
+    <string name="return_to_app">العودة إلى التطبيق</string>
     <string name="settings_button">الإعدادات</string>
     <string name="shareTheApp">مشاركة التطبيق</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

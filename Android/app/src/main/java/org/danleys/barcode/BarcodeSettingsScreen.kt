@@ -84,6 +84,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlin.time.Duration.Companion.milliseconds
 import org.json.JSONArray
 import org.json.JSONObject
 import java.net.HttpURLConnection
@@ -97,7 +98,8 @@ fun SettingsScreen(
     currentClientId: String,
     currentDisplayMode: String,
     onSettingsSaved: (String, String) -> Unit,
-    hideBottomBar: Boolean = false
+    hideBottomBar: Boolean = false,
+    onBack: (() -> Unit)? = null
 ) {
     val context = LocalContext.current
     val activity = context as? ComponentActivity
@@ -189,60 +191,6 @@ fun SettingsScreen(
     val earlyEntryStatusKey = stringPreferencesKey("EarlyEntryStatus")
     val earlyEntryIssueDateKey = stringPreferencesKey("earlyEntryIssueDate")
 
-    suspend fun submitApprovalRequest(id: String): String = withContext(Dispatchers.IO) {
-        val url = URL("https://edwardd20.homedns.org/api/request-approval")
-        val conn = (url.openConnection() as HttpURLConnection).apply {
-            requestMethod = "POST"
-            doOutput = true
-            setRequestProperty("Content-Type", "application/json")
-        } // end apply
-        val body = JSONObject().apply { put("clientId", id) }.toString()
-        conn.outputStream.use { it.write(body.toByteArray()) }
-        if (conn.responseCode !in 200..299) throw Exception("Server error: ${conn.responseCode}")
-        val response = conn.inputStream.bufferedReader().use { it.readText() }
-        JSONObject(response).getString("requestId")
-    } // end fun submitApprovalRequest
-
-    suspend fun fetchRequestStatus(requestId: String): String = withContext(Dispatchers.IO) {
-        val url = URL("https://edwardd20.homedns.org/api/request-status/$requestId")
-        val response = url.readText()
-        try {
-            val obj = JSONObject(response)
-            return@withContext "${obj.getString("status")} (${obj.getString("requestId")})"
-        } catch (e: Exception) {
-            try {
-                val arr = JSONArray(response)
-                if (arr.length() > 0) {
-                    val obj = arr.getJSONObject(0)
-                    return@withContext "${obj.getString("status")} (${obj.getString("requestId")})"
-                } // end if
-            } catch (e2: Exception) {
-            } // end catch
-        } // end catch
-        response
-    } // end fun fetchRequestStatus
-
-    suspend fun pollStatusUntilComplete(requestId: String): String? {
-        val terminalStatuses = setOf("Senior", "Medical", "Denied")
-        val maxDuration = 180_000L
-        val interval = 5_000L
-        val start = System.currentTimeMillis()
-        while (System.currentTimeMillis() - start < maxDuration) {
-            try {
-                val status = fetchRequestStatus(requestId)
-                val plainStatus = if (status.contains("(")) {
-                    status.substringBefore("(").trim()
-                } else {
-                    status.trim()
-                } // end if
-                if (terminalStatuses.contains(plainStatus)) return plainStatus
-            } catch (e: Exception) {
-            } // end catch
-            delay(interval)
-        } // end while
-        return null
-    } // end fun pollStatusUntilComplete
-
     fun runEarlyEntryFlow() {
         if (clientId.isBlank()) {
             if (BuildConfig.DEBUG) earlyEntryErrorMessage = "No client ID available"
@@ -261,7 +209,7 @@ fun SettingsScreen(
                     
                     dataStore.edit { it[earlyEntryIssueDateKey] = isoDate }
                     
-                    if (finalStatus == "Senior" || finalStatus == "Medical") {
+                    if ((finalStatus == "Senior") || (finalStatus == "Medical")) {
                         dataStore.edit { it[earlyEntryStatusKey] = finalStatus }
                         if (finalStatus == "Medical" && BuildConfig.DEBUG) {
                             requestStatusMessage += " ($isoDate)"
@@ -369,6 +317,14 @@ fun SettingsScreen(
                 ) // end colors
             ) // OutlinedTextField (Client ID input)
 
+            if (onBack != null) {
+                FilledWideButton(
+                    text = stringResource(id = R.string.return_to_app),
+                    onClick = onBack
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+            }
+
             PrimaryRaisedWideButton(
                 text = stringResource(id = R.string.save_client_and_close),
                 onClick = { onSettingsSaved(clientId, selectedDisplayMode) }
@@ -408,16 +364,16 @@ fun SettingsScreen(
             ) // FilledWideButton (Info Dialog 2)
 
             FilledWideButton(
-                text = if (shareTheApp) stringResource(id = R.string.close_button)
-                else stringResource(id = R.string.shareTheApp),
-                onClick = { shareTheApp = !shareTheApp }
-            ) // FilledWideButton (Share the App)
-
-            FilledWideButton(
                 text = if (earlyEntry) stringResource(id = R.string.close_button)
                 else stringResource(id = R.string.early_entry_label),
                 onClick = { earlyEntry = !earlyEntry }
             ) // FilledWideButton (Early Entry)
+
+            FilledWideButton(
+                text = if (shareTheApp) stringResource(id = R.string.close_button)
+                else stringResource(id = R.string.shareTheApp),
+                onClick = { shareTheApp = !shareTheApp }
+            ) // FilledWideButton (Share the App)
 
             // Condensed Display Mode Selector
             CondensedDropdown(
@@ -573,7 +529,8 @@ fun SettingsScreen(
                             Button(
                                 onClick = { runEarlyEntryFlow() },
                                 colors = ButtonDefaults.buttonColors(
-                                    containerColor = androidx.compose.ui.graphics.Color(0xFFFFF59D) // Lighter yellow
+                                    containerColor = Color.White,
+                                    contentColor = Color.Black
                                 ),
                                 modifier = Modifier.weight(1f)
                             ) {
@@ -593,8 +550,8 @@ fun SettingsScreen(
                                     },
                                     modifier = Modifier.weight(1f),
                                     colors = ButtonDefaults.buttonColors(
-                                        containerColor = Color.Black,
-                                        contentColor = Color.White
+                                        containerColor = Color.White,
+                                        contentColor = Color.Black
                                     )
                                 ) {
                                     Text("Erase")
@@ -711,6 +668,7 @@ fun ShareAppSheet(
     googlePlayLogo: Int,
     onClose: () -> Unit
 ) {
+    val context = LocalContext.current
     val screenWidth = LocalConfiguration.current.screenWidthDp.dp
 
     val googleUrl = "https://play.google.com/store/apps/details?id=org.danleys.fourksbarcode"
@@ -769,6 +727,10 @@ fun ShareAppSheet(
                             modifier = Modifier
                                 .width(screenWidth * 0.75f)
                                 .aspectRatio(1f)
+                                .clickable {
+                                    val intent = Intent(Intent.ACTION_VIEW, googleUrl.toUri())
+                                    context.startActivity(intent)
+                                }
                         ) // end Image
                     } // end if
                 } // Column (Google Play)
@@ -790,6 +752,10 @@ fun ShareAppSheet(
                             modifier = Modifier
                                 .width(screenWidth * 0.75f)
                                 .aspectRatio(1f)
+                                .clickable {
+                                    val intent = Intent(Intent.ACTION_VIEW, appleUrl.toUri())
+                                    context.startActivity(intent)
+                                }
                         ) // end Image
                     } // end if
                 } // Column (Apple App Store)
@@ -899,7 +865,7 @@ private fun FilledWideButton(
         onClick = onClick,
         modifier = Modifier.fillMaxWidth(),
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color.White.copy(alpha = 0.8f),
+            containerColor = Color.White,
             contentColor = Color.Black
         ),
         contentPadding = PaddingValues(vertical = 10.dp)
@@ -919,3 +885,57 @@ private fun FilledWideButton(
         ) // end Text
     } // Button (FilledWideButton)
 } // FilledWideButton
+
+private suspend fun submitApprovalRequest(id: String): String = withContext(Dispatchers.IO) {
+    val url = URL("https://edwardd20.homedns.org/api/request-approval")
+    val conn = (url.openConnection() as HttpURLConnection).apply {
+        requestMethod = "POST"
+        doOutput = true
+        setRequestProperty("Content-Type", "application/json")
+    }
+    val body = JSONObject().apply { put("clientId", id) }.toString()
+    conn.outputStream.use { it.write(body.toByteArray()) }
+    if (conn.responseCode !in 200..299) throw Exception("Server error: ${conn.responseCode}")
+    val response = conn.inputStream.bufferedReader().use { it.readText() }
+    JSONObject(response).getString("requestId")
+}
+
+private suspend fun fetchRequestStatus(requestId: String): String = withContext(Dispatchers.IO) {
+    val url = URL("https://edwardd20.homedns.org/api/request-status/$requestId")
+    val response = url.readText()
+    try {
+        val obj = JSONObject(response)
+        return@withContext "${obj.getString("status")} (${obj.getString("requestId")})"
+    } catch (_: Exception) {
+        try {
+            val arr = JSONArray(response)
+            if (arr.length() > 0) {
+                val obj = arr.getJSONObject(0)
+                return@withContext "${obj.getString("status")} (${obj.getString("requestId")})"
+            }
+        } catch (_: Exception) {
+        }
+    }
+    response
+}
+
+private suspend fun pollStatusUntilComplete(requestId: String): String? {
+    val terminalStatuses = setOf("Senior", "Medical", "Denied")
+    val maxDuration = 180_000L
+    val interval = 5_000L
+    val start = System.currentTimeMillis()
+    while (System.currentTimeMillis() - start < maxDuration) {
+        try {
+            val status = fetchRequestStatus(requestId)
+            val plainStatus = if (status.contains("(")) {
+                status.substringBefore("(").trim()
+            } else {
+                status.trim()
+            }
+            if (terminalStatuses.contains(plainStatus)) return plainStatus
+        } catch (_: Exception) {
+        }
+        delay(interval.milliseconds)
+    }
+    return null
+}

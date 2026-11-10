@@ -60,24 +60,31 @@ private struct ConnectingOverlay: View {
 
     var body: some View {
         VStack(spacing: 24) {
-            Text("XPaddle")
+            xpaddleText("XPaddle")
                 .font(.system(size: 48, weight: .heavy, design: .monospaced))
                 .foregroundStyle(.white)
                 .kerning(6)
 
             if engine.phase == .connectionLost {
-                Text("CONNECTION LOST")
+                xpaddleText("CONNECTION LOST")
                     .font(.system(size: 18, weight: .bold, design: .monospaced))
                     .foregroundStyle(.white)
                 Button { engine.start() } label: { pillLabel("SEARCH AGAIN") }
             } else {
                 ProgressView()
                     .tint(.white)
-                Text(engine.connectionLabel)
-                    .font(.system(size: 15, weight: .medium, design: .monospaced))
-                    .foregroundStyle(.white.opacity(0.7))
-                    .multilineTextAlignment(.center)
-                Text("Bring both phones close together.\nMake sure Wi-Fi and Bluetooth are on,\nand XPaddle is open on both.")
+                if let peerName = engine.connectedPeerName {
+                    Text("Connected to \(peerName) — syncing…", tableName: "XPaddle")
+                        .font(.system(size: 15, weight: .medium, design: .monospaced))
+                        .foregroundStyle(.white.opacity(0.7))
+                        .multilineTextAlignment(.center)
+                } else {
+                    xpaddleText(engine.connectionLabel)
+                        .font(.system(size: 15, weight: .medium, design: .monospaced))
+                        .foregroundStyle(.white.opacity(0.4))
+                        .multilineTextAlignment(.center)
+                }
+                xpaddleText("Bring both phones together. Turn on Wi-Fi\nand Bluetooth, and open XPaddle on both.")
                     .font(.system(size: 12, weight: .regular, design: .monospaced))
                     .foregroundStyle(.white.opacity(0.4))
                     .multilineTextAlignment(.center)
@@ -89,7 +96,7 @@ private struct ConnectingOverlay: View {
     }
 
     private func pillLabel(_ text: String, filled: Bool = true) -> some View {
-        Text(text)
+        xpaddleText(text)
             .font(.system(size: 16, weight: .bold, design: .monospaced))
             .foregroundStyle(filled ? .black : .white)
             .padding(.vertical, 12)
@@ -136,7 +143,7 @@ private struct DuelCourtView: View {
     private var statusOverlay: some View {
         switch engine.phase {
         case .serving:
-            Text("TAP TO SERVE")
+            xpaddleText("TAP TO SERVE")
                 .font(.system(size: 22, weight: .bold, design: .monospaced))
                 .foregroundStyle(.white)
                 .padding(16)
@@ -144,7 +151,7 @@ private struct DuelCourtView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .allowsHitTesting(false)
         case .waitingForBall:
-            Text("OPPONENT'S SERVE…")
+            xpaddleText("OPPONENT'S SERVE…")
                 .font(.system(size: 16, weight: .bold, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.5))
                 .allowsHitTesting(false)
@@ -190,7 +197,7 @@ private struct DuelScoreBar: View {
     private func scoreBlock(label: String, value: Int) -> some View {
         VStack(spacing: 2) {
             Text("\(value)")
-            Text(label)
+            xpaddleText(label)
                 .font(.system(size: 11, weight: .medium, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.5))
         }
@@ -205,7 +212,7 @@ private struct DuelGameOverOverlay: View {
 
     var body: some View {
         VStack(spacing: 24) {
-            Text(engine.winnerIsMe == true ? "YOU WIN" : "YOU LOSE")
+            xpaddleText(engine.winnerIsMe == true ? "YOU WIN" : "YOU LOSE")
                 .font(.system(size: 40, weight: .heavy, design: .monospaced))
                 .foregroundStyle(.white)
 
@@ -215,7 +222,7 @@ private struct DuelGameOverOverlay: View {
 
             HStack(spacing: 16) {
                 Button { engine.requestRematch() } label: {
-                    Text("REMATCH")
+                    xpaddleText("REMATCH")
                         .font(.system(size: 16, weight: .bold, design: .monospaced))
                         .foregroundStyle(.black)
                         .padding(.vertical, 12)
@@ -224,7 +231,7 @@ private struct DuelGameOverOverlay: View {
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
                 Button { dismiss() } label: {
-                    Text("EXIT")
+                    xpaddleText("EXIT")
                         .font(.system(size: 16, weight: .bold, design: .monospaced))
                         .foregroundStyle(.white)
                         .padding(.vertical, 12)

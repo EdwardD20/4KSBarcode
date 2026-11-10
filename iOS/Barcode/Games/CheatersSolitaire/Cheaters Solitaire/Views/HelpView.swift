@@ -20,34 +20,34 @@ struct HelpView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     ruleSection(
-                        title: "Goal",
-                        text: "Move every card onto the four foundation piles, one per suit, built up in order from Ace to King."
+                        title: "help_goal_title",
+                        text: "help_goal_body"
                     ) // ruleSection (goal)
 
                     ruleSection(
-                        title: "Tableau",
-                        text: "Build down in alternating colors — a red 9 can hold a black 8, for example. A run of cards in the right order can be moved together. Only a King can start an empty column."
+                        title: "help_tableau_title",
+                        text: "help_tableau_body"
                     ) // ruleSection (tableau)
 
                     ruleSection(
-                        title: "Foundations",
-                        text: "Each pile starts with an Ace and builds upward by suit: Ace, 2, 3, and so on, up to King. Double-tap a card to send it straight to its foundation if it's eligible."
+                        title: "help_foundations_title",
+                        text: "help_foundations_body"
                     ) // ruleSection (foundations)
 
                     ruleSection(
-                        title: "The stock",
-                        text: "Tap the deck to draw three cards at a time. Once you've gone through the whole deck, tapping again reshuffles the drawn pile back into the stock."
+                        title: "help_stock_title",
+                        text: "help_stock_body"
                     ) // ruleSection (stock)
 
                     ruleSection(
-                        title: "Winning",
-                        text: "You've won once every card is resting on a foundation, in order, by suit."
+                        title: "help_winning_title",
+                        text: "help_winning_body"
                     ) // ruleSection (winning)
 
                     Divider()
                         .padding(.vertical, 4)
 
-                    Text("If you can cheat, then so can I.")
+                    solitaireText("help_closing_line")
                         .font(.headline)
                         .italic()
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -55,13 +55,13 @@ struct HelpView: View {
                 } // VStack (all rule sections)
                 .padding()
             } // ScrollView
-            .navigationTitle("How to Play")
+            .navigationTitle(solitaireText("help_title"))
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { dismiss() }
+                    Button { dismiss() } label: { solitaireText("done") }
                 } // ToolbarItem
             } // toolbar
         } // NavigationStack
@@ -69,9 +69,9 @@ struct HelpView: View {
 
     private func ruleSection(title: String, text: String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(title)
+            solitaireText(title)
                 .font(.headline)
-            Text(text)
+            solitaireText(text)
                 .font(.body)
                 .foregroundStyle(.secondary)
         } // VStack (one rule section)

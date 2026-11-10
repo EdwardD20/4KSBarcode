@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">Top 10 Cov Qhab Ntaus</string>
+    <string name="solitaire_no_scores">Tsis tau sau cov qhab ntaus tsis tau. Yeej ib qho kev ua si los teeb tsa qhab ntaus!</string>
+    <string name="solitaire_close">Kaw</string>
+    <string name="solitaire_return_to_app">Rov qab rau app</string>
+    <string name="solitaire_new_game">Tshiab</string>
+    <string name="solitaire_you_won">★ KOJ YEEJ! ★</string>
+    <string name="solitaire_play_again">Ua si dua</string>
+    <string name="solitaire_card_description">%1$s ntawm %2$s</string>
+    <string name="solitaire_card_back">Daim Ntawv Nraum Qab</string>
+</resources>

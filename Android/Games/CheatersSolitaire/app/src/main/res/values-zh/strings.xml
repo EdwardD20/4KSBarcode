@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">前 10 名得分</string>
+    <string name="solitaire_no_scores">尚无记录的分数。赢得一局游戏来设定分数！</string>
+    <string name="solitaire_close">关闭</string>
+    <string name="solitaire_return_to_app">返回应用</string>
+    <string name="solitaire_new_game">新游戏</string>
+    <string name="solitaire_you_won">★ 你赢了！ ★</string>
+    <string name="solitaire_play_again">再玩一次</string>
+    <string name="solitaire_card_description">%2$s %1$s</string>
+    <string name="solitaire_card_back">牌背面</string>
+</resources>

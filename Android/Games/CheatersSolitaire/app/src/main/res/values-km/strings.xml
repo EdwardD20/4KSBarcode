@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">ពិន្ទុខ្ពស់បំផុតទាំង ១០</string>
+    <string name="solitaire_no_scores">មិនទាន់មានពិន្ទុត្រូវបានកត់ត្រាទេ។ ឈ្នះហ្គេមដើម្បីកំណត់ពិន្ទុ!</string>
+    <string name="solitaire_close">បិទ</string>
+    <string name="solitaire_return_to_app">ត្រឡប់ទៅកម្មវិធីវិញ</string>
+    <string name="solitaire_new_game">ថ្មី</string>
+    <string name="solitaire_you_won">★ អ្នកបានឈ្នះ! ★</string>
+    <string name="solitaire_play_again">លេងម្តងទៀត</string>
+    <string name="solitaire_card_description">%1$s នៃ %2$s</string>
+    <string name="solitaire_card_back">ខ្នងកាត</string>
+</resources>

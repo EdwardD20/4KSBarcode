@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">Top 10 Scores</string>
+    <string name="solitaire_no_scores">No scores recorded yet. Win a game to set a score!</string>
+    <string name="solitaire_close">Close</string>
+    <string name="solitaire_return_to_app">Return to app</string>
+    <string name="solitaire_new_game">New</string>
+    <string name="solitaire_you_won">★ YOU WON! ★</string>
+    <string name="solitaire_play_again">Play Again</string>
+    <string name="solitaire_card_description">%1$s of %2$s</string>
+    <string name="solitaire_card_back">Card Back</string>
 </resources>

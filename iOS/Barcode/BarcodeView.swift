@@ -24,8 +24,8 @@ struct BarcodeView: View {
                     .clipped()
             } else {
                 Rectangle()
-                    .fill(Color.gray.opacity(0.2))
-                    .overlay(Text("No barcode"))
+                    .fill(Color.red)
+                    .overlay(Text("No barcode").foregroundStyle(.black))
             } // if/else
         } // GeometryReader
     } // body

@@ -18,7 +18,7 @@ struct XPaddleSettingsView: View {
 
     var body: some View {
         VStack(spacing: 22) {
-            Text("SETTINGS")
+            xpaddleText("SETTINGS")
                 .font(.system(size: 34, weight: .heavy, design: .monospaced))
                 .foregroundStyle(.yellow)
 
@@ -26,7 +26,7 @@ struct XPaddleSettingsView: View {
                 Image(systemName: soundEnabled ? "speaker.wave.2.fill" : "speaker.slash.fill")
                     .font(.system(size: 25, weight: .semibold))
                     .frame(width: 64, height: 42)
-                    .accessibilityLabel("Sound")
+                    .accessibilityLabel(xpaddleText("Sound"))
             }
 
             optionRow(isOn: $blackHole) {
@@ -34,18 +34,18 @@ struct XPaddleSettingsView: View {
             }
 
             optionRow(isOn: $smarterAI) {
-                Text("SMARTER AI")
+                xpaddleText("SMARTER AI")
                     .font(.system(size: 17, weight: .bold, design: .monospaced))
                     .frame(width: 180, alignment: .leading)
             }
 
-            Text("Drag on your half to move your paddle\nFirst to \(GameEngine.winningScore) wins\n\nPlay Nearby: hold two iPhones side by side\nand rally the ball across both screens")
+            Text("Drag your paddle. First to \(GameEngine.winningScore) wins.\nPlay Nearby: place two iPhones side by side\nand rally the ball between screens.", tableName: "XPaddle")
                 .multilineTextAlignment(.center)
                 .font(.system(size: 14, weight: .medium, design: .monospaced))
                 .foregroundStyle(.yellow.opacity(0.55))
 
             Button(action: onBack) {
-                Text("BACK")
+                xpaddleText("BACK")
                     .font(.system(size: 17, weight: .bold, design: .monospaced))
                     .foregroundStyle(.black)
                     .padding(.vertical, 12)
@@ -85,6 +85,6 @@ private struct BlackHoleOptionIcon: View {
             }
         }
         .frame(width: 64, height: 64)
-        .accessibilityLabel("Black Hole")
+        .accessibilityLabel(xpaddleText("Black Hole"))
     }
 }

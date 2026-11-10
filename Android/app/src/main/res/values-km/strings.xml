@@ -22,6 +22,8 @@
     <string name="save_client_and_close">រក្សាទុក និងបិទ</string>
     <string name="senior_day">ថ្ងៃមនុស្សចាស់</string>
     <string name="senior_day_notice">បើកនៅថ្ងៃពុธទីបីពីម៉ោង 12:00–2:00 សម្រាប់មនុស្សចាស់ និងអ្នកមានជំងឺ。</string>
+    <string name="games">ហ្គេម</string>
+    <string name="return_to_app">ត្រឡប់ទៅកម្មវិធីវិញ</string>
     <string name="settings_button">ការកំណត់</string>
     <string name="shareTheApp">ចែករំលែកកម្មវិធី</string>
     <string name="splash_address"><![CDATA[505 S Weber Rd<br/>Unit 315<br/>Bolingbrook, IL 60490]]></string>

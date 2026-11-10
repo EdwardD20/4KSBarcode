@@ -37,25 +37,43 @@
 /* Begin PBXFileReference section */
 		640C67853069C4B900E351E0 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		640C6D763069C4B900E351E0 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		6412D8A4308E36D300973070 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		6412D8B9308E36D300973070 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		6412DAA3308E439500973070 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		6412DABB308E439500973070 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		6412DFBF308E45D800973070 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		6412DFD7308E45D800973070 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		644E1A093073078A000C6CD4 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		644E1A1E3073078A000C6CD4 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		645729D7306FDF0B004A5C24 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		645729EE306FDF0B004A5C24 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		645EA2462E9FF90600AE6D00 /* 4KSBarcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4KSBarcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64644D26309CBFE300975642 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		64644D50309CBFE300975642 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		6470A4A130678DB50079B8AE /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		6470A4B730678DB50079B8AE /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		6486E6243069C7A200606D3A /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		6486EC113069C7A200606D3A /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		6486F1543069C9CE00606D3A /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		6486F7413069C9CE00606D3A /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		648EB58D30A1F74000F7657F /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		648EB5B730A1F74000F7657F /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		649A150E309503A300734743 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		649A1538309503A300734743 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		649FEF4C306BFEF700C9594A /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		649FF53A306BFEF700C9594A /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		64A58334306D4AA20089BA56 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		64A58394306D4AA20089BA56 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		64B49C1D30A2388E001F672B /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		64B49C4730A2388E001F672B /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		64B8C24E30A36255007C8ED3 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		64B8C27830A36255007C8ED3 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		64BE43D23075271B00080020 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		64BE43E73075271B00080020 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		64CB0984306D4D0700AADFE7 /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
 		64CB099B306D4D0700AADFE7 /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
+		64CF4B1130A36A820067395D /* Cheaters Solitaire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Cheaters Solitaire.xcodeproj"; sourceTree = "<group>"; };
+		64CF4B3B30A36A820067395D /* XPaddle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = XPaddle.xcodeproj; sourceTree = "<group>"; };
 		64EAE2EB2E9FFB3100ECE644 /* 4KSBarcodeWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4KSBarcodeWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +143,24 @@
 				645729EE306FDF0B004A5C24 /* XPaddle.xcodeproj */,
 				644E1A093073078A000C6CD4 /* Cheaters Solitaire.xcodeproj */,
 				644E1A1E3073078A000C6CD4 /* XPaddle.xcodeproj */,
+				64BE43D23075271B00080020 /* Cheaters Solitaire.xcodeproj */,
+				64BE43E73075271B00080020 /* XPaddle.xcodeproj */,
+				6412D8B9308E36D300973070 /* XPaddle.xcodeproj */,
+				6412D8A4308E36D300973070 /* Cheaters Solitaire.xcodeproj */,
+				6412DABB308E439500973070 /* XPaddle.xcodeproj */,
+				6412DAA3308E439500973070 /* Cheaters Solitaire.xcodeproj */,
+				6412DFBF308E45D800973070 /* Cheaters Solitaire.xcodeproj */,
+				6412DFD7308E45D800973070 /* XPaddle.xcodeproj */,
+				649A1538309503A300734743 /* XPaddle.xcodeproj */,
+				649A150E309503A300734743 /* Cheaters Solitaire.xcodeproj */,
+				64644D26309CBFE300975642 /* Cheaters Solitaire.xcodeproj */,
+				64644D50309CBFE300975642 /* XPaddle.xcodeproj */,
+				648EB5B730A1F74000F7657F /* XPaddle.xcodeproj */,
+				648EB58D30A1F74000F7657F /* Cheaters Solitaire.xcodeproj */,
+				64B49C1D30A2388E001F672B /* Cheaters Solitaire.xcodeproj */,
+				64B49C4730A2388E001F672B /* XPaddle.xcodeproj */,
+				64B8C27830A36255007C8ED3 /* XPaddle.xcodeproj */,
+				64B8C24E30A36255007C8ED3 /* Cheaters Solitaire.xcodeproj */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -137,6 +173,48 @@
 			sourceTree = "<group>";
 		};
 		640C6D9C3069C4B900E351E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6412D8D9308E36D300973070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6412D8DB308E36D300973070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6412DADB308E439500973070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6412DADD308E439500973070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6412DFF7308E45D800973070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6412DFF9308E45D800973070 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -190,6 +268,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		64644D70309CBFE300975642 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64644D72309CBFE300975642 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6470A4DB30678DB50079B8AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +324,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		648EB5D730A1F74000F7657F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		648EB5D930A1F74000F7657F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		649A1558309503A300734743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		649A155A309503A300734743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		649FF55E306BFEF700C9594A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +380,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		64B49C6730A2388E001F672B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64B49C6930A2388E001F672B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64B8C29830A36255007C8ED3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64B8C29A30A36255007C8ED3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		64BE44073075271B00080020 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +430,20 @@
 			sourceTree = "<group>";
 		};
 		64CB09BD306D4D0700AADFE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64CF4B5B30A36A820067395D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64CF4B5D30A36A820067395D /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -380,6 +542,8 @@
 				uk,
 				vi,
 				fil,
+				ja,
+				it,
 			);
 			mainGroup = 645EA23D2E9FF90600AE6D00;
 			minimizedProjectReferenceProxies = 1;
@@ -390,6 +554,38 @@
 				{
 					ProductGroup = 64BE44073075271B00080020 /* Products */;
 					ProjectRef = 64BE43D23075271B00080020 /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 64CB09BD306D4D0700AADFE7 /* Products */;
+					ProjectRef = 64CB0984306D4D0700AADFE7 /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 6486EC353069C7A200606D3A /* Products */;
+					ProjectRef = 6486E6243069C7A200606D3A /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 64572A11306FDF0B004A5C24 /* Products */;
+					ProjectRef = 645729D7306FDF0B004A5C24 /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 6412D8DB308E36D300973070 /* Products */;
+					ProjectRef = 6412D8A4308E36D300973070 /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 640C6D9A3069C4B900E351E0 /* Products */;
+					ProjectRef = 640C67853069C4B900E351E0 /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 64644D70309CBFE300975642 /* Products */;
+					ProjectRef = 64644D26309CBFE300975642 /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 6412DFF9308E45D800973070 /* Products */;
+					ProjectRef = 6412DFBF308E45D800973070 /* Cheaters Solitaire.xcodeproj */;
+				},
+				{
+					ProductGroup = 649A155A309503A300734743 /* Products */;
+					ProjectRef = 649A150E309503A300734743 /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
 					ProductGroup = 644E1A403073078A000C6CD4 /* Products */;
@@ -404,52 +600,56 @@
 					ProjectRef = 64A58334306D4AA20089BA56 /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
-					ProductGroup = 64CB09BD306D4D0700AADFE7 /* Products */;
-					ProjectRef = 64CB0984306D4D0700AADFE7 /* Cheaters Solitaire.xcodeproj */;
+					ProductGroup = 64CF4B5B30A36A820067395D /* Products */;
+					ProjectRef = 64CF4B1130A36A820067395D /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
 					ProductGroup = 6470A4DD30678DB50079B8AE /* Products */;
 					ProjectRef = 6470A4A130678DB50079B8AE /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
-					ProductGroup = 6486EC353069C7A200606D3A /* Products */;
-					ProjectRef = 6486E6243069C7A200606D3A /* Cheaters Solitaire.xcodeproj */;
+					ProductGroup = 64B49C6730A2388E001F672B /* Products */;
+					ProjectRef = 64B49C1D30A2388E001F672B /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
-					ProductGroup = 64572A11306FDF0B004A5C24 /* Products */;
-					ProjectRef = 645729D7306FDF0B004A5C24 /* Cheaters Solitaire.xcodeproj */;
+					ProductGroup = 6412DADB308E439500973070 /* Products */;
+					ProjectRef = 6412DAA3308E439500973070 /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
 					ProductGroup = 649FF55E306BFEF700C9594A /* Products */;
 					ProjectRef = 649FEF4C306BFEF700C9594A /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
-					ProductGroup = 640C6D9A3069C4B900E351E0 /* Products */;
-					ProjectRef = 640C67853069C4B900E351E0 /* Cheaters Solitaire.xcodeproj */;
+					ProductGroup = 64B8C29830A36255007C8ED3 /* Products */;
+					ProjectRef = 64B8C24E30A36255007C8ED3 /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
-					ProductGroup = 640C6D9C3069C4B900E351E0 /* Products */;
-					ProjectRef = 640C6D763069C4B900E351E0 /* XPaddle.xcodeproj */;
+					ProductGroup = 648EB5D730A1F74000F7657F /* Products */;
+					ProjectRef = 648EB58D30A1F74000F7657F /* Cheaters Solitaire.xcodeproj */;
 				},
 				{
-					ProductGroup = 6486F7673069C9CE00606D3A /* Products */;
-					ProjectRef = 6486F7413069C9CE00606D3A /* XPaddle.xcodeproj */;
+					ProductGroup = 6412D8D9308E36D300973070 /* Products */;
+					ProjectRef = 6412D8B9308E36D300973070 /* XPaddle.xcodeproj */;
 				},
 				{
-					ProductGroup = 64BE44093075271B00080020 /* Products */;
-					ProjectRef = 64BE43E73075271B00080020 /* XPaddle.xcodeproj */;
+					ProductGroup = 64644D72309CBFE300975642 /* Products */;
+					ProjectRef = 64644D50309CBFE300975642 /* XPaddle.xcodeproj */;
 				},
 				{
-					ProductGroup = 64572A0F306FDF0B004A5C24 /* Products */;
-					ProjectRef = 645729EE306FDF0B004A5C24 /* XPaddle.xcodeproj */;
+					ProductGroup = 6412DADD308E439500973070 /* Products */;
+					ProjectRef = 6412DABB308E439500973070 /* XPaddle.xcodeproj */;
 				},
 				{
 					ProductGroup = 6470A4DB30678DB50079B8AE /* Products */;
 					ProjectRef = 6470A4B730678DB50079B8AE /* XPaddle.xcodeproj */;
 				},
 				{
-					ProductGroup = 6486EC373069C7A200606D3A /* Products */;
-					ProjectRef = 6486EC113069C7A200606D3A /* XPaddle.xcodeproj */;
+					ProductGroup = 64B8C29A30A36255007C8ED3 /* Products */;
+					ProjectRef = 64B8C27830A36255007C8ED3 /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 64CF4B5D30A36A820067395D /* Products */;
+					ProjectRef = 64CF4B3B30A36A820067395D /* XPaddle.xcodeproj */;
 				},
 				{
 					ProductGroup = 649FF560306BFEF700C9594A /* Products */;
@@ -466,6 +666,42 @@
 				{
 					ProductGroup = 64A583BC306D4AA20089BA56 /* Products */;
 					ProjectRef = 64A58394306D4AA20089BA56 /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 640C6D9C3069C4B900E351E0 /* Products */;
+					ProjectRef = 640C6D763069C4B900E351E0 /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 648EB5D930A1F74000F7657F /* Products */;
+					ProjectRef = 648EB5B730A1F74000F7657F /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 649A1558309503A300734743 /* Products */;
+					ProjectRef = 649A1538309503A300734743 /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 6412DFF7308E45D800973070 /* Products */;
+					ProjectRef = 6412DFD7308E45D800973070 /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 6486F7673069C9CE00606D3A /* Products */;
+					ProjectRef = 6486F7413069C9CE00606D3A /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 64BE44093075271B00080020 /* Products */;
+					ProjectRef = 64BE43E73075271B00080020 /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 64572A0F306FDF0B004A5C24 /* Products */;
+					ProjectRef = 645729EE306FDF0B004A5C24 /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 6486EC373069C7A200606D3A /* Products */;
+					ProjectRef = 6486EC113069C7A200606D3A /* XPaddle.xcodeproj */;
+				},
+				{
+					ProductGroup = 64B49C6930A2388E001F672B /* Products */;
+					ProjectRef = 64B49C4730A2388E001F672B /* XPaddle.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -661,7 +897,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 7WNRPT262U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -680,7 +916,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.danleys.4KSBarcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -704,7 +940,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 7WNRPT262U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -723,7 +959,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.danleys.4KSBarcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -747,7 +983,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 7WNRPT262U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -761,7 +997,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.danleys.4KSBarcode.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";
@@ -785,7 +1021,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 7WNRPT262U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -799,7 +1035,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.danleys.4KSBarcode.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";

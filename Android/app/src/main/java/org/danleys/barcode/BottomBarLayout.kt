@@ -20,7 +20,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -44,10 +43,10 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -56,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import kotlinx.coroutines.delay
+import kotlin.time.Duration.Companion.milliseconds
 
 // ============================================================
 // BottomBarLayout - shared container for any screen
@@ -161,16 +161,15 @@ fun BottomMessageSwitcher(
     onPantryHours: () -> Unit,
     onFeelGoodDeals: () -> Unit
 ) {
-    val isDark = MaterialTheme.colorScheme.background.luminance() < 0.5f
-    val textColor = if (isDark) Color.White else Color.Red
-    val bgColor = if (isDark) Color.Red else Color.Transparent
+    val textColor = Color.Black
+    val bgColor = Color.Red
 
     var showFirst by remember { mutableStateOf(true) }
 
     // Switch every 10 seconds
     LaunchedEffect(Unit) {
         while (true) {
-            delay(10_000)
+            delay(10_000.milliseconds)
             showFirst = !showFirst
         } // while
     } // LaunchedEffect
@@ -351,37 +350,49 @@ fun MediumWidthButton(
     icon: Int? = null,
     enabled: Boolean = true
 ) {
-    val screenDp = LocalConfiguration.current.screenWidthDp.dp
-    val maxW = minOf(280.dp, screenDp * 0.6f) // up to 60% of screen, capped at 280dp
-
     Button(
         onClick = onClick,
         enabled = enabled,
-        modifier = Modifier
-            .widthIn(min = 160.dp, max = maxW)
-            .padding(horizontal = 8.dp), // breathing room
+        modifier = Modifier.fillMaxWidth(),
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color.Black,
-            contentColor = Color.White,
-            disabledContainerColor = Color.Black.copy(alpha = 0.3f),
-            disabledContentColor = Color.White.copy(alpha = 0.5f)
+            containerColor = Color.White,
+            contentColor = Color.Black,
+            disabledContainerColor = Color.White.copy(alpha = 0.3f),
+            disabledContentColor = Color.Black.copy(alpha = 0.5f)
         ),
         contentPadding = PaddingValues(vertical = 12.dp)
     ) {
         if (icon != null) {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_facebook),
-                contentDescription = null,
-                tint = Color.Unspecified,      // keep brand colors
-                modifier = Modifier
-                    .size(28.dp)
-                    .padding(end = 8.dp)
-            ) // Icon
-        } // if (icon)
-
-        Text(
-            text = text,
-            style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold)
-        ) // end Text
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_facebook),
+                    contentDescription = null,
+                    tint = Color.Unspecified,      // keep brand colors
+                    modifier = Modifier
+                        .size(28.dp)
+                        .padding(end = 8.dp)
+                ) // Icon
+                Text(
+                    text = text,
+                    style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold),
+                    textAlign = TextAlign.Center,
+                    maxLines = 2,
+                    softWrap = true
+                ) // end Text
+            }
+        } else {
+            Text(
+                text = text,
+                style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold),
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center,
+                maxLines = 2,
+                softWrap = true
+            ) // end Text
+        }
     } // end Button
 } // fun MediumWidthButton

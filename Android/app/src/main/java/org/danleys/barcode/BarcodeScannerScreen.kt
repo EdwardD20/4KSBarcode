@@ -24,7 +24,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -92,8 +91,14 @@ fun BarcodeScannerScreen(
                     ) {
                         Text("Camera permission required")
                         Spacer(modifier = Modifier.height(8.dp))
-                        Button(onClick = {cameraPermissionState.launchPermissionRequest() }) {
-                            Text("Grant Permission")
+                        Button(
+                            onClick = {cameraPermissionState.launchPermissionRequest() },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color.White,
+                                contentColor = Color.Black
+                            )
+                        ) {
+                            Text("Grant Permission", color = Color.Black)
                         } // Button
                     } // Column
                 } // Card
@@ -106,10 +111,11 @@ fun BarcodeScannerScreen(
                     .align(Alignment.BottomCenter)
                     .padding(bottom = 32.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.8f)
+                    containerColor = Color.White,
+                    contentColor = Color.Black
                 )
             ) {
-                Text("Cancel")
+                Text("Cancel", color = Color.Black)
             } // Button (Cancel)
         } // Box
     } // Dialog

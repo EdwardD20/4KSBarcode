@@ -17,6 +17,9 @@ enum Globals {
 
 @main
 struct BarcodeApp: App {
+    // Activate Watch Connectivity at app launch so the saved Client ID is sent
+    // even when the barcode screen does not otherwise use the session manager.
+    @StateObject private var watchSessionManager = PhoneWatchSessionManager.shared
     @AppStorage("appLanguage") private var appLanguage: String = "en"
     @State private var showSplash = true
     @State private var revealStyle = SplashRevealStyle.random()
@@ -26,7 +29,7 @@ struct BarcodeApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                Color.darkBlue.ignoresSafeArea()
+                Color.red.ignoresSafeArea()
 
                 ContentView()
                     .modifier(SplashRevealProgress(style: revealStyle, progress: revealProgress))
@@ -52,6 +55,9 @@ struct BarcodeApp: App {
                         .id(appLanguage)
                 } // if showSplash
             } // ZStack
+            .foregroundStyle(.black)
+            .preferredColorScheme(.light)
+            .buttonStyle(MainAppButtonStyle())
         } // WindowGroup
         .onChange(of: appLanguage) { _, newValue in
             LanguageBundle.set(newValue)

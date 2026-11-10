@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">ຕັ້ງຄ່າ</string>
+    <string name="xpaddle_sound_on">ເປີດສຽງ</string>
+    <string name="xpaddle_sound_off">ປິດສຽງ</string>
+    <string name="xpaddle_black_hole_on">ຫຼຸມດຳເປີດ</string>
+    <string name="xpaddle_black_hole_off">ຫຼຸມດຳປິດ</string>
+    <string name="xpaddle_smarter_ai">AI ສະຫຼາດກວ່າ</string>
+    <string name="xpaddle_instructions">ລາກໃສ່ເຄິ່ງຂອງທ່ານເພື່ອຍ້າຍໄມ້ຕີ\nໃຜຮອດ %1$d ກ່ອນຊະນະ\n\nຫຼິ້ນໃກ້ກັນ: ວາງໂທລະສັບສອງໜ່ວຍຄຽງຄູ່ກັນ\nແລະ ຕີບານຂ້າມທັງສອງໜ້າຈໍ</string>
+    <string name="xpaddle_back">ກັບຄືນ</string>
+    <string name="xpaddle_return_to_app">ກັບຄືນສູ່ແອັບ</string>
+    <string name="xpaddle_1p_vs_cpu">1 ຜູ້ຫຼິ້ນ (ທຽບກັບ CPU)</string>
+    <string name="xpaddle_2p_same_device">2 ຜູ້ຫຼິ້ນ (ເຄື່ອງດຽວກັນ)</string>
+    <string name="xpaddle_play_nearby">ຫຼິ້ນໃກ້ກັນ (2 ເຄື່ອງ)</string>
+    <string name="xpaddle_settings">ຕັ້ງຄ່າ</string>
+    <string name="xpaddle_tap_to_serve">ແຕະເພື່ອເສิร์ບ</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">ຜູ້ຫຼິ້ນ 1 (ເທິງ) vs ຜູ້ຫຼິ້ນ 2 (ລຸ່ມ)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">ຜູ້ຫຼິ້ນ 1 (ຊ້າຍ) vs ຜູ້ຫຼິ້ນ 2 (ຂວາ)</string>
+    <string name="xpaddle_you_are_bottom_paddle">ທ່ານແມ່ນໄມ້ຕີດ້ານລຸ່ມ</string>
+    <string name="xpaddle_you_are_right_paddle">ທ່ານແມ່ນໄມ້ຕີດ້ານຂວາ</string>
+    <string name="xpaddle_wins_format">%1$s ຊະນະ</string>
+    <string name="xpaddle_player_1">ຜູ້ຫຼິ້ນ 1</string>
+    <string name="xpaddle_player_2">ຜູ້ຫຼິ້ນ 2</string>
+    <string name="xpaddle_computer">ຄອມພິວເຕີ</string>
+    <string name="xpaddle_rematch">ຫຼິ້ນອີກຄັ້ງ</string>
+    <string name="xpaddle_menu">ເມນູ</string>
+    <string name="xpaddle_searching_for_phone">ກຳລັງຊອກຫາໂທລະສັບໃກ້ຄຽງ…</string>
+    <string name="xpaddle_connected_syncing">ເຊື່ອມຕໍ່ແລ້ວ — ກຳລັງຊິ້ງ…</string>
+    <string name="xpaddle_connection_lost">ສູນເສຍການເຊື່ອມຕໍ່</string>
+    <string name="xpaddle_search_again">ຊອກຫາອີກຄັ້ງ</string>
+    <string name="xpaddle_nearby_hint">ເອົາໂທລະສັບທັງສອງມາໃກ້ກັນ.\nໃຫ້ແນ່ໃຈວ່າ Wi-Fi ແລະ Bluetooth ເປີດຢູ່,\nແລະ XPaddle ເປີດຢູ່ທັງສອງ.</string>
+    <string name="xpaddle_cancel">ຍົກເລີກ</string>
+    <string name="xpaddle_you">ທ່ານ</string>
+    <string name="xpaddle_them">ເຂົາເຈົ້າ</string>
+    <string name="xpaddle_opponents_serve">ການເສิร์ບຂອງຄູ່ແຂ່ງ…</string>
+    <string name="xpaddle_you_win">ທ່ານຊະນະ</string>
+    <string name="xpaddle_you_lose">ທ່ານເສຍ</string>
+    <string name="xpaddle_exit">ອອກ</string>
+    <string name="xpaddle_default_player_name">ຜູ້ຫຼິ້ນ XPaddle</string>
+</resources>

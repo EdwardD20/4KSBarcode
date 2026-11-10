@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">НАСТРОЙКИ</string>
+    <string name="xpaddle_sound_on">Звук вкл</string>
+    <string name="xpaddle_sound_off">Звук выкл</string>
+    <string name="xpaddle_black_hole_on">Черная дыра вкл</string>
+    <string name="xpaddle_black_hole_off">Черная дыра выкл</string>
+    <string name="xpaddle_smarter_ai">УМНЫЙ ИИ</string>
+    <string name="xpaddle_instructions">Проведите по своей половине, чтобы двигать ракетку\nПервый до %1$d побеждает\n\nИгра рядом: держите два телефона рядом\nи перебрасывайте мяч между экранами</string>
+    <string name="xpaddle_back">НАЗАД</string>
+    <string name="xpaddle_return_to_app">Вернуться в приложение</string>
+    <string name="xpaddle_1p_vs_cpu">1 ИГРОК (ПРОТИВ ИИ)</string>
+    <string name="xpaddle_2p_same_device">2 ИГРОКА (НА ОДНОМ УСТРОЙСТВЕ)</string>
+    <string name="xpaddle_play_nearby">ИГРАТЬ РЯДОМ (2 УСТРОЙСТВА)</string>
+    <string name="xpaddle_settings">НАСТРОЙКИ</string>
+    <string name="xpaddle_tap_to_serve">НАЖМИТЕ ДЛЯ ПОДАЧИ</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">Игрок 1 (верх) против Игрока 2 (низ)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">Игрок 1 (лев) против Игрока 2 (прав)</string>
+    <string name="xpaddle_you_are_bottom_paddle">Вы — нижняя ракетка</string>
+    <string name="xpaddle_you_are_right_paddle">Вы — правая ракетка</string>
+    <string name="xpaddle_wins_format">%1$s ПОБЕЖДАЕТ</string>
+    <string name="xpaddle_player_1">ИГРОК 1</string>
+    <string name="xpaddle_player_2">ИГРОК 2</string>
+    <string name="xpaddle_computer">КОМПЬЮТЕР</string>
+    <string name="xpaddle_rematch">РЕВАНШ</string>
+    <string name="xpaddle_menu">МЕНЮ</string>
+    <string name="xpaddle_searching_for_phone">Поиск телефона поблизости…</string>
+    <string name="xpaddle_connected_syncing">Подключено — синхронизация…</string>
+    <string name="xpaddle_connection_lost">СВЯЗЬ ПОТЕРЯНА</string>
+    <string name="xpaddle_search_again">ИСКАТЬ СНОВА</string>
+    <string name="xpaddle_nearby_hint">Держите оба телефона близко друг к другу.\nУбедитесь, что Wi-Fi и Bluetooth включены,\nа XPaddle открыт на обоих.</string>
+    <string name="xpaddle_cancel">ОТМЕНА</string>
+    <string name="xpaddle_you">ВЫ</string>
+    <string name="xpaddle_them">ОНИ</string>
+    <string name="xpaddle_opponents_serve">ПОДАЧА СОПЕРНИКА…</string>
+    <string name="xpaddle_you_win">ВЫ ПОБЕДИЛИ</string>
+    <string name="xpaddle_you_lose">ВЫ ПРОИГРАЛИ</string>
+    <string name="xpaddle_exit">ВЫХОД</string>
+    <string name="xpaddle_default_player_name">Игрок XPaddle</string>
+</resources>

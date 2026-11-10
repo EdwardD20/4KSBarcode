@@ -8,6 +8,7 @@
 //
 
 import SwiftUI
+
 #if os(iOS)
 import UIKit
 #endif
@@ -15,9 +16,11 @@ import UIKit
 struct SolitaireContentView: View {
     
     let onExitToHost: (() -> Void)?
+    var expandsToAvailableWidth: Bool = false
 
-    init(onExitToHost: (() -> Void)? = nil) {
+    init(onExitToHost: (() -> Void)? = nil, expandsToAvailableWidth: Bool = false) {
         self.onExitToHost = onExitToHost
+        self.expandsToAvailableWidth = expandsToAvailableWidth
     }
 
     @StateObject private var game = SolitaireGameState()
@@ -55,7 +58,7 @@ struct SolitaireContentView: View {
     var body: some View {
         Group {
             #if os(iOS)
-            if isPhoneIdiom {
+            if isPhoneIdiom || expandsToAvailableWidth {
                 // iPhone bypasses NavigationStack/.toolbar entirely — that's
                 // what spins up the new iOS 26 "floating bar" system
                 // (FloatingBarHostingView), which turned out to be reserving
@@ -66,20 +69,15 @@ struct SolitaireContentView: View {
             } else {
                 // iOS toolbar items (.navigationBarTrailing) need a
                 // NavigationStack ancestor to have an actual nav bar to
-                // attach to — without this, "New Game" and the help button
+                // attach to — without this, "new_game" and the help button
                 // silently don't render at all. iPad keeps this; only
                 // iPhone dropped it (see above).
                 NavigationStack {
                     desktopGameArea
                         .toolbar { toolbarContent }
                         .safeAreaInset(edge: .top) { if showDebugBanner { debugBanner } }
-                        // The system nav bar is opaque white by default,
-                        // which paints over the felt that's already
-                        // extending underneath it (via ignoresSafeArea in
-                        // desktopGameArea) — that's the white strip along
-                        // the top edge. Hiding the bar's own background lets
-                        // the felt show through, with only the toolbar
-                        // buttons floating on top of it.
+                        // Hide the system bar background so the red app
+                        // canvas remains visible behind the toolbar.
                         .toolbarBackground(.hidden, for: .navigationBar)
                 } // NavigationStack
             } // if/else
@@ -134,7 +132,7 @@ struct SolitaireContentView: View {
     private var phoneTopBar: some View {
         HStack(spacing: 12) {
             if let onExitToHost {
-                Button(LocalizedStringKey("Return to app"), action: onExitToHost)
+                Button(action: onExitToHost) { solitaireText("return_to_app") }
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.black)
                     .padding(.horizontal, 10)
@@ -143,8 +141,8 @@ struct SolitaireContentView: View {
             } // if let onExitToHost
             GameTimerView(game: game)
             Spacer()
-            Button("New Game") {
-                startNewGameWithSound()
+            Button { startNewGameWithSound() } label: {
+                solitaireText("new_game")
             } // Button
             Button {
                 game.undo()
@@ -277,19 +275,8 @@ struct SolitaireContentView: View {
             let fanOffset = cardWidth * fanRatio
 
             ZStack {
-                // Table background — TableFelt is an IMAGE asset (Table-Felt.png),
-                // so it's drawn with Image, not Color. This lives OUTSIDE the
-                // zoom/pan/clip group below on purpose: that group's
-                // .clipped() clamps to this GeometryReader's own frame,
-                // which (being inside a NavigationStack, and inset for the
-                // landscape notch/rounded corners on the sides) is smaller
-                // than the true screen bounds — so when the felt used to
-                // live INSIDE that clipped group, ignoresSafeArea() would
-                // bleed it out to the real edges only for .clipped() to
-                // immediately crop it right back down to the safe frame,
-                // leaving plain white showing at the true top/side edges.
-                // Sitting out here, the felt's ignoresSafeArea() is never
-                // undone by that clip and reaches every physical edge.
+                // Keep the red table canvas outside the zoom and clip group
+                // so it continues to fill the safe-area edges.
                 Image("TableFelt")
                     .resizable()
                     .scaledToFill()
@@ -314,7 +301,7 @@ struct SolitaireContentView: View {
                     CritterOverlayView(isActive: $critterActive) {
                         game.clearConsequence()
                     } // CritterOverlayView
-                } // ZStack (zoomable/pannable game content — felt is NOT part of this)
+                } // ZStack (zoomable/pannable game content)
                 .scaleEffect(zoomScale)
                 .offset(panOffset)
                 // Deliberately OUTSIDE the scaleEffect/offset above, so
@@ -330,12 +317,12 @@ struct SolitaireContentView: View {
                 // it, with nothing stopping it from bleeding up past this
                 // GeometryReader's own top edge and rendering underneath
                 // whatever chrome sits above it (a debug banner, if one's ever
-                // re-enabled; "New Game" and the other toolbar buttons on both
+                // re-enabled; "new_game" and the other toolbar buttons on both
                 // platforms). The pan clamp above is meant to stop that in the
                 // first place, but clipping to our own frame here is a hard
                 // guarantee regardless: nothing this view draws can ever escape
                 // its own bounds, so there's nothing left to get lost behind.
-                // Scoped to just the cards/critter — NOT the felt (see above).
+                // Scope the gesture layer to the cards and critter.
                 .clipped()
 
                 if let preview = game.dragPreview {
@@ -355,12 +342,12 @@ struct SolitaireContentView: View {
                     AutoCompleteFlightOverlay(flight: flight, colorsReversed: game.colorsReversed)
                         .scaleEffect(zoomScale)
                 } // if the win-triggered auto-complete animation is currently flying a card
-            } // ZStack (felt + zoomable content + drag preview)
+            } // ZStack (red canvas + zoomable content + drag preview)
             .coordinateSpace(name: "board") // shared reference frame for every pile's drop-zone frame AND every drag gesture's reported location
             // .simultaneousGesture (not .gesture) so pinch/pan don't steal
             // taps away from the cards underneath — both recognizers get a
             // chance to see the touch rather than one exclusively consuming
-            // it. Attached to the WHOLE table (felt included), not just the
+            // it. Attached to the WHOLE table, not just the
             // card content, so pinching anywhere on screen works, not only
             // directly over cards.
             .simultaneousGesture(magnificationGesture(boardSize: geo.size))
@@ -550,7 +537,7 @@ struct SolitaireContentView: View {
             GameTimerView(game: game)
         } // ToolbarItem (running game-length timer)
         ToolbarItem(placement: .automatic) {
-            Button("New Game") { startNewGameWithSound() }
+            Button { startNewGameWithSound() } label: { solitaireText("new_game") }
         }
         ToolbarItem(placement: .automatic) {
             Button {
@@ -588,7 +575,7 @@ struct SolitaireContentView: View {
         ToolbarItem(placement: .navigationBarLeading) {
             HStack(spacing: 12) {
                 if let onExitToHost {
-                    Button(LocalizedStringKey("Return to app"), action: onExitToHost)
+                    Button(action: onExitToHost) { solitaireText("return_to_app") }
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.black)
                         .padding(.horizontal, 10)
@@ -599,7 +586,7 @@ struct SolitaireContentView: View {
             }
         } // ToolbarItem (return action and running game-length timer)
         ToolbarItem(placement: .navigationBarTrailing) {
-            Button("New Game") { startNewGameWithSound() }
+            Button { startNewGameWithSound() } label: { solitaireText("new_game") }
         }
         ToolbarItem(placement: .navigationBarTrailing) {
             Button {
@@ -763,7 +750,7 @@ struct SolitaireContentView: View {
         // whenever there happens to be extra width to spend, and leaves
         // landscape's comparatively short height for the ScrollView to
         // absorb via scrolling rather than via ever-taller cards.
-        let sanityCeiling: CGFloat = 65
+        let sanityCeiling: CGFloat = expandsToAvailableWidth ? .infinity : 65
 
         return max(40, min(min(tableauCardWidth, topRowCardWidth), sanityCeiling))
     } // computePhoneCardWidth(in:)

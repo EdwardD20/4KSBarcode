@@ -1,3 +1,11 @@
+4.1.0/4.1.1
+Rename "Get distracted..." to Games
+Add localization for Games
+Correct Setting in Dark Mode on iOS
+Improve Settings layout for iPhone Duo
+Add Hyperlink for Share This App on respective phones
+Clean up app colors
+
 4.0.2
 Android only. Correct adding pass to Google Wallet.
 

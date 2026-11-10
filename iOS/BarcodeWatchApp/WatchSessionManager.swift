@@ -87,6 +87,7 @@ final class WatchSessionManager: NSObject, ObservableObject {
                 self.clientId = id
                 newClientId = id
                 shouldPersist = true
+                UserDefaults.standard.set(id, forKey: "cachedClientId")
             }
 
             // Only update barcode if different

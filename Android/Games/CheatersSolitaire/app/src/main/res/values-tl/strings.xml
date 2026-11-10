@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">Top 10 na Marka</string>
+    <string name="solitaire_no_scores">Wala pang naitalang marka. Manalo sa laro para magtakda ng marka!</string>
+    <string name="solitaire_close">Isara</string>
+    <string name="solitaire_return_to_app">Bumalik sa app</string>
+    <string name="solitaire_new_game">Bago</string>
+    <string name="solitaire_you_won">★ NANALO KA! ★</string>
+    <string name="solitaire_play_again">Maglaro Muli</string>
+    <string name="solitaire_card_description">%1$s ng %2$s</string>
+    <string name="solitaire_card_back">Likod ng Card</string>
+</resources>

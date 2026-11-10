@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheaters Solitaire</string>
+    <string name="solitaire_top_scores">Tafio 10 isa</string>
+    <string name="solitaire_no_scores">Tsy misy isa voarakitra hatramin\'izao. Mandresy lalao iray hametraka isa!</string>
+    <string name="solitaire_close">Hidio</string>
+    <string name="solitaire_return_to_app">Miverina amin\'ny app</string>
+    <string name="solitaire_new_game">Vaovao</string>
+    <string name="solitaire_you_won">★ NANDRESY IANAO! ★</string>
+    <string name="solitaire_play_again">Milalao indray</string>
+    <string name="solitaire_card_description">%1$s an\'i %2$s</string>
+    <string name="solitaire_card_back">Lamosin\'ny karatra</string>
+</resources>

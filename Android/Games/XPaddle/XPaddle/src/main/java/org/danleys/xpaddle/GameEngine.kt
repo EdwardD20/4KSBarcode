@@ -29,7 +29,7 @@ enum class XPaddleGamePhase {
 /// (x = axis the ball travels between paddles, y = axis a paddle slides
 /// along); the UI layer is responsible for transposing that onto the
 /// screen when the device is portrait, exactly as CourtView did on iOS.
-class GameEngine(context: Context, private val settings: GameSettings) {
+class GameEngine(private val context: Context, private val settings: GameSettings) {
     companion object {
         const val WINNING_SCORE = 11
     } // companion object
@@ -82,6 +82,7 @@ class GameEngine(context: Context, private val settings: GameSettings) {
     private var ballVelocity: Offset = Offset.Zero
     private var servingToRight: Boolean = true
     private var lastTick: Long? = null
+    private var personHitBall: Boolean = false
 
     // targets set by touch input; null = no active touch (AI or idle)
     var leftPaddleTarget: Float? = null
@@ -187,6 +188,7 @@ class GameEngine(context: Context, private val settings: GameSettings) {
         ballVelocity = Offset(cos(angle) * baseBallSpeed * dir, sin(angle) * baseBallSpeed)
         phase = XPaddleGamePhase.PLAYING
         playSound("wall_hit")
+        personHitBall = !servingToRight
     } // serve
 
     // MARK: - Game loop
@@ -259,18 +261,16 @@ class GameEngine(context: Context, private val settings: GameSettings) {
                 leftPaddleY = clampMove(leftPaddleY, target, dt, minY, maxY)
             } // if let target = leftPaddleTarget
         } else if (settings.smarterAI) {
-            // Smarter AI: hold still until the ball has actually crossed
-            // onto the computer's side of the court, then track it — same
-            // speed as always, just doesn't react preemptively.
-            val ballOnAiSide = ballPos.x < courtSize.width / 2
-            if (ballOnAiSide) {
-                leftPaddleY = clampMove(leftPaddleY, ballPos.y, dt, minY, maxY, speedScale = 0.86f)
-            } // if ballOnAiSide (else: paddle holds its current position)
+            // Smarter AI: in motion, following the ball at all times.
+            leftPaddleY = clampMove(leftPaddleY, ballPos.y, dt, minY, maxY, speedScale = 0.86f)
         } else {
-            // Default: track the ball's y as soon as it's headed this way,
-            // regardless of which side of the court it's on yet.
-            val aiTarget = if (ballVelocity.x < 0) ballPos.y else courtSize.height / 2
-            leftPaddleY = clampMove(leftPaddleY, aiTarget, dt, minY, maxY, speedScale = 0.86f)
+            // Standard AI: Once the AI hits the ball, the paddle freezes.
+            // The AI paddle should only move after the ball was hit by the person
+            // AND the ball is now in the AI side of the net.
+            val ballOnAiSide = ballPos.x < courtSize.width / 2
+            if (personHitBall && ballOnAiSide) {
+                leftPaddleY = clampMove(leftPaddleY, ballPos.y, dt, minY, maxY, speedScale = 0.86f)
+            } // else: paddle holds its current position (frozen)
         } // if twoPlayerMode / else if smarterAI / else
     } // updatePaddles
 
@@ -330,6 +330,7 @@ class GameEngine(context: Context, private val settings: GameSettings) {
             pos = Offset(leftFront + half, pos.y)
             vel = bounced(vel, leftPaddleY, pos.y, movingRight = true)
             playSound("racquet_hit")
+            personHitBall = false
         } // if crossedLeft, withinLeftPaddleY
 
         // Right paddle collision (same swept-crossing reasoning as above).
@@ -340,6 +341,7 @@ class GameEngine(context: Context, private val settings: GameSettings) {
             pos = Offset(rightFront - half, pos.y)
             vel = bounced(vel, rightPaddleY, pos.y, movingRight = false)
             playSound("racquet_hit")
+            personHitBall = true
         } // if vel.x > 0 (right paddle collision)
 
         ballPos = pos
@@ -374,7 +376,13 @@ class GameEngine(context: Context, private val settings: GameSettings) {
         playSound(if (twoPlayerMode || rightScored) "golf_clap" else "aw")
         servingToRight = !rightScored
         if (leftScore >= WINNING_SCORE || rightScore >= WINNING_SCORE) {
-            winner = if (leftScore > rightScore) "PLAYER 1" else if (twoPlayerMode) "PLAYER 2" else "COMPUTER"
+            winner = if (leftScore > rightScore) {
+                context.getString(R.string.xpaddle_player_1)
+            } else if (twoPlayerMode) {
+                context.getString(R.string.xpaddle_player_2)
+            } else {
+                context.getString(R.string.xpaddle_computer)
+            }
             phase = XPaddleGamePhase.GAME_OVER
             resetPositions()
         } else {

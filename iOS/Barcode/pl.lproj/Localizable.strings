@@ -21,6 +21,7 @@
 "senior_day_label" = "Dzień seniora";
 "senior_day_text" = "Otwarte w trzecią środę miesiąca od 12:00–14:00 tylko dla seniorów i osób z diagnozami medycznymi.";
 "settings_button_label" = "Ustawienia";
+"games_label" = "Gry";
 "ShareTheApp_label" = "Udostępnij aplikację";
 "shopping_label" = "Zakupy w magazynie";
 "shopping_text" = "Wszyscy klienci muszą mieć profil w Link2Feed. Przygotuj swój identyfikator klienta.\n\nGdy Twój numer zostanie wywołany, zgłoś się do recepcji. Potrzebujemy identyfikatora klienta i aktualnych danych gospodarstwa domowego.\n\nRób zakupy tylko dla swojego gospodarstwa domowego. Próby obejścia systemu mogą skutkować usunięciem z listy.\n\nObowiązują limity produktów. Wszystkie artykuły są wydawane według zasady „kto pierwszy, ten lepszy”.\n\nPo zakończeniu zakupów produkty zostaną przeniesione do plastikowego wózka. Nie wynoś koszyka poza budynek.\n\nParkuj tylko w trzech tylnych rzędach parkingu głównego.";

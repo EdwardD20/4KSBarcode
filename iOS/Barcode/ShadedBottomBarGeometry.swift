@@ -18,22 +18,7 @@ struct ShadedBottomBarGeometry: View {
             let bottomInset = proxy.safeAreaInsets.bottom
 
             ZStack(alignment: .top) {
-                Rectangle().fill(.thinMaterial)
-
-                LinearGradient(
-                    colors: [
-                        Color.black.opacity(0.04),
-                        Color.black.opacity(0.015),
-                        .clear
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                ) // LinearGradient
-
-                Rectangle()
-                    .fill(Color.black.opacity(0.05))
-                    .frame(height: 0.5)
-                    .frame(maxHeight: .infinity, alignment: .top)
+                Rectangle().fill(Color.red)
             } // ZStack(alignment: .top)
             .frame(height: height + bottomInset)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -52,27 +37,11 @@ struct ShadedBottomBarTapLayer: View {
     let iconName: String?          // e.g. "Facebook_Logo_Primary" or nil
     let onTap: () -> Void
 
-    @Environment(\.colorScheme) private var colorScheme
-
     var body: some View {
         GeometryReader { proxy in
             let bottomInset = proxy.safeAreaInsets.bottom
 
-            // Light mode → red text on gray (default)
-            // Dark mode  → white text on red background
-            let isDark = (colorScheme == .dark)
-            let textColor: Color = isDark ? .white : .red
-            let backgroundColor: Color = isDark ? .red : .clear
-
             ZStack(alignment: .bottom) {
-                // Transparent hit area (full bar)
-                Color.clear
-                    .frame(height: height + bottomInset)
-                    .frame(maxWidth: .infinity, alignment: .bottom)
-                    .contentShape(Rectangle())
-                    .onTapGesture { onTap() }
-                // Color.clear (tap area)
-
                 // Visible label row
                 HStack(spacing: 8) {
                     if let iconName {
@@ -86,7 +55,7 @@ struct ShadedBottomBarTapLayer: View {
 
                     Text(titleKey)
                         .font(.title2.weight(.bold))
-                        .foregroundColor(textColor)
+                        .foregroundColor(.black)
                         .lineLimit(1)
                         .minimumScaleFactor(0.6)
                         .allowsTightening(true)
@@ -95,11 +64,20 @@ struct ShadedBottomBarTapLayer: View {
                 .padding(.vertical, 6)
                 .padding(.horizontal, 12)
                 .frame(maxWidth: .infinity)
-                .background(backgroundColor)
+                .background(Color.red)
                 .padding(.bottom, bottomInset - 15)
-                .accessibilityAddTraits(.isButton)
-                .accessibilityLabel(Text(titleKey))
             } // ZStack(alignment: .bottom)
+            .overlay(alignment: .bottom) {
+                // A real button covers the full bar, including the visible label.
+                Button(action: onTap) {
+                    Color.clear
+                        .contentShape(Rectangle())
+                        .frame(height: height + bottomInset)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(Text(titleKey))
+            }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .ignoresSafeArea(edges: .bottom)
         } // GeometryReader

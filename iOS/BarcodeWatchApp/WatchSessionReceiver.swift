@@ -19,12 +19,21 @@ final class WatchSessionReceiver: NSObject, WCSessionDelegate, ObservableObject 
     @Published var clientId: String = ""
 
     private let session = WCSession.isSupported() ? WCSession.default : nil
+    private let clientIdDefaultsKey = "cachedClientId"
 
     override private init() {
         super.init()
+        clientId = UserDefaults.standard.string(forKey: clientIdDefaultsKey) ?? ""
         session?.delegate = self
         session?.activate()
     } // init
+
+    private func storeClientId(_ clientId: String) {
+        DispatchQueue.main.async {
+            UserDefaults.standard.set(clientId, forKey: self.clientIdDefaultsKey)
+            self.clientId = clientId
+        } // DispatchQueue.main.async
+    } // storeClientId
 
     // MARK: - File transfer (PNG + clientId)
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
@@ -50,20 +59,22 @@ final class WatchSessionReceiver: NSObject, WCSessionDelegate, ObservableObject 
         } // do/catch
 
         if let cid = file.metadata?["clientId"] as? String {
-            DispatchQueue.main.async {
-                self.clientId = cid
-            } // DispatchQueue.main.async
+            storeClientId(cid)
         } // if
     } // session didReceive file
 
     // MARK: - Text-only message
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let cid = message["clientId"] as? String {
-            DispatchQueue.main.async {
-                self.clientId = cid
-            } // DispatchQueue.main.async
+            storeClientId(cid)
         } // if
     } // session didReceiveMessage
+
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        if let cid = applicationContext["clientId"] as? String {
+            storeClientId(cid)
+        } // if
+    } // session didReceiveApplicationContext
 
     // MARK: - Activation
     func session(
@@ -73,6 +84,11 @@ final class WatchSessionReceiver: NSObject, WCSessionDelegate, ObservableObject 
     ) {
         if let error {
             print("Watch WC activation error: \(error)")
+            return
+        } // if
+
+        if let cid = session.receivedApplicationContext["clientId"] as? String {
+            storeClientId(cid)
         } // if
     } // session activationDidCompleteWith
 } // WatchSessionReceiver

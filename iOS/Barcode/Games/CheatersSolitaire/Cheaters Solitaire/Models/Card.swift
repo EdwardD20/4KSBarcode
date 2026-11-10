@@ -34,6 +34,15 @@ enum Suit: String, CaseIterable, Codable {
         }
     }
 
+    var localizationKey: String {
+        switch self {
+        case .hearts: return "suit_hearts"
+        case .diamonds: return "suit_diamonds"
+        case .clubs: return "suit_clubs"
+        case .spades: return "suit_spades"
+        }
+    }
+
     /// Capitalized name for building face-card asset names, e.g. "Jack-Spades".
     var name: String {
         switch self {
@@ -54,6 +63,16 @@ enum Rank: Int, CaseIterable, Codable {
         case .jack: return "J"
         case .queen: return "Q"
         case .king: return "K"
+        default: return "\(rawValue)"
+        }
+    }
+
+    var spokenName: String {
+        switch self {
+        case .ace: return "rank_ace"
+        case .jack: return "rank_jack"
+        case .queen: return "rank_queen"
+        case .king: return "rank_king"
         default: return "\(rawValue)"
         }
     }

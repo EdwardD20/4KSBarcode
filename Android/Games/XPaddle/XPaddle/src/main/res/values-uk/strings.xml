@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xpaddle_app_name">XPaddle</string>
+    <string name="xpaddle_settings_title">НАЛАШТУВАННЯ</string>
+    <string name="xpaddle_sound_on">Звук увімкнено</string>
+    <string name="xpaddle_sound_off">Звук вимкнено</string>
+    <string name="xpaddle_black_hole_on">Чорна діра увімкнена</string>
+    <string name="xpaddle_black_hole_off">Чорна діра вимкнена</string>
+    <string name="xpaddle_smarter_ai">РОЗУМНІШИЙ ШІ</string>
+    <string name="xpaddle_instructions">Проведіть пальцем по своїй половині, щоб рухати ракетку\nХто перший набере %1$d очок, перемагає\n\nГрати поруч: тримайте два телефони поруч\nі перекидайте м\'яч через обидва екрани</string>
+    <string name="xpaddle_back">НАЗАД</string>
+    <string name="xpaddle_return_to_app">Повернутися до програми</string>
+    <string name="xpaddle_1p_vs_cpu">1 ГРАВЕЦЬ (ПРОТИ ШІ)</string>
+    <string name="xpaddle_2p_same_device">2 ГРАВЦІ (НА ОДНОМУ ПРИСТРОЇ)</string>
+    <string name="xpaddle_play_nearby">ГРАТИ ПОРУЧ (2 ПРИСТРОЇ)</string>
+    <string name="xpaddle_settings">НАЛАШТУВАННЯ</string>
+    <string name="xpaddle_tap_to_serve">НАТИСНІТЬ ДЛЯ ПОДАЧІ</string>
+    <string name="xpaddle_p1_top_vs_p2_bottom">Гравець 1 (верх) проти Гравець 2 (низ)</string>
+    <string name="xpaddle_p1_left_vs_p2_right">Гравець 1 (ліво) проти Гравець 2 (право)</string>
+    <string name="xpaddle_you_are_bottom_paddle">Ви — нижня ракетка</string>
+    <string name="xpaddle_you_are_right_paddle">Ви — права ракетка</string>
+    <string name="xpaddle_wins_format">%1$s ПЕРЕМАГАЄ</string>
+    <string name="xpaddle_player_1">ГРАВЕЦЬ 1</string>
+    <string name="xpaddle_player_2">ГРАВЕЦЬ 2</string>
+    <string name="xpaddle_computer">КОМП\'ЮТЕР</string>
+    <string name="xpaddle_rematch">РЕВАНШ</string>
+    <string name="xpaddle_menu">МЕНЮ</string>
+    <string name="xpaddle_searching_for_phone">Пошук телефону поблизу…</string>
+    <string name="xpaddle_connected_syncing">Підключено — синхронізація…</string>
+    <string name="xpaddle_connection_lost">ЗВ\'ЯЗОК ВТРАЧЕНО</string>
+    <string name="xpaddle_search_again">ШУКАТИ ЗНОВУ</string>
+    <string name="xpaddle_nearby_hint">Тримайте обидва телефони близько.\nПереконайтеся, що Wi-Fi та Bluetooth увімкнені,\nі XPaddle відкрито на обох.</string>
+    <string name="xpaddle_cancel">СКАСУВАТИ</string>
+    <string name="xpaddle_you">ВИ</string>
+    <string name="xpaddle_them">ВОНИ</string>
+    <string name="xpaddle_opponents_serve">ПОДАЧА СУПЕРНИКА…</string>
+    <string name="xpaddle_you_win">ВИ ПЕРЕМОГЛИ</string>
+    <string name="xpaddle_you_lose">ВИ ПРОГРАЛИ</string>
+    <string name="xpaddle_exit">ВИХІД</string>
+    <string name="xpaddle_default_player_name">Гравець XPaddle</string>
+</resources>
